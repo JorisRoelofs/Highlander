@@ -40,6 +40,7 @@ if(image_index = image_number-5)
 {
 	with(objEntity) if(!invincible && id != other.owner && point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(other.image_angle,point_direction(other.x,other.y,x,y))) < 45)
 	{
+		other.owner.dashes++;
 		instance_destroy();
 	}
 }

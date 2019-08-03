@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "262fc269-0abc-445a-a5c1-73f2cbccac23",
+            "Value": {
+                "id": "9cdec4e5-42f2-41d5-b7aa-a6e7dab64bc3",
+                "resourcePath": "objects\\objMenuManager\\objMenuManager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3051e83f-7045-49fa-a99b-4cab5ab1e176",
             "Value": {
                 "id": "78e18086-9a36-454e-9920-e06d6515dea6",
@@ -324,6 +332,14 @@
                 "id": "00cf3fe5-f045-415f-aefa-4f3ba3d4993d",
                 "resourcePath": "options\\ios\\options_ios.yy",
                 "resourceType": "GMiOSOptions"
+            }
+        },
+        {
+            "Key": "84f54e47-0056-4951-afee-b47fa4fb6ff0",
+            "Value": {
+                "id": "a7869d79-76c1-4a39-9276-43d2340150ea",
+                "resourcePath": "objects\\objButton\\objButton.yy",
+                "resourceType": "GMObject"
             }
         },
         {
