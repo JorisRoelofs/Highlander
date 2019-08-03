@@ -15,6 +15,4 @@ enum enemyState {
 
 state = enemyState.spawn;
 target = noone;
-spd = 1;
-age = random(99);
 check = 60;

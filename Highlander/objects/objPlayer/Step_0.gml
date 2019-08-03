@@ -2,6 +2,7 @@
 dashInput = mouse_check_button_pressed(mb_right);
 meleeStartInput = mouse_check_button_pressed(mb_left);
 meleeEndInput = mouse_check_button_released(mb_left);
+meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
 
 #region walk
 speed = 0;

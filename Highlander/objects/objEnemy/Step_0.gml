@@ -15,7 +15,7 @@ x += 10000;
 switch (state) {
 	case enemyState.spawn:
 	
-		move_towards_point(random(room_width),random(room_height),spd/2);
+		move_towards_point(random(room_width),random(room_height),maxSpeed/2);
 		
 		
 		
@@ -47,7 +47,7 @@ switch (state) {
 		}
 		
 		if point_distance(x,y,objGun.x,objGun.y) > 32 {
-			move_towards_point(objGun.x, objGun.y, spd);	
+			move_towards_point(objGun.x, objGun.y, maxSpeed);	
 		} else {
 			speed = 0;
 			show_debug_message("i got the gun!");
@@ -59,17 +59,22 @@ switch (state) {
 		//follow target
 		if instance_exists(target) {
 			
-			move_towards_point(target.x, target.y, spd);
+			var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
+			var _dir = point_direction(x,y,target.x,target.y) + 90;
+			var _targetX = target.x + lengthdir_x(_dis,_dir);
+			var _targetY = target.y + lengthdir_y(_dis,_dir);
+			if (point_distance(x, y, target.x, target.y) > 90) move_towards_point(_targetX, _targetY, maxSpeed);
   
 			if (point_distance(x, y, target.x, target.y) < 256)  {
 					
 				if (point_distance(x, y, target.x, target.y) < 32)  {
-				
-					show_debug_message("im close");
-					if age < target.age {
-						instance_destroy();	
-					}
 
+					//if(!irandom(10))
+					{
+						//meleeStartInput = true;
+						meleeEndInput = true;
+						meleeAngleInput = point_direction(x,y,target.x,target.y);
+					}
 				}
 				
 			} else state = enemyState.idle;
@@ -84,3 +89,5 @@ switch (state) {
 	
 	break;
 }
+
+event_inherited();

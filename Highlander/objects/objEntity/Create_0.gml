@@ -11,6 +11,9 @@ meleeCharge = 0;
 meleeId = noone;
 invincible = false;
 dashes = 3;
+meleeStartInput = false;
+meleeEndInput = false;
+dashInput = false;
 #endregion
 #endregion
 #region timers

@@ -32,10 +32,11 @@ if(meleeChargeTime >= 0)
 	
 	if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
 	{
-	meleeChargeTime = -1;
-	meleeId = instance_create_depth(x,y,0,objMelee);
-	meleeId.charge = meleeCharge;
-	meleeId.owner = id;
+		meleeChargeTime = -1;
+		meleeId = instance_create_depth(x,y,0,objMelee);
+		meleeId.charge = meleeCharge;
+		meleeId.owner = id;
+		meleeId.image_angle = meleeAngleInput;
 	}
 }
 #endregion
