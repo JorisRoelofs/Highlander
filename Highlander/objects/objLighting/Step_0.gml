@@ -3,7 +3,7 @@
 
 if instance_exists(objPlayer) {
 	target = objPlayer;
-} else target = noone;
+} else target = objDead;
 
 if (surface_exists(surf)) {
 	surface_set_target(surf);

@@ -25,12 +25,15 @@ if debug_mode {
 		
 		}
 		
-		var _playerDash = objPlayer.dashes;
-		var _sep = 9;
-		var _screenCenter = ideal_width/2-((_playerDash/2)*_sep);
+		if instance_exists(objPlayer) {
+			var _playerDash = objPlayer.dashes;
+			var _sep = 9;
+			var _screenCenter = ideal_width/2-((_playerDash/2)*_sep);
 	
-		for (var i = 0; i < _playerDash; ++i) {
-		    draw_sprite(sprGUI,0,(_screenCenter)+(i*_sep),ideal_height-21);
+			for (var i = 0; i < _playerDash; ++i) {
+			    draw_sprite(sprGUI,0,(_screenCenter)+(i*_sep),ideal_height-21);
+			}
+		
 		}
 
 
