@@ -23,7 +23,7 @@ if item  == 0 { // sword
 	
 #region melee
 if(meleeStartInput) meleeChargeTime = 0;
-if(meleeChargeTime >= 0)
+if(ownKnife && meleeChargeTime >= 0)
 {
 	meleeChargeTime += 1/room_speed;
 	
@@ -44,6 +44,7 @@ if(meleeChargeTime >= 0)
 	
 		
 	#region bow
+	ownKnife = true;
 	if(meleeStartInput) meleeChargeTime = 0;
 	if(meleeChargeTime >= 0)
 	{
