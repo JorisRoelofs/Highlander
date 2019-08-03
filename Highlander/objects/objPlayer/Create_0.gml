@@ -5,4 +5,3 @@ event_inherited();
 facing = 1;
 back = 1;
 gunDirection = image_angle;
-dash = 12;

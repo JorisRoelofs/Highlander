@@ -25,7 +25,7 @@ if debug_mode {
 		
 		}
 		
-		var _playerDash = objPlayer.dash;
+		var _playerDash = objPlayer.dashes;
 		var _sep = 9;
 		var _screenCenter = ideal_width/2-((_playerDash/2)*_sep);
 	
