@@ -1,4 +1,6 @@
 /// @description Insert description here
+event_inherited();
+
 #region variables
 #region constants
 maxSpeed = 5;

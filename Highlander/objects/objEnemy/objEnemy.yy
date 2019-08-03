@@ -4,11 +4,50 @@
     "mvc": "1.0",
     "name": "objEnemy",
     "eventList": [
-        
+        {
+            "id": "02e3bd6d-85c3-4342-b2ee-c507ac30256d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "e50c2ea4-bb93-427d-acb1-690340899418"
+        },
+        {
+            "id": "e5478598-c6c4-439f-bcae-15cfa98dc891",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "e50c2ea4-bb93-427d-acb1-690340899418"
+        },
+        {
+            "id": "fb697d4c-3082-4130-9426-fe67cbc60fc8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "e50c2ea4-bb93-427d-acb1-690340899418"
+        },
+        {
+            "id": "f6736734-828a-40ae-a5ca-8d1cd86225e4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "e50c2ea4-bb93-427d-acb1-690340899418"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "fc5034ad-8735-4a17-852d-50a4e9936137",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +63,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "spriteId": "06576c21-09a3-49ff-a8d0-c4e116dadf90",
     "visible": true
 }
