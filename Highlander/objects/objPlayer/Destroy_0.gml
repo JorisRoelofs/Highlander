@@ -1,2 +1,6 @@
 /// @description Insert description here
-game_restart();
+instance_create_layer(x,y,"Instances", objDead);
+with (objDisplayManager) { 
+	target = other.id;
+	camereState = camereState.nothing;
+	}
