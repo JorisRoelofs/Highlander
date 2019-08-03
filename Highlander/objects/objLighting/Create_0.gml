@@ -8,7 +8,7 @@ y = room_height/2;
 target = self;
 
 radiusX = 240;
-radiusY = 160;
+radiusY = 240;
 
 //create surface
 surf = surface_create(room_width,room_height);

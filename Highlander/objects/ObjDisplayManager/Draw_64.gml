@@ -22,6 +22,15 @@ if debug_mode {
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_top);
 		draw_text(ideal_width/2,16,_instanceAmount);
+		
+		}
+		
+		var _playerDash = objPlayer.dash;
+		var _sep = 9;
+		var _screenCenter = ideal_width/2-((_playerDash/2)*_sep);
+	
+		for (var i = 0; i < _playerDash; ++i) {
+		    draw_sprite(sprGUI,0,(_screenCenter)+(i*_sep),ideal_height-21);
 		}
 
 
