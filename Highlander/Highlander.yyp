@@ -199,14 +199,6 @@
             }
         },
         {
-            "Key": "4f9202a8-0423-4a43-9057-ccb72ce90c0b",
-            "Value": {
-                "id": "8ffe7e4a-5611-4d3a-97aa-7a4acc75ea34",
-                "resourcePath": "objects\\objMenuManager\\objMenuManager.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "518fe9c6-ccc4-4508-a917-4e385d585ce9",
             "Value": {
                 "id": "12778c8e-2851-4709-a836-881957d5bffc",
@@ -292,14 +284,6 @@
                 "id": "279004dd-c684-4d88-b552-d49ac1933e06",
                 "resourcePath": "views\\6faf40af-18f6-47b4-9a3a-dcfbfb7b1e45.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "724125fd-8384-4d07-a41d-cd5c68d35c32",
-            "Value": {
-                "id": "da343066-c072-47e8-877d-9807aa13da90",
-                "resourcePath": "objects\\objButton\\objButton.yy",
-                "resourceType": "GMObject"
             }
         },
         {
