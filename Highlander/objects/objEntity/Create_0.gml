@@ -3,8 +3,8 @@ scr_BasicCollision_init(1);
 
 #region variables
 #region constants
-maxSpeed = 5;
-dashSpeed = 30;
+maxSpeed = 2;
+dashSpeed = 6*maxSpeed;
 #endregion
 #region temps
 meleeCharge = 0;

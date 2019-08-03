@@ -64,18 +64,20 @@ switch (state) {
 			var _targetX = target.x + lengthdir_x(_dis,_dir);
 			var _targetY = target.y + lengthdir_y(_dis,_dir);
 			if (point_distance(x, y, target.x, target.y) > 90) move_towards_point(_targetX, _targetY, maxSpeed);
+			else
+			{
+			
+				if(!irandom(10)) meleeStartInput = true;
+				else meleeStartInput = false;
+				
+				if(!irandom(10)) meleeEndInput = true;
+				else meleeEndInput = false;
+				
+				meleeAngleInput = point_direction(x,y,target.x,target.y);
+			
+			}
   
 			if (point_distance(x, y, target.x, target.y) < 256)  {
-					
-				if (point_distance(x, y, target.x, target.y) < 32)  {
-
-					//if(!irandom(10))
-					{
-						//meleeStartInput = true;
-						meleeEndInput = true;
-						meleeAngleInput = point_direction(x,y,target.x,target.y);
-					}
-				}
 				
 			} else state = enemyState.idle;
 			
