@@ -34,6 +34,17 @@ if debug_mode {
 			    draw_sprite(sprGUI,0,(_screenCenter)+(i*_sep),ideal_height-21);
 			}
 		
+		} else {
+			
+			
+			draw_set_font(fnt16);
+			draw_set_color(cyellow);
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_top);
+			draw_text(ideal_width/2,ideal_height/2-64,"PLAYER DED");
+		
+			
+			
 		}
 
 

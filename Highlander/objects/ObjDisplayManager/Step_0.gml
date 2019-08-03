@@ -29,10 +29,9 @@ if(keyboard_check_pressed(vk_f4)) {
 if(cameraZoom>maxCameraZoom)
 cameraZoom=1;
 
+if (window_get_fullscreen()) { cursor_sprite = sprCursorLarge; }
+else { cursor_sprite = sprCursor; }
 
-//if (window_get_fullscreen()) { cursor_sprite = sprCrossHairLarge; }
-//else { cursor_sprite = sprCrossHair; }
-	
 if target = undefined {
 	with (objDisplayManager) { camereState = camereState.nothing; }
 }
