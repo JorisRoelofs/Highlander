@@ -1,18 +1,28 @@
 {
-    "id": "53b83181-e60a-45d7-ad16-acf4edf384a4",
+    "id": "fc5034ad-8735-4a17-852d-50a4e9936137",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objEnemyManager",
+    "name": "objEntity",
     "eventList": [
         {
-            "id": "aebdd8b9-b927-4c32-b132-cf9bf3854e04",
+            "id": "bebad53c-0461-414f-84df-a5b16651934f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "53b83181-e60a-45d7-ad16-acf4edf384a4"
+            "m_owner": "fc5034ad-8735-4a17-852d-50a4e9936137"
+        },
+        {
+            "id": "ccbf1844-19ff-40b3-a051-2bedbf5e9cbb",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "fc5034ad-8735-4a17-852d-50a4e9936137",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "fc5034ad-8735-4a17-852d-50a4e9936137"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

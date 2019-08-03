@@ -18,7 +18,7 @@ if(image_index >= 3)
 
 if(image_index = image_number-2)
 {
-	with(objPlayer) if(!invincible && id != other.owner && place_meeting(x,y,other))
+	with(objEntity) if(!invincible && id != other.owner && place_meeting(x,y,other))
 	{
 		instance_destroy();
 	}

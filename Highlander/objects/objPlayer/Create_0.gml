@@ -1,4 +1,6 @@
 /// @description Insert description here
+event_inherited();
+
 #region variables
 #region constants
 maxSpeed = 5;
@@ -16,4 +18,4 @@ meleeChargeTime = -1;
 timeTillMeleeCharge = 1;
 dashTime = -1;
 timeTillDash = 0.1;
-#endregion instance_nearest()
+#endregion

@@ -573,6 +573,14 @@
                 "resourcePath": "views\\fb508808-7c0b-471c-9f48-dcf0b26dc1d5.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "fc5034ad-8735-4a17-852d-50a4e9936137",
+            "Value": {
+                "id": "45457bef-3c9f-44e1-95a7-1f6861d9c301",
+                "resourcePath": "objects\\objEntity\\objEntity.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
