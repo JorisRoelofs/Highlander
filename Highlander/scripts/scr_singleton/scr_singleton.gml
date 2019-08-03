@@ -1,7 +1,4 @@
-//testing
+if (instance_number (object_index) > 1) {
+	instance_destroy();
+}
 
-//1
-
-//2
-
-//3
