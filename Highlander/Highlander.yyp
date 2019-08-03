@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "5c0b61b4-b9b2-484b-b2f1-b4dc67041e09",
+            "Value": {
+                "id": "2ef598bc-ba2c-4e45-8038-6763ed5cc05e",
+                "resourcePath": "scripts\\scr_macro\\scr_macro.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5dd9a1e6-029a-4143-aa84-51c1265e709b",
             "Value": {
                 "id": "0b08a4c4-0b1f-4c6b-83c2-542dc647b9c1",
@@ -220,6 +228,14 @@
                 "id": "c2a9b3b8-ab59-436b-8e3c-93469563544d",
                 "resourcePath": "objects\\objInvisibleWall\\objInvisibleWall.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6e2cde41-e9ba-4cfe-ac16-dbd4bac830b1",
+            "Value": {
+                "id": "fd2f0ff7-4feb-43d0-b010-11cebc32a592",
+                "resourcePath": "sprites\\sprFoliage\\sprFoliage.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -300,6 +316,14 @@
                 "id": "baf88a86-655a-4aff-84ff-1f45cef21b7b",
                 "resourcePath": "views\\98a7cd66-ccc7-45c9-a857-10091796da0b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9d423fa0-d02d-4364-8341-1405f967bffd",
+            "Value": {
+                "id": "bc6a4652-77ec-487e-9f01-66cf2650cc27",
+                "resourcePath": "objects\\objFoliage\\objFoliage.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -388,6 +412,14 @@
                 "id": "68dcc022-93e1-4473-a9a0-e0050fc3595e",
                 "resourcePath": "views\\c00af120-6f6a-4582-a6e7-00759f81a408.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c0e02f32-cf33-452d-a119-abe32462b721",
+            "Value": {
+                "id": "ad0b0130-9fd9-4304-b5fb-f55aef117187",
+                "resourcePath": "fonts\\fnt16\\fnt16.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -598,7 +630,8 @@
         "23346738-a77c-4527-9357-24dfd6e30b2f",
         "568004bf-0bfe-4aa4-be02-beb1beb2b240",
         "b0d038b2-b518-4afd-8773-cfee2bd8fec6",
-        "72b08efc-1def-44b4-8aa5-881515e40aad"
+        "72b08efc-1def-44b4-8aa5-881515e40aad",
+        "5c0b61b4-b9b2-484b-b2f1-b4dc67041e09"
     ],
     "tutorial": ""
 }

@@ -8,7 +8,7 @@ if instance_exists(objPlayer) {
 if (surface_exists(surf)) {
 	surface_set_target(surf);
 	
-	draw_set_color(c_black);
+	draw_set_color(cpurple);
 	draw_set_alpha(1);
 	draw_rectangle(0,0,room_width,room_height,false);
 	
@@ -18,14 +18,14 @@ if (surface_exists(surf)) {
 	draw_ellipse(target.x-(radiusX*.8)+ random_range(-1,1,),target.y-(radiusY*.8)+ random_range(-1,1,)
 	,target.x+(radiusX*.8)+ random_range(-1,1,),target.y+(radiusY*.6)+ random_range(-1,1,),false);
 	
-	gpu_set_blendmode(bm_normal);
-	draw_set_alpha(.2);
+	//gpu_set_blendmode(bm_normal);
+	//draw_set_alpha(.2);
 	
-	//circles
-	gpu_set_blendmode(bm_subtract);
-	draw_set_color(c_white);
-	draw_ellipse(target.x-radiusX+ random_range(-1,1,),target.y-radiusY+ random_range(-1,1,)
-	,target.x+radiusX+ random_range(-1,1,),target.y+(radiusY*.8)+ random_range(-1,1,),false);
+	////circles
+	//gpu_set_blendmode(bm_subtract);
+	//draw_set_color(c_white);
+	//draw_ellipse(target.x-radiusX+ random_range(-1,1,),target.y-radiusY+ random_range(-1,1,)
+	//,target.x+radiusX+ random_range(-1,1,),target.y+(radiusY*.8)+ random_range(-1,1,),false);
 	
 	gpu_set_blendmode(bm_normal);
 	draw_set_alpha(1);
