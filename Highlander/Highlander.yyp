@@ -162,7 +162,7 @@
             "Key": "347d3557-3adc-4ceb-8c06-4c779025fe34",
             "Value": {
                 "id": "d789b217-9d69-4708-96a2-9e2244109f23",
-                "resourcePath": "objects\\objGunStage\\objGunStage.yy",
+                "resourcePath": "objects\\objBowShrine\\objBowShrine.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -570,7 +570,7 @@
             "Key": "dfc4afcc-ba3c-46e0-b25d-f1224730665b",
             "Value": {
                 "id": "51ee1130-2d3e-46d3-9a2c-b5d1fbd5869c",
-                "resourcePath": "sprites\\sprite17\\sprite17.yy",
+                "resourcePath": "sprites\\sprBowShrine\\sprBowShrine.yy",
                 "resourceType": "GMSprite"
             }
         },
