@@ -21,8 +21,11 @@ else image_alpha = 1;
 
 if(dashTime >= timeTillDash) dashTime = -1;
 #endregion
+
+if item  == 0 { // sword
+	
 #region melee
-if(ownKnife && meleeStartInput) meleeChargeTime = 0;
+if(meleeStartInput) meleeChargeTime = 0;
 if(meleeChargeTime >= 0)
 {
 	meleeChargeTime += 1/room_speed;
@@ -40,3 +43,41 @@ if(meleeChargeTime >= 0)
 	}
 }
 #endregion
+} else if item == 1 { // bow 
+	
+		
+	#region bow
+	if(meleeStartInput) meleeChargeTime = 0;
+	if(meleeChargeTime >= 0)
+	{
+		meleeChargeTime += 1/room_speed;
+	
+		if(meleeChargeTime >= timeTillGunCharge) meleeCharge = 1;
+		else meleeCharge = meleeChargeTime/timeTillGunCharge;
+	
+		if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
+		{
+			meleeChargeTime = -1;
+			
+			var b;
+			b = instance_create_layer(x, y, "Instances", objBullet);
+			b.direction = gunDirection;
+			b.speed = 20*meleeCharge;
+//			b.hspeed += hspeed;
+//			b.vspeed += vspeed;
+			b.image_angle = b.direction;
+			b.startSpeed = b.speed;
+			
+		}
+	}
+	#endregion
+	
+}
+
+
+image_xscale = facing;
+
+if speed > 0 {
+	sprite_index = sprPlayerWalk;
+} else sprite_index = sprPlayerIdle;
+

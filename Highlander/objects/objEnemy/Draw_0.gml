@@ -1,10 +1,10 @@
 /// @description Insert description here
-draw_self();
+event_inherited();
 
-draw_set_color(c_black);
-if(target = objPlayer.id) draw_set_color(c_red);
-draw_text(x,y-32,string(state));
-
-if(meleeChargeTime >= 0) draw_circle(x,y,5,false);
-
-//draw_circle(x,y,256,true);
+if back = -1 {
+    draw_self();
+    draw_sprite_ext(sprKnife,0,x,y+4,1,back,gunDirection,c_white,1);
+} else if back = 1 {
+    draw_sprite_ext(sprKnife,0,x,y+4,1,back,gunDirection,c_white,1);
+    draw_self();
+}
