@@ -16,6 +16,28 @@
     "edgeFiltering": false,
     "frames": [
         {
+            "id": "88b2b108-ff36-4c3b-953b-b50b8aecefc6",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "dd53aaf6-40d0-41a1-8fa5-8a2016e3c4cc",
+            "compositeImage": {
+                "id": "4476786e-667c-4e04-b124-b514b0ba110f",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "88b2b108-ff36-4c3b-953b-b50b8aecefc6",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "243882c4-1d61-4e79-83fa-b2ce181f81a8",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "88b2b108-ff36-4c3b-953b-b50b8aecefc6",
+                    "LayerId": "5a13f01e-65a9-4d98-a280-5f1129c5301e"
+                }
+            ]
+        },
+        {
             "id": "a349b60e-bc24-4718-a26f-a40f5d73f55d",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
@@ -36,33 +58,11 @@
                     "LayerId": "5a13f01e-65a9-4d98-a280-5f1129c5301e"
                 }
             ]
-        },
-        {
-            "id": "b0cdb8f0-1d65-438d-b659-8b54f879b0fc",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "dd53aaf6-40d0-41a1-8fa5-8a2016e3c4cc",
-            "compositeImage": {
-                "id": "fb60adc3-230b-43ec-a904-1042fb72b329",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "b0cdb8f0-1d65-438d-b659-8b54f879b0fc",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "a1b65021-0f44-4259-8983-573417c30837",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "b0cdb8f0-1d65-438d-b659-8b54f879b0fc",
-                    "LayerId": "5a13f01e-65a9-4d98-a280-5f1129c5301e"
-                }
-            ]
         }
     ],
     "gridX": 0,
     "gridY": 0,
-    "height": 15,
+    "height": 28,
     "layers": [
         {
             "id": "5a13f01e-65a9-4d98-a280-5f1129c5301e",
@@ -88,5 +88,5 @@
     "type": 0,
     "width": 28,
     "xorig": 13,
-    "yorig": 7
+    "yorig": 13
 }
