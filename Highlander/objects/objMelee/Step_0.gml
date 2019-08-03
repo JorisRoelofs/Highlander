@@ -4,14 +4,22 @@ if(instance_exists(owner))
 	x = owner.x;
 	y = owner.y;
 }
-else instance_destroy();
+else
+{
+	instance_destroy();
+	exit;
+}
 
 if(image_index >= 3 && image_index <= 7)
 {
-	var _colMelee = instance_place(x,y,objMelee);
-	if(instance_exists(_colMelee) && _colMelee.image_index >= 3 && image_index <= 7)
+	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,other.image_angle) < 90))
 	{
-		instance_destroy(_colMelee);
+		
+		owner.speed = 30;
+		owner.direction = point_direction(other.owner.x,other.owner.y,owner.x,owner.y);
+		other.owner.speed = 5;
+		other.owner.direction = owner.direction - 180;
+		instance_destroy(other);
 		instance_destroy();
 	}
 }

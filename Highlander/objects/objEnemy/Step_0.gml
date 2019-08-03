@@ -2,6 +2,8 @@
 
 //var _inst = instance_nearest(x,y,objEntity);  
 
+speed = 0;
+
 var _inst, _xx;
 _xx = x;
 x -= 10000;
