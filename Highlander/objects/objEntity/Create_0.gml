@@ -15,11 +15,12 @@ dashes = 3;
 meleeStartInput = false;
 meleeEndInput = false;
 dashInput = false;
-
+ownKnife = true;
 // gun orientation
 facing = 1;
 back = 1;
 gunDirection = image_angle;
+timeTillGunCharge = 1;
 
 #endregion
 #endregion

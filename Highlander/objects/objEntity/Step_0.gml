@@ -46,30 +46,27 @@ if(meleeChargeTime >= 0)
 } else if item == 1 { // bow 
 	
 		
-	#region melee
+	#region bow
 	if(meleeStartInput) meleeChargeTime = 0;
 	if(meleeChargeTime >= 0)
 	{
 		meleeChargeTime += 1/room_speed;
 	
-		if(meleeChargeTime >= timeTillMeleeCharge) meleeCharge = 1;
-		else meleeCharge = 0;
+		if(meleeChargeTime >= timeTillGunCharge) meleeCharge = 1;
+		else meleeCharge = meleeChargeTime/timeTillGunCharge;
 	
 		if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
 		{
 			meleeChargeTime = -1;
-			meleeId = instance_create_depth(x,y,0,objMelee);
-			meleeId.charge = meleeCharge;
-			meleeId.owner = id;
-			meleeId.image_angle = meleeAngleInput;
 			
 			var b;
 			b = instance_create_layer(x, y, "Instances", objBullet);
 			b.direction = gunDirection;
-			b.image_angle = gunDirection;
-			b.speed = 6;
-			b.hspeed += hspeed;
-			b.vspeed += vspeed;
+			b.speed = 20*meleeCharge;
+//			b.hspeed += hspeed;
+//			b.vspeed += vspeed;
+			b.image_angle = b.direction;
+			b.startSpeed = b.speed;
 			
 		}
 	}
@@ -79,6 +76,7 @@ if(meleeChargeTime >= 0)
 
 
 image_xscale = facing;
+
 if speed > 0 {
 	sprite_index = sprPlayerWalk;
 } else sprite_index = sprPlayerIdle;

@@ -10,17 +10,26 @@ else
 	exit;
 }
 
+image_index = 6;
+
 if(image_index >= 3 && image_index <= 7)
 {
-	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,other.image_angle) < 90))
+	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 45)
 	{
-		
 		owner.speed = 30;
 		owner.direction = point_direction(other.owner.x,other.owner.y,owner.x,owner.y);
-		other.owner.speed = 5;
-		other.owner.direction = owner.direction - 180;
-		instance_destroy(other);
+		owner.ownKnife = false;
+		instance_create_layer(x,y,"Instances",objKnife);
 		instance_destroy();
+		with(other)
+		{
+			owner.speed = 30;
+			owner.direction = other.owner.direction - 180;
+			owner.ownKnife = false;
+			instance_create_layer(x,y,"Instances",objKnife);
+			instance_destroy();
+		}
+		exit;
 	}
 }
 
