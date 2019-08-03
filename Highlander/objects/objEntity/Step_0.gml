@@ -14,10 +14,7 @@ if(dashTime >= 0)
 	
 	speed = dashSpeed;
 	direction = dashDirection;
-	
-	image_alpha = 0;
 }
-else image_alpha = 1;
 
 if(dashTime >= timeTillDash) dashTime = -1;
 #endregion
@@ -67,6 +64,7 @@ if(meleeChargeTime >= 0)
 //			b.vspeed += vspeed;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
+			b.owner = id;
 			
 		}
 	}
@@ -77,7 +75,8 @@ if(meleeChargeTime >= 0)
 
 image_xscale = facing;
 
-if speed > 0 {
+if(dashTime >= 0) sprite_index = sprPlayerDash;
+else if speed > 0 {
 	sprite_index = sprPlayerWalk;
 } else sprite_index = sprPlayerIdle;
 

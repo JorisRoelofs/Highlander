@@ -10,10 +10,12 @@ else
 	exit;
 }
 
-image_index = 6;
+//image_index = 6;
 
 if(image_index >= 3 && image_index <= 7)
 {
+	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 45) instance_destroy();
+
 	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 45)
 	{
 		owner.speed = 30;
@@ -31,6 +33,7 @@ if(image_index >= 3 && image_index <= 7)
 		}
 		exit;
 	}
+	
 }
 
 if(image_index = image_number-5)
