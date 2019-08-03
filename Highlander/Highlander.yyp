@@ -637,6 +637,14 @@
                 "resourcePath": "objects\\objEntity\\objEntity.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "fe7ef09d-ed0b-4940-b8fa-bfb60763c1c5",
+            "Value": {
+                "id": "ae81f1df-f54c-45c2-9b4b-626ef8253c0f",
+                "resourcePath": "objects\\objKnife\\objKnife.yy",
+                "resourceType": "GMObject"
+            }
         }
     ],
     "script_order": [
