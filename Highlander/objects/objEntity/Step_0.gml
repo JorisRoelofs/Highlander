@@ -32,6 +32,10 @@ if(ownKnife && meleeChargeTime >= 0)
 	
 	if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
 	{
+		
+		if audio_is_playing(sndSword) {audio_stop_sound(sndSword);}
+		audio_play_sound_at(sndSword,x,y,0,global.falloff_ref,global.falloff_max,1,false,1);
+		
 		meleeChargeTime = -1;
 		meleeId = instance_create_depth(x,y,0,objMelee);
 		meleeId.charge = meleeCharge;
@@ -56,6 +60,9 @@ if(ownKnife && meleeChargeTime >= 0)
 		if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
 		{
 			meleeChargeTime = -1;
+			
+			if audio_is_playing(sndBow) {audio_stop_sound(sndBow);}
+			audio_play_sound_at(sndBow,x,y,0,global.falloff_ref,global.falloff_max,1,false,1);
 			
 			var b;
 			b = instance_create_layer(x, y, "Instances", objBullet);

@@ -16,3 +16,4 @@ enum enemyState {
 state = enemyState.spawn;
 target = noone;
 check = 60;
+distance = 256;
