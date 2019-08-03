@@ -242,7 +242,7 @@
             "Key": "593259c5-425f-4fa9-85f4-b24c7c83e67a",
             "Value": {
                 "id": "eba95688-373a-40a1-8bd3-3410c3ec4573",
-                "resourcePath": "sprites\\sprGUI\\sprGUI.yy",
+                "resourcePath": "sprites\\sprDashSymbol\\sprDashSymbol.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -539,6 +539,14 @@
             "Value": {
                 "id": "0b966f5f-d3f1-43bd-843a-e8826e985ec2",
                 "resourcePath": "sprites\\sprIce\\sprIce.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d5702194-0e71-4a12-b060-0221860b12b4",
+            "Value": {
+                "id": "ba11e48b-6ea9-485c-888f-f83d43ae0c58",
+                "resourcePath": "sprites\\sprBtn\\sprBtn.yy",
                 "resourceType": "GMSprite"
             }
         },

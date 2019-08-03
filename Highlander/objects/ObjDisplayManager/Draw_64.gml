@@ -31,7 +31,7 @@ if debug_mode {
 			var _screenCenter = ideal_width/2-((_playerDash/2)*_sep);
 	
 			for (var i = 0; i < _playerDash; ++i) {
-			    draw_sprite(sprGUI,0,(_screenCenter)+(i*_sep),ideal_height-21);
+			    draw_sprite(sprDashSymbol,0,(_screenCenter)+(i*_sep),ideal_height-21);
 			}
 		
 		} else {
