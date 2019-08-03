@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "6e2cde41-e9ba-4cfe-ac16-dbd4bac830b1",
+            "Value": {
+                "id": "fd2f0ff7-4feb-43d0-b010-11cebc32a592",
+                "resourcePath": "sprites\\sprFoliage\\sprFoliage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6faf40af-18f6-47b4-9a3a-dcfbfb7b1e45",
             "Value": {
                 "id": "279004dd-c684-4d88-b552-d49ac1933e06",
@@ -402,7 +410,7 @@
             "Key": "c0e02f32-cf33-452d-a119-abe32462b721",
             "Value": {
                 "id": "ad0b0130-9fd9-4304-b5fb-f55aef117187",
-                "resourcePath": "fonts\\fnt32\\fnt32.yy",
+                "resourcePath": "fonts\\fnt16\\fnt16.yy",
                 "resourceType": "GMFont"
             }
         },

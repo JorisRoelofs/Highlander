@@ -2,7 +2,7 @@
     "id": "c0e02f32-cf33-452d-a119-abe32462b721",
     "modelName": "GMFont",
     "mvc": "1.1",
-    "name": "fnt32",
+    "name": "fnt16",
     "AntiAlias": 0,
     "TTFName": "",
     "ascenderOffset": 0,
