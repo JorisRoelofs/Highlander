@@ -86,9 +86,9 @@ switch (state) {
 			
 			}
   
-			if (point_distance(x, y, target.x, target.y) < 256)  {
-				
-			} else state = enemyState.idle;
+			if (point_distance(x, y, target.x, target.y) > 256)  {
+				state = enemyState.idle;
+			} 
 			
 		} else state = enemyState.idle;
 	
