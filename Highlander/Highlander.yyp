@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0b1a8fc8-01c4-44d2-aa15-e1b8db98b95d",
+            "Value": {
+                "id": "74cbfbbe-980a-4af4-8190-88c6170b5b36",
+                "resourcePath": "objects\\objDead\\objDead.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0ce7dd91-29e0-49dd-a9e8-cc5776b384e6",
             "Value": {
                 "id": "6a107ad2-837b-4197-bb44-fcdcb3f86b48",
@@ -186,7 +194,7 @@
             "Key": "518fe9c6-ccc4-4508-a917-4e385d585ce9",
             "Value": {
                 "id": "12778c8e-2851-4709-a836-881957d5bffc",
-                "resourcePath": "objects\\ObjDisplayManager\\ObjDisplayManager.yy",
+                "resourcePath": "objects\\objDisplayManager\\objDisplayManager.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -516,6 +524,14 @@
                 "id": "f010d541-9786-4efb-836e-a89768e6b6e2",
                 "resourcePath": "views\\d5b2cca7-7947-4e68-890d-eb9a63b6838c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "daa9e4ee-4bed-4a1a-93d0-298467ca3ce3",
+            "Value": {
+                "id": "170a3526-646f-409d-b630-4aabfde17e60",
+                "resourcePath": "sprites\\sprPlayerDead\\sprPlayerDead.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
