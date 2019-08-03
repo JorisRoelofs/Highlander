@@ -1,8 +1,7 @@
 /// @description Insert description here
 
-//var _inst = instance_nearest(x,y,objEntity);  
 
-speed = 0;
+//speed = 0;
 
 var _inst, _xx;
 _xx = x;
@@ -13,6 +12,7 @@ if _inst != id {
 }
 	
 x += 10000;
+
 
 switch (state) {
 	case enemyState.spawn:
@@ -37,22 +37,29 @@ switch (state) {
 	break;
 	case enemyState.gunChase:
 	
-		if check > 0 {
-			check--;
-		} else {
+		if objBowShrine.present = true  {
+	
+			if check > 0 {
+				check--;
+			} else {
 					
-			if point_distance(x,y,_inst.x,_inst.y) < 128 {
-				state = enemyState.knifeHunt;				
-			}
+				if point_distance(x,y,_inst.x,_inst.y) < 256 {
+					state = enemyState.knifeHunt;				
+				}
 			
-			check = 60;
-		}
+				check = 60;
+			}
 		
-		if point_distance(x,y,objGun.x,objGun.y) > 32 {
-			move_towards_point(objGun.x, objGun.y, maxSpeed);	
-		} else {
-			speed = 0;
-		}
+			if point_distance(x,y,objBowShrine.x,objBowShrine.y) > 64 {
+				move_towards_point(objBowShrine.x, objBowShrine.y, maxSpeed);	
+			} else {
+				objBowShrine.present = false;
+				item = 1;
+				state = enemyState.shooter;
+				show_debug_message("i've got the bow! ");
+			}
+		
+		} else state = enemyState.knifeHunt;
 	
 	break;
 	case enemyState.knifeHunt:
@@ -86,6 +93,33 @@ switch (state) {
 	
 	break;
 	case enemyState.shooter:
+	
+		//follow target
+		if instance_exists(target) {
+			
+			var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
+			var _dir = point_direction(x,y,target.x,target.y) + 90;
+			var _targetX = target.x + lengthdir_x(_dis,_dir);
+			var _targetY = target.y + lengthdir_y(_dis,_dir);
+			if (point_distance(x, y, target.x, target.y) > 90) move_towards_point(_targetX, _targetY, maxSpeed);
+			else
+			{
+			
+				if(!irandom(10)) meleeStartInput = true;
+				else meleeStartInput = false;
+				
+				if(!irandom(10)) meleeEndInput = true;
+				else meleeEndInput = false;
+				
+				meleeAngleInput = point_direction(x,y,target.x,target.y);
+			
+			}
+  
+			if (point_distance(x, y, target.x, target.y) < 256)  {
+				
+			} else state = enemyState.idle;
+			
+		}
 	
 	break;
 	case enemyState.death:

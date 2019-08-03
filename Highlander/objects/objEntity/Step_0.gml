@@ -60,8 +60,6 @@ if(meleeChargeTime >= 0)
 			b = instance_create_layer(x, y, "Instances", objBullet);
 			b.direction = gunDirection;
 			b.speed = 20*meleeCharge;
-//			b.hspeed += hspeed;
-//			b.vspeed += vspeed;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;
@@ -72,8 +70,6 @@ if(meleeChargeTime >= 0)
 	
 }
 
-
-image_xscale = facing;
 
 if(dashTime >= 0) sprite_index = sprPlayerDash;
 else if speed > 0 {
