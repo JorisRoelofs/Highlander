@@ -1,5 +1,5 @@
 {
-    "id": "724125fd-8384-4d07-a41d-cd5c68d35c32",
+    "id": "84f54e47-0056-4951-afee-b47fa4fb6ff0",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "objButton",
