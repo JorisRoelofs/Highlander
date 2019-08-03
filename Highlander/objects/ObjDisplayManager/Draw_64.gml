@@ -14,3 +14,14 @@ if debug_mode {
 }
 
 
+		{
+		var _instanceAmount = instance_number(objEntity);
+			
+		draw_set_font(fnt32);
+		draw_set_color(cyellow);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_text(ideal_width/2,16,_instanceAmount);
+		}
+
+
