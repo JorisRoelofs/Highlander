@@ -18,6 +18,11 @@ else
 	direction += 20*sign(angle_difference(direction,90))/startSpeed;
 }
 
-t += 1/room_speed;
+if(instance_number(objBullet) > 100 && number = smallestNumber)
+{
+	with(objBullet) smallestNumber++;
+	instance_destroy();
+	exit;
+}
 
-show_debug_message(alarm[1]);
+t += 1/room_speed;
