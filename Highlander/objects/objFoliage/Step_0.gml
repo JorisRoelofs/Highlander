@@ -1,5 +1,5 @@
 /// @description Insert description here
-if instance_number (objFoliage) < 300 {
+if instance_number (objFoliage) < 400 {
 
 	if !place_meeting(x,y,objFoliage) {
 	
@@ -8,3 +8,4 @@ if instance_number (objFoliage) < 300 {
 	}
 	
 }
+

@@ -1,5 +1,4 @@
 /// @description Insert description here
-draw_self();
 
 if back = -1 {
 	draw_self();

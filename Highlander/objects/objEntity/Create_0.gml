@@ -15,6 +15,12 @@ dashes = 3;
 meleeStartInput = false;
 meleeEndInput = false;
 dashInput = false;
+
+// gun orientation
+facing = 1;
+back = 1;
+gunDirection = image_angle;
+
 #endregion
 #endregion
 #region timers

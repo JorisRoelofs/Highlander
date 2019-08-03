@@ -1,5 +1,5 @@
 /// @description Insert description here
-draw_self();
+event_inherited();
 
 draw_set_color(c_black);
 if(target = objPlayer.id) draw_set_color(c_red);

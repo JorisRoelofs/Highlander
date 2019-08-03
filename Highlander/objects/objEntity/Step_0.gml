@@ -76,3 +76,11 @@ if(meleeChargeTime >= 0)
 	#endregion
 	
 }
+
+
+image_xscale = facing;
+
+if speed > 0 {
+	sprite_index = sprPlayerWalk;
+} else sprite_index = sprPlayerIdle;
+
