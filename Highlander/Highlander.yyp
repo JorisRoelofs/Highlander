@@ -58,7 +58,7 @@
             "Key": "06576c21-09a3-49ff-a8d0-c4e116dadf90",
             "Value": {
                 "id": "8cd27ae1-13ea-4382-9462-81acab3f4595",
-                "resourcePath": "sprites\\sprPlayer\\sprPlayer.yy",
+                "resourcePath": "sprites\\sprPlayerWalk\\sprPlayerWalk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -203,6 +203,14 @@
             "Value": {
                 "id": "eba95688-373a-40a1-8bd3-3410c3ec4573",
                 "resourcePath": "sprites\\sprGUI\\sprGUI.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5c02799b-1a03-4477-b878-3e012a22c032",
+            "Value": {
+                "id": "8e131eaa-9843-4f55-ab17-33e7ee158c0f",
+                "resourcePath": "sprites\\sprKnife\\sprKnife.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -395,6 +403,14 @@
             "Value": {
                 "id": "2b31f6f9-dfdd-45c9-8b7b-56b6826df78d",
                 "resourcePath": "sprites\\sprImpact\\sprImpact.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b94b87b4-b314-4877-a12e-a14bcd86c6f1",
+            "Value": {
+                "id": "2bff0fdd-e6a0-4b14-ac9b-71bd5f5aba57",
+                "resourcePath": "sprites\\sprPlayerIdle\\sprPlayerIdle.yy",
                 "resourceType": "GMSprite"
             }
         },

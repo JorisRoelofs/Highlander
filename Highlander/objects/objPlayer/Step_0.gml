@@ -4,6 +4,22 @@ meleeStartInput = mouse_check_button_pressed(mb_left);
 meleeEndInput = mouse_check_button_released(mb_left);
 meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
 
+image_xscale = facing;
+if speed > 0 {
+	sprite_index = sprPlayerWalk;
+} else sprite_index = sprPlayerIdle;
+
+// player facing		
+if mouse_x > x {
+	facing = 1;
+} else facing = -1;
+
+if mouse_y < y {
+	back = 1
+} else back = -1
+
+gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,lerp(2,8,1	));
+
 #region walk
 speed = 0;
 
