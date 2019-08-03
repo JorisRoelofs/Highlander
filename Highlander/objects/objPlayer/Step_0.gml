@@ -1,5 +1,6 @@
 /// @description Insert description here
 #region movement
+#region walk
 speed = 0;
 
 if(keyboard_check(vk_right) || keyboard_check(ord("D"))) hspeed = maxSpeed;
@@ -8,7 +9,8 @@ if(keyboard_check(vk_down) || keyboard_check(ord("S"))) vspeed = maxSpeed;
 if(keyboard_check(vk_up) || keyboard_check(ord("W"))) vspeed = -maxSpeed;
 
 speed = clamp(speed,0,maxSpeed);
-
+#endregion
+#region dash
 if(dashes && mouse_check_button_pressed(mb_right))
 {
 	dashes-=1;
@@ -16,8 +18,19 @@ if(dashes && mouse_check_button_pressed(mb_right))
 	dashDirection = direction;
 }
 
-//if(dashTime)
+if(dashTime >= 0)
+{
+	dashTime += 1/room_speed;
+	
+	speed = dashSpeed;
+	direction = dashDirection;
+	
+	image_alpha = 0;
+}
+else image_alpha = 1;
 
+if(dashTime >= timeTillDash) dashTime = -1;
+#endregion
 #endregion
 #region melee
 if(mouse_check_button_pressed(mb_left)) meleeChargeTime = 0;

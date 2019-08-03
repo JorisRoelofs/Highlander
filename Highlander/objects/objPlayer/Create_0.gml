@@ -2,7 +2,7 @@
 #region variables
 #region constants
 maxSpeed = 5;
-dashSpeed = 10;
+dashSpeed = 30;
 #endregion
 #region temps
 meleeCharge = 0;
@@ -14,4 +14,6 @@ dashes = 3;
 #region timers
 meleeChargeTime = -1;
 timeTillMeleeCharge = 1;
+dashTime = -1;
+timeTillDash = 0.1;
 #endregion instance_nearest()
