@@ -22,7 +22,7 @@ else image_alpha = 1;
 if(dashTime >= timeTillDash) dashTime = -1;
 #endregion
 #region melee
-if(meleeStartInput) meleeChargeTime = 0;
+if(ownKnife && meleeStartInput) meleeChargeTime = 0;
 if(meleeChargeTime >= 0)
 {
 	meleeChargeTime += 1/room_speed;

@@ -52,7 +52,6 @@ switch (state) {
 			move_towards_point(objGun.x, objGun.y, maxSpeed);	
 		} else {
 			speed = 0;
-			show_debug_message("i got the gun!");
 		}
 	
 	break;

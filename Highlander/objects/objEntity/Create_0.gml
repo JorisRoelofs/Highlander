@@ -14,6 +14,7 @@ dashes = 3;
 meleeStartInput = false;
 meleeEndInput = false;
 dashInput = false;
+ownKnife = true;
 #endregion
 #endregion
 #region timers
