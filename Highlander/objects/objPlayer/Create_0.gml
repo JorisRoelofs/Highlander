@@ -11,3 +11,7 @@ pointerTargetX = 0.5*ideal_width;
 pointerTargetY = 0.5*ideal_height;
 
 dashes = 1000;
+
+mode = 0;
+crownScale = 1;
+rate = 0.0015;

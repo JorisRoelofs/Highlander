@@ -37,8 +37,7 @@ if debug_mode {
 							var _dis = point_distance(camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height,_target.x,_target.y-20);
 							var _mul = max((300 - _dis)/400,0.05);
 							pointerTargetX += (_target.x - camera_get_view_x(view_camera[0]) - pointerTargetX) * _mul;
-							pointerTargetY += (_target.y - 20 - camera_get_view_y(view_camera[0]) - pointerTargetY) * _mul;
-								
+							pointerTargetY += (_target.y + - 20 - camera_get_view_y(view_camera[0]) - pointerTargetY) * _mul;
 						}
 						else
 						{
@@ -47,7 +46,17 @@ if debug_mode {
 							pointerTargetX += (0.5*ideal_width+lengthdir_x(_dis,_dir) - pointerTargetX)*0.05;
 							pointerTargetY += (0.5*ideal_height+lengthdir_y(_dis,_dir) - pointerTargetY)*0.05;
 						}
-						draw_sprite(sprCrown,!item,pointerTargetX,pointerTargetY);
+						if mode = 0 {
+							crownScale -= rate;
+							crownScale -= rate;
+							if crownScale < 1 mode = 1;
+						} else if mode = 1 {
+						    crownScale += rate;
+						    crownScale += rate;
+						    if crownScale > 1.1 mode = 0;
+						}
+						
+						draw_sprite_ext(sprCrown,!item,pointerTargetX,pointerTargetY,crownScale,crownScale,0,c_white,1);
 					}
 				}
 		

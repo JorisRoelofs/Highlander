@@ -4,7 +4,7 @@ scr_BasicCollision_init(1);
 #region variables
 #region constants
 maxSpeed = 2;
-dashSpeed = 6*maxSpeed;
+dashSpeed = 2*maxSpeed;
 #endregion
 #region temps
 meleeCharge = 0;
@@ -29,7 +29,7 @@ timeTillGunCharge = 1;
 meleeChargeTime = -1;
 timeTillMeleeCharge = 1;
 dashTime = -1;
-timeTillDash = 0.1;
+timeTillDash = 0.5;
 #endregion
 
 type = irandom(1);
