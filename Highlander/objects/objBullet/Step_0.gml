@@ -2,7 +2,7 @@
 
 image_angle = direction + (10*sin(4*pi*t)/max(startSpeed,6));
 speed *= 0.95;
-if(speed <= 1)
+if(speed <= 2)
 {
 	deflectTime = -1;
 	image_angle = direction - (max(alarm[0],0)*sin(4*pi*t)*max(startSpeed,1)/100);
