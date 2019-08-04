@@ -119,7 +119,8 @@ if debug_mode {
 			draw_set_halign(fa_center);
 			draw_set_valign(fa_top);
 			draw_text(ideal_width/2,48,"CREATION OF JORIS ROELOFS AND TOM JONGENS");
-		
-		}
 
+				scrDrawText("#"+string(objDisplayManager.placeRecord),ideal_height-30,100);
+				scrDrawText("X"+string(objDisplayManager.killRecord),ideal_height-30,ideal_width-100);
+		}
 

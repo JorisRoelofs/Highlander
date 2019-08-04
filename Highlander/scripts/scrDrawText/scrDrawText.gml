@@ -1,6 +1,6 @@
 
 if(argument_count > 2) var _x = argument[2];
-else var _x = 0;
+else var _x = ideal_width/2;
 
 for(var i=0;i<5;i++)
 {
@@ -19,5 +19,5 @@ for(var i=0;i<5;i++)
 	draw_set_font(fnt16);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
-	draw_text(ideal_width/2+lengthdir_x(_dis,_dir)+_x,argument[1]+lengthdir_y(_dis,_dir),argument[0]);
+	draw_text(lengthdir_x(_dis,_dir)+_x,argument[1]+lengthdir_y(_dis,_dir),argument[0]);
 }
