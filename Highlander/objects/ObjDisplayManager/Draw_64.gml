@@ -45,7 +45,7 @@ if debug_mode {
 						var _target = instance_nearest(x,y,objEnemy);
 						if(instance_exists(_target))
 						{
-							var _dis = min(0.5*ideal_height, point_distance(x-hspeed,y-vspeed,_target.x,_target.y-10));
+							var _dis = min(0.5*ideal_height, point_distance(view_xport,y-vspeed,_target.x,_target.y-10));
 							var _dir = point_direction(x-hspeed,y-vspeed,_target.x,_target.y-10);
 							pointerTargetX = 0.5*ideal_width+lengthdir_x(_dis,_dir);
 							pointerTargetY = 0.5*ideal_height+lengthdir_y(_dis,_dir);
