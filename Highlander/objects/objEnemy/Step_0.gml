@@ -89,4 +89,4 @@ else
 
 event_inherited();
 
-if(!scr_in_view() && random(1) > 0.05) invincible = true;
+if(!scr_in_view() && random(1) > 0.001) invincible = true;

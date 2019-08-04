@@ -65,12 +65,7 @@ if(ownKnife && meleeChargeTime >= 0)
 		{
 			meleeChargeTime = -1;
 			
-			
-			if (scr_in_view()) {
-				if audio_is_playing(sndBow) {audio_stop_sound(sndBow);}
-				audio_sound_pitch(sndBow, 1 + random(0.2));
-				audio_play_sound(sndBow,1,false);
-			}
+			scr_play_snd(sndBow);
 			
 			var b;
 			b = instance_create_layer(x, y, "Instances", objBullet);

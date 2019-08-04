@@ -20,8 +20,8 @@ if(selected && input)
 		with(objPersistent)
 		{
 			audioSetting = ++audioSetting mod 3;
-			audio_master_gain(!audioSetting);
-			audio_sound_gain(sndMusic,!(audioSetting - 1),0.2);
+			audio_sound_gain(sndMusic,!audioSetting,0.2);
+			audio_master_gain(!(audioSetting - 1));
 		}
 		break;
 	}

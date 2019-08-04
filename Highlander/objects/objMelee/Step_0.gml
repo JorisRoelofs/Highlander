@@ -20,11 +20,7 @@ if(image_index >= 3 && image_index <= 7)
 		
 		if(deflectTime >= 0)// && other.speed > 0)
 		{
-			if (scr_in_view()) {
-				if audio_is_playing(sndParry) {audio_stop_sound(sndParry);}
-				audio_sound_pitch(sndParry, 1 + random(0.2));
-				audio_play_sound_at(sndParry, x, y, 0, 100, 300, 1, false, 1);
-			}			
+			scr_play_snd(sndParry);
 	
 			speed *= 0.8;
 			direction += 180 *(1 + (0.5*cos(pi*random(1))));
