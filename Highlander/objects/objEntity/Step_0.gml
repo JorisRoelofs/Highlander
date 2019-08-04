@@ -2,7 +2,7 @@
 
 if(meleeChargeTime >= 0) speed *= 0.5;
 
-gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,lerp(2,8,1	));
+gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,8); //(-7*(meleeChargeTime >= 0))
 ownKnife = true;
 
 #region dash
@@ -27,7 +27,7 @@ if(dashTime >= timeTillDash) dashTime = -1;
 
 if item  == 0 { // sword
 	
-	speed *= 1.3;
+//	speed *= 1.3;
 	
 #region melee
 if(meleeStartInput) meleeChargeTime = 0;
