@@ -4,6 +4,7 @@ meleeStartInput = mouse_check_button_pressed(mb_left);
 meleeEndInput = mouse_check_button_released(mb_left);
 meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
 
+
 image_xscale = facing;
 if speed > 0 {
 	sprite_index = sprPlayerWalk;
