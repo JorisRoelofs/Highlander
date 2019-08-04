@@ -44,7 +44,7 @@ if(ownKnife && meleeChargeTime >= 0)
 		if (scr_in_view()) {
 			if audio_is_playing(sndSword) {audio_stop_sound(sndSword);}
 			audio_sound_pitch(sndSword, 1 + random(0.2));
-			audio_play_sound_at(sndSword, x, y, 0, 100, 300, 1, false, 1);
+			audio_play_sound(sndSword,1,false);
 		}
 	
 		meleeChargeTime = -1;
@@ -75,7 +75,7 @@ if(ownKnife && meleeChargeTime >= 0)
 			if (scr_in_view()) {
 				if audio_is_playing(sndBow) {audio_stop_sound(sndBow);}
 				audio_sound_pitch(sndBow, 1 + random(0.2));
-				audio_play_sound_at(sndBow, x, y, 0, 100, 300, 1, false, 1);
+				audio_play_sound(sndBow,1,false);
 			}
 			
 			var b;

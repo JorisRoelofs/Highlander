@@ -2,7 +2,7 @@
     "id": "8a877d79-03d7-49ea-97cd-13a7de54cd42",
     "modelName": "GMFont",
     "mvc": "1.1",
-    "name": "fnt161",
+    "name": "fnt8",
     "AntiAlias": 0,
     "TTFName": "",
     "ascenderOffset": 0,
