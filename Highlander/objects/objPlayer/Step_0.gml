@@ -8,8 +8,17 @@ meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
 image_xscale = facing;
 if speed > 0 {
 	sprite_index = sprPlayerWalk;
-} else sprite_index = sprPlayerIdle;
-
+	
+	footstep += 1;
+	if footstep == 15 {
+		footstep = 0;
+		scr_play_snd(sndFootstep);
+	} 
+	
+} else {
+	footstep = 0;
+	sprite_index = sprPlayerIdle;
+}
 // player facing		
 if mouse_x > x {
 	facing = 1;
