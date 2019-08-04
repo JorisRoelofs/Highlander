@@ -18,7 +18,31 @@ if debug_mode {
 			
 		{
 		var _instanceAmount = instance_number(objEntity);
-			
+					
+		draw_set_font(fnt16);
+		draw_set_color(cpurple);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_text(ideal_width/2-1,16,_instanceAmount);
+		
+		draw_set_font(fnt16);
+		draw_set_color(cpurple);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_text(ideal_width/2+1,16,_instanceAmount);
+		
+		draw_set_font(fnt16);
+		draw_set_color(cpurple);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_text(ideal_width/2,16-1,_instanceAmount);
+		
+		draw_set_font(fnt16);
+		draw_set_color(cpurple);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+		draw_text(ideal_width/2,16+1,_instanceAmount);
+		
 		draw_set_font(fnt16);
 		draw_set_color(cyellow);
 		draw_set_halign(fa_center);
