@@ -14,7 +14,7 @@ else
 
 if(image_index >= 3 && image_index <= 7)
 {
-	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 90)
+	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
 		
 		
@@ -30,7 +30,7 @@ if(image_index >= 3 && image_index <= 7)
 	}
 	
 
-	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 90)
+	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
 		
 		if owner = objPlayer {
@@ -57,7 +57,7 @@ if(image_index >= 3 && image_index <= 7)
 
 if(image_index = image_number-5)
 {
-	with(objEntity) if(!invincible && id != other.owner && point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(other.image_angle,point_direction(other.x,other.y,x,y))) < 90)
+	with(objEntity) if(!invincible && id != other.owner && point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(other.image_angle,point_direction(other.x,other.y,x,y))) < 120)
 	{
 		other.owner.dashes++;
 		instance_destroy();

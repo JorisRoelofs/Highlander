@@ -18,6 +18,7 @@ if room = rmAction {
 
 		if(point_distance(x,y,_entityNear.x,_entityNear.y) < 12)
 		{
+			scr_play_snd(sndSwordPickup);
 			_entityNear.item = 0;
 			owner = _entityNear.id;
 		}

@@ -17,14 +17,19 @@ if debug_mode {
 
 		if room = rmAction {
 			
-			if instance_exists(objPlayer) {
-				var _playerDash = objPlayer.dashes;
-				var _sep = 9;
-				var _screenCenter = ideal_width/2-((_playerDash/2)*_sep);
+				var _playerDash = objDisplayManager.kills;
+				var _sep = 12;
+				var _screenCenter = ideal_width/2-((((_playerDash div 5) + (_playerDash mod 5))/2)*_sep);
 	
-				for (var i = 0; i < _playerDash; ++i) {
-				    draw_sprite(sprDashSymbol,0,(_screenCenter)+(i*_sep),ideal_height-21);
+				for (var j = 0; j < _playerDash div 5; ++j) {
+					draw_sprite_ext(sprCrown,1,(_screenCenter)+(j*_sep),ideal_height-21,1.5,1.5,0,c_white,1);
 				}
+				if(_playerDash mod 5) for (var i = 0; i < _playerDash mod 5; ++i) {
+					draw_sprite(sprCrown,1,(_screenCenter)+((i+j)*_sep),ideal_height-21);
+				}
+
+			
+			if instance_exists(objPlayer) {
 				
 				with(objPlayer)
 				{
@@ -60,18 +65,50 @@ if debug_mode {
 					}
 				}
 
-			place = instance_number(objEntity);
-			kills = objPlayer.dashes;
+			objDisplayManager.place = instance_number(objEntity);
+			objDisplayManager.kills = objPlayer.dashes;
+			
+			if(objDisplayManager.place = 1)
+			{
+				scrDrawText("Winner winner chicken dinner",0.5*ideal_height);
+				if(mouse_check_button_pressed(mb_left)) room_goto(room);
+				
+				if(objDisplayManager.place < objDisplayManager.placeRecord)
+				{
+					scrDrawText("New record: #"+string(objDisplayManager.place),20);
+				}
+				else scrDrawText("#"+string(objDisplayManager.place),20);
+				if(objDisplayManager.kills > objDisplayManager.killRecord)
+				{
+					scrDrawText("New record: X"+string(objDisplayManager.kills),40);
+				}
+				else scrDrawText("X"+string(objDisplayManager.kills),40);
+			}
+			else
+			{
+				scrDrawText("#"+string(objDisplayManager.place),20);
+				scrDrawText("X"+string(objDisplayManager.kills),40);	
+			}
+
 			}			
 			else
 			{
 				if(mouse_check_button_pressed(mb_left)) room_goto(room);
-				scrDrawText("Ded",48);
+				scrDrawText("Ded",0.5*ideal_height);
+				
+			if(objDisplayManager.place < objDisplayManager.placeRecord)
+			{
+				scrDrawText("New record: #"+string(objDisplayManager.place),20);
+			}
+			else scrDrawText("#"+string(objDisplayManager.place),20);
+			if(objDisplayManager.kills > objDisplayManager.killRecord)
+			{
+				scrDrawText("New record: X"+string(objDisplayManager.kills),40);
+			}
+			else scrDrawText("X"+string(objDisplayManager.kills),40);
+
 			}
 			
-				scrDrawText("#"+string(place),16);
-				scrDrawText("X"+string(kills),32);
-
 		}				
 				else {
 			
