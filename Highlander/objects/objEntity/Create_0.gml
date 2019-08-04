@@ -31,4 +31,18 @@ dashTime = -1;
 timeTillDash = 0.1;
 #endregion
 
+type = irandom(1);
 
+if type = 0 {
+
+sprIdle = sprPlayerIdle;
+sprWalk = sprPlayerWalk;
+sprDashing = sprPlayerDash; 
+	
+} else if type = 1 {
+	
+sprIdle = sprPlayer2Idle;
+sprWalk = sprPlayer2Walk;
+sprDashing = sprPlayer2Dash; 
+
+}

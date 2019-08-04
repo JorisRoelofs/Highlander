@@ -83,8 +83,8 @@ if(ownKnife && meleeChargeTime >= 0)
 
 image_xscale = facing;
 
-if(dashTime >= 0) sprite_index = sprPlayerDash;
+if(dashTime >= 0) sprite_index = sprDashing;
 else if speed > 0 {
-	sprite_index = sprPlayerWalk;
-} else sprite_index = sprPlayerIdle;
+	sprite_index = sprWalk;
+} else sprite_index = sprIdle;
 
