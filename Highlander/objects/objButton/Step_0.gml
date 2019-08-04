@@ -16,12 +16,14 @@ if(selected && input)
 		case quitGame: game_end();
 		break;
 		case switchFullscreen: window_set_fullscreen(!window_get_fullscreen());
+		break;
 		case switchSound: 
 		with(objPersistent)
 		{
 			audioSetting = ++audioSetting mod 3;
-			audio_sound_gain(sndMusic,!audioSetting,0.2);
+			audio_sound_gain(musicTitle,!audioSetting,0.2);
 			audio_master_gain(!(audioSetting - 1));
+			show_debug_message(!(audioSetting - 1));
 		}
 		break;
 	}
