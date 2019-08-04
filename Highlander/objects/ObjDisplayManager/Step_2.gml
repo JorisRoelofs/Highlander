@@ -15,6 +15,15 @@ switch (camereState) {
 	break;
 	case camereState.followPlayer:
 	
+			
+		camera_set_view_size(view_camera[0],view_w,view_h);
+				
+		var length = point_distance(target.x,target.y,mouse_x,mouse_y)/2;
+		var dir = point_direction(target.x,target.y,mouse_x,mouse_y);
+		var _mousex = lengthdir_x(length,dir);
+		var _mousey = lengthdir_y(length,dir);
+		var _zoomX = lerp(0,_mousex,.2);
+		
 		var _x = clamp(target.x-view_w/2,0,room_width- view_w);
 		var _y = clamp(target.y-view_h/2,0,room_height- view_h);
 					
@@ -32,6 +41,7 @@ switch (camereState) {
 			_ran_x = 0;
 			_ran_y = 0;
 		}
+	
 	
 		camera_set_view_pos(view_camera[0],(lerp(_cur_x,_x,_spd)+_ran_x), (lerp(_cur_y,_y,_spd)+_ran_y));
 			
