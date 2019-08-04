@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "70ac61de-289c-413c-9c89-e9874e96d671",
+            "Value": {
+                "id": "d2119c45-2b02-4e9a-8da9-02aeda9f85a0",
+                "resourcePath": "sprites\\sprWaterTile\\sprWaterTile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "72b08efc-1def-44b4-8aa5-881515e40aad",
             "Value": {
                 "id": "bf469ba9-8e5a-4a75-838a-6e8f422a647f",

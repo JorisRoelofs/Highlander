@@ -1,5 +1,8 @@
 /// @description Insert description here
 
+alarm[0] = 30;
+alarm[1] = 90;
+
 for (var i = 1; i < 31; ++i) {
     var left = instance_create_layer(32,32+(i*64),"Foliage", objWater)
 		left.image_angle = 270;
