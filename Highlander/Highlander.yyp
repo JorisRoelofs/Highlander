@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "1f693d7b-9791-43d6-8040-d6a5f1ffa644",
+            "Value": {
+                "id": "fb7facab-bfab-4c0d-a5fe-8e9845c1d6cd",
+                "resourcePath": "sprites\\sprWaterCorner\\sprWaterCorner.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "222e8347-9f5c-442d-b9f6-599e2d20273d",
             "Value": {
                 "id": "46d9eb64-922e-4548-9aff-85d3a9c2df23",
