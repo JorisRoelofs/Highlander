@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "042f2883-544d-48f4-baa7-d3637d9f7c7b",
+            "Value": {
+                "id": "22f922a5-4dca-4be5-b735-ac67870b0795",
+                "resourcePath": "scripts\\display_write_all_specs\\display_write_all_specs.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "05a8357a-f5e3-4ab4-a957-81570402125f",
             "Value": {
                 "id": "24c07254-857d-474d-9e2c-f531e1eff517",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "2e6e2d7d-2f6a-4855-b381-c289607fed70",
+            "Value": {
+                "id": "92ade33a-458a-453f-aca4-31a676a47fbe",
+                "resourcePath": "scripts\\scr_in_view\\scr_in_view.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3051e83f-7045-49fa-a99b-4cab5ab1e176",
             "Value": {
                 "id": "78e18086-9a36-454e-9920-e06d6515dea6",
@@ -244,6 +260,14 @@
                 "id": "e6275f06-c16e-4878-ac2e-92532e88f34e",
                 "resourcePath": "sprites\\sprCursorLarge\\sprCursorLarge.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "426e8e40-fff6-4471-a842-e59a9586882b",
+            "Value": {
+                "id": "2ef6f30c-b50d-431d-8e37-eaf0f91f50c1",
+                "resourcePath": "scripts\\display_write_specs\\display_write_specs.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -444,6 +468,14 @@
                 "id": "6c48959d-6d75-49b8-9c4e-2b8b3b8d976f",
                 "resourcePath": "sprites\\sprPlayer2Walk\\sprPlayer2Walk.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8a877d79-03d7-49ea-97cd-13a7de54cd42",
+            "Value": {
+                "id": "abe4c5e5-68d5-4888-9c0d-52773907ccc2",
+                "resourcePath": "fonts\\fnt8\\fnt8.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -927,7 +959,10 @@
         "568004bf-0bfe-4aa4-be02-beb1beb2b240",
         "b0d038b2-b518-4afd-8773-cfee2bd8fec6",
         "72b08efc-1def-44b4-8aa5-881515e40aad",
-        "5c0b61b4-b9b2-484b-b2f1-b4dc67041e09"
+        "5c0b61b4-b9b2-484b-b2f1-b4dc67041e09",
+        "2e6e2d7d-2f6a-4855-b381-c289607fed70",
+        "426e8e40-fff6-4471-a842-e59a9586882b",
+        "042f2883-544d-48f4-baa7-d3637d9f7c7b"
     ],
     "tutorial": ""
 }
