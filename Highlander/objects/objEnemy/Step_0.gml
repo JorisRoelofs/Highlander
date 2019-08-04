@@ -3,20 +3,22 @@
 
 speed = 0;
 
+var _inst, _xx;
+_xx = x;
+x -= 100000;
+_inst = instance_nearest(_xx, y, objEntity);
+x += 100000;
+
 if(newTargetTime >= 0 || !instance_exists(target))
 {
 	newTargetTime = -random(1);
-	var _inst, _xx;
-	_xx = x;
-	x -= 100000;
-	_inst = instance_nearest(_xx, y, objEntity);
-	x += 100000;
 	if _inst != id {
 		target = _inst;
 	}
 	if(instance_exists(objGun.owner) && random(min((300-point_distance(x,y,objGun.owner.x,objGun.owner.x)/300),1) > 0.5)) target = objGun.owner;
 }
-newTargetTime += 1/room_speed;
+
+newTargetTime += (1 + min((300-point_distance(x,y,target.x,target.y)/300) + (target != _inst),1))/room_speed;
 
 //target = objPlayer;
 
