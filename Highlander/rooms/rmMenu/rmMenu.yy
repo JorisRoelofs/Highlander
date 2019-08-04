@@ -15,8 +15,8 @@
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Entities",
-            "id": "d7642e02-0560-4f5b-a2ea-06df5c2fbdc5",
+            "name": "Menu",
+            "id": "63fa15e8-8119-4408-b6f2-8c05dbb94034",
             "depth": 0,
             "grid_x": 32,
             "grid_y": 32,
@@ -68,13 +68,39 @@
             "visible": true
         },
         {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Entities",
+            "id": "d7642e02-0560-4f5b-a2ea-06df5c2fbdc5",
+            "depth": 200,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Background",
             "id": "9c9378e3-594c-4e9c-8b46-bf9863bf5e21",
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4287251062 },
-            "depth": 200,
+            "depth": 300,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,

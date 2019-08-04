@@ -117,6 +117,14 @@ if debug_mode {
 		draw_set_valign(fa_top);
 		draw_text(ideal_width/2,16,_instanceAmount);
 		
+		} else {
+			
+			draw_set_font(fnt8);
+			draw_set_color(cyellow);
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_top);
+			draw_text(ideal_width/2,48,"CREATION OF JORIS ROELOFS AND TOM JONGENS");
+		
 		}
 
 
