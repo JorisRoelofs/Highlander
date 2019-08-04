@@ -11,3 +11,5 @@ for(var i = 0; i < iMax; i++)
 	}
 }
 
+alarm[0] = 10;
+
