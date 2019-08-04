@@ -18,8 +18,6 @@ if mouse_y < y {
 	back = 1
 } else back = -1
 
-gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,lerp(2,8,1	));
-
 #region walk
 speed = 0;
 

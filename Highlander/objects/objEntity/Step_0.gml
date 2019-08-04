@@ -1,4 +1,9 @@
 /// @description Insert description here
+
+if(meleeChargeTime >= 0) speed *= 0.5;
+
+gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,lerp(2,8,1	));
+
 #region dash
 if(dashes && dashInput)
 {

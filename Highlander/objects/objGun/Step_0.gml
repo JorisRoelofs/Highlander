@@ -16,7 +16,7 @@ else
 
 	if(point_distance(x,y,_entityNear.x,_entityNear.y) < 12)
 	{
-		_entityNear.item = 1;
+		_entityNear.item = 0;
 		owner = _entityNear.id;
 	}
 

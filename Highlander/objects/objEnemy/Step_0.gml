@@ -75,17 +75,24 @@ switch (state) {
 		if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance {
 			
 			var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
-			var _dir = point_direction(x,y,target.x,target.y) + 90;
-			var _targetX = target.x + lengthdir_x(_dis,_dir);
-			var _targetY = target.y + lengthdir_y(_dis,_dir);
-			if (point_distance(x, y, target.x, target.y) > 90) move_towards_point(_targetX, _targetY, maxSpeed);
+			if(randomDirectionTime >= 0)
+			{
+				walkDirection = random(360);
+				randomDirectionTime = random(-1) - 0.4;
+			}
+			else randomDirectionTime += 1/room_speed;
+			var _targetX = x + lengthdir_x(_dis,walkDirection);
+			var _targetY = y + lengthdir_y(_dis,walkDirection);
+			
+			move_towards_point(_targetX, _targetY, maxSpeed)
+			if (point_distance(x, y, target.x, target.y) > 120);
 			else
 			{
 			
 				if(!irandom(10)) meleeStartInput = true;
 				else meleeStartInput = false;
 				
-				if(!irandom(10)) meleeEndInput = true;
+				if(!irandom(60)) meleeEndInput = true;
 				else meleeEndInput = false;
 				
 				meleeAngleInput = point_direction(x,y,target.x,target.y);

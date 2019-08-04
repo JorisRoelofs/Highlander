@@ -14,7 +14,7 @@ else
 	direction += 20*sign(angle_difference(direction,90))/startSpeed;
 }
 
-if(instance_number(objBullet) > 100 && number = smallestNumber)
+if(instance_number(objBullet) > 300 && number >= smallestNumber)
 {
 	with(objBullet) smallestNumber++;
 	instance_destroy();
