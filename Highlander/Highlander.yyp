@@ -351,10 +351,26 @@
             }
         },
         {
+            "Key": "844553d0-8b87-47a9-aa16-3b1d2d37179d",
+            "Value": {
+                "id": "9dd2a315-a01a-43c9-bc9e-87136afabc0f",
+                "resourcePath": "sprites\\sprTree\\sprTree.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "84f54e47-0056-4951-afee-b47fa4fb6ff0",
             "Value": {
                 "id": "a7869d79-76c1-4a39-9276-43d2340150ea",
                 "resourcePath": "objects\\objButton\\objButton.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8687f033-da2a-479f-ba1e-00e523e7ef46",
+            "Value": {
+                "id": "6ab1d036-94a7-419f-bca2-c30419973b9c",
+                "resourcePath": "objects\\objTree\\objTree.yy",
                 "resourceType": "GMObject"
             }
         },
