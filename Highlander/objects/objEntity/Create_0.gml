@@ -10,7 +10,7 @@ dashSpeed = 6*maxSpeed;
 meleeCharge = 0;
 meleeId = noone;
 invincible = false;
-item = 1; // 0 = sword, 1 = bow
+item = 0; // 0 = sword, 1 = bow
 dashes = 1;
 meleeStartInput = false;
 meleeEndInput = false;

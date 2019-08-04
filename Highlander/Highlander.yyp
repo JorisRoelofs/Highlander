@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "906e141b-5f52-4d6d-a1ac-3e69849861b5",
+            "Value": {
+                "id": "c5ff5059-f081-4162-a111-dce0ad73c405",
+                "resourcePath": "sprites\\sprMeleeDebug\\sprMeleeDebug.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "931fb300-f439-42a4-b5bf-ac97ea5c9abd",
             "Value": {
                 "id": "452c5a2d-eaac-4abd-9648-f35a8c5c58b3",
