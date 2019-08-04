@@ -2,7 +2,7 @@
     "id": "2a3e9ae9-7383-4505-9f89-7c7ff330718d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objBullet1",
+    "name": "objBulletDead",
     "eventList": [
         {
             "id": "a3078efa-732b-4841-8d75-bfff98e15073",
