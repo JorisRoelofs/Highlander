@@ -14,6 +14,8 @@ if debug_mode {
 }
 
 
+		if room = rmAction {
+			
 		{
 		var _instanceAmount = instance_number(objEntity);
 			
@@ -24,6 +26,8 @@ if debug_mode {
 		draw_text(ideal_width/2,16,_instanceAmount);
 		
 		}
+		
+
 		
 		if instance_exists(objPlayer) {
 			var _playerDash = objPlayer.dashes;
@@ -45,6 +49,8 @@ if debug_mode {
 		
 			
 			
+		}
+		
 		}
 
 
