@@ -6,3 +6,5 @@ y = room_height/2+96;
 
 pointerTargetX = 0.5*ideal_width;
 pointerTargetY = 0.5*ideal_height;
+
+dashes = 1000;

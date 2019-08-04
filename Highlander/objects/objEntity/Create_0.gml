@@ -4,7 +4,6 @@ scr_BasicCollision_init(1);
 #region variables
 #region constants
 maxSpeed = 2;
-bowSpeed = 1.5;
 dashSpeed = 6*maxSpeed;
 #endregion
 #region temps
@@ -12,7 +11,7 @@ meleeCharge = 0;
 meleeId = noone;
 invincible = false;
 item = 1; // 0 = sword, 1 = bow
-dashes = 3;
+dashes = 1;
 meleeStartInput = false;
 meleeEndInput = false;
 meleeAngleInput = 0;

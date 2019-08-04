@@ -18,6 +18,8 @@ if(newTargetTime >= 0 || !instance_exists(target))
 	if(instance_exists(objGun.owner) && random(min((300-point_distance(x,y,objGun.owner.x,objGun.owner.x)/300),1) > 0.5)) target = objGun.owner;
 }
 
+if(!instance_exists(target)) target = noone;
+
 newTargetTime += (1 + min((300-point_distance(x,y,target.x,target.y)/300) + (target != _inst),1))/room_speed;
 
 //target = objPlayer;
@@ -51,6 +53,9 @@ if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance 
 		}
 		
 		walkDirection += angle_difference(point_direction(x,y,objGun.x,objGun.y),walkDirection) * min(point_distance(x,y,objGun.x,objGun.y) < 300,1) * (0.3 + (0.7*(!instance_exists(objGun.owner))));
+		
+		var _waterNear = instance_nearest(x,y,objWater);
+		walkDirection += point_direction(x,y,_waterNear.x,_waterNear.y) * clamp((300 - point_distance(x,y,_waterNear.x,_waterNear.y))/300,0,1);
 	}
 	else randomDirectionTime += 1/room_speed;
 			
@@ -79,14 +84,17 @@ if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance 
 		else meleeEndInput = false;
 				
 		meleeAngleInput = point_direction(x,y,target.x,target.y);
-			
 	}
 }
 else
 {
-	move_towards_point(objGun.x, objGun.y, maxSpeed);
+	if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y, maxSpeed);
+	else move_towards_point(objGun.x, objGun.y, maxSpeed);
 }
 
 event_inherited();
 
 if(!scr_in_view() && random(1) > 0.001) invincible = true;
+
+if(!invincible && random(1) > 0.999) dashInput = true;
+else dashInput = false;
