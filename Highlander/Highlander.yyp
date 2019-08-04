@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0425d773-45bb-491a-a534-eb32e19f5b6f",
+            "Value": {
+                "id": "8edc8533-ef88-466c-a484-9bef3beb9264",
+                "resourcePath": "sounds\\sndSwordSwoosh\\sndSwordSwoosh.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "042f2883-544d-48f4-baa7-d3637d9f7c7b",
             "Value": {
                 "id": "22f922a5-4dca-4be5-b735-ac67870b0795",
