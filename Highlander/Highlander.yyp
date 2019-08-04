@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0a54fa4f-9a8f-494d-a561-03946ea18c3e",
+            "Value": {
+                "id": "bbfbfbc7-fe58-49fb-bcb3-00b6978debf1",
+                "resourcePath": "sprites\\sprPlayer2Idle\\sprPlayer2Idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0b1a8fc8-01c4-44d2-aa15-e1b8db98b95d",
             "Value": {
                 "id": "74cbfbbe-980a-4af4-8190-88c6170b5b36",
@@ -348,6 +356,14 @@
                 "id": "a7869d79-76c1-4a39-9276-43d2340150ea",
                 "resourcePath": "objects\\objButton\\objButton.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8a5ab3d2-7aef-4ee8-a9b6-d9b7d2d0c3aa",
+            "Value": {
+                "id": "6c48959d-6d75-49b8-9c4e-2b8b3b8d976f",
+                "resourcePath": "sprites\\sprPlayer2Walk\\sprPlayer2Walk.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -692,6 +708,14 @@
                 "id": "26b2f007-dc67-4c8a-8293-ad66b02df7a7",
                 "resourcePath": "views\\ef248399-1fbc-4196-8498-490916c72b88.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ef819e09-594a-4525-80e8-885d8ed4e6e9",
+            "Value": {
+                "id": "848984f9-07a5-4b95-a51b-26080dde0961",
+                "resourcePath": "sprites\\sprPlayer2Dash\\sprPlayer2Dash.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
