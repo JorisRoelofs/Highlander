@@ -1,5 +1,5 @@
 /// @description Insert description here
-if(speed > 0 && other.id != owner)
+if(speed > 0 && other.id != owner && !other.invincible)
 {
 	var _hit = choose(sndDamage0,sndDamage1,sndDamage2);
 	

@@ -41,12 +41,6 @@ if(ownKnife && meleeChargeTime >= 0)
 	if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
 	{
 			
-		if (scr_in_view()) {
-			if audio_is_playing(sndSword) {audio_stop_sound(sndSword);}
-			audio_sound_pitch(sndSword, 1 + random(0.2));
-			audio_play_sound(sndSword,1,false);
-		}
-	
 		meleeChargeTime = -1;
 		meleeId = instance_create_depth(x,y,0,objMelee);
 		meleeId.charge = meleeCharge;

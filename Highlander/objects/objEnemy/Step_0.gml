@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-
+invincible = false;
 speed = 0;
 
 var _inst, _xx;
@@ -88,3 +88,5 @@ else
 }
 
 event_inherited();
+
+if(!scr_in_view() && random(1) > 0.05) invincible = true;
