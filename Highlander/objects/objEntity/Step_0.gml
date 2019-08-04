@@ -3,6 +3,7 @@
 if(meleeChargeTime >= 0) speed *= 0.5;
 
 gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,lerp(2,8,1	));
+ownKnife = true;
 
 #region dash
 if(dashes && dashInput)
@@ -26,6 +27,8 @@ if(dashTime >= timeTillDash) dashTime = -1;
 
 if item  == 0 { // sword
 	
+	speed *= 1.3;
+	
 #region melee
 if(meleeStartInput) meleeChargeTime = 0;
 if(ownKnife && meleeChargeTime >= 0)
@@ -45,7 +48,7 @@ if(ownKnife && meleeChargeTime >= 0)
 		meleeId = instance_create_depth(x,y,0,objMelee);
 		meleeId.charge = meleeCharge;
 		meleeId.owner = id;
-		meleeId.image_angle = meleeAngleInput;
+		meleeId.image_angle = gunDirection;
 	}
 }
 #endregion
@@ -53,7 +56,6 @@ if(ownKnife && meleeChargeTime >= 0)
 	
 		
 	#region bow
-	ownKnife = true;
 	if(meleeStartInput) meleeChargeTime = 0;
 	if(meleeChargeTime >= 0)
 	{

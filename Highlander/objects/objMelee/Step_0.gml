@@ -14,7 +14,16 @@ else
 
 if(image_index >= 3 && image_index <= 7)
 {
-	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 45) instance_destroy();
+	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 45)
+	{
+		if(deflectTime >= 0)// && other.speed > 0)
+		{
+			speed *= 0.8;
+			direction += 180 *(1 + (0.5*cos(pi*random(1))));
+			deflectTime = -0.2;	
+		}
+	}
+	
 
 	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 45)
 	{

@@ -1,19 +1,23 @@
 /// @description Insert description here
 
 
-//speed = 0;
+speed = 0;
 
-var _inst, _xx;
-_xx = x;
-x -= 10000;
-_inst = instance_nearest(_xx, y, objEntity);
-if _inst != id {
-	target = _inst;
+if(newTargetTime >= 0 || !instance_exists(target))
+{
+	newTargetTime = -random(1);
+	var _inst, _xx;
+	_xx = x;
+	x -= 100000;
+	_inst = instance_nearest(_xx, y, objEntity);
+	x += 100000;
+	if _inst != id {
+		target = _inst;
+	}
 }
+newTargetTime += 1/room_speed;
 
 //target = objPlayer;
-
-x += 10000;
 
 if instance_number(objEntity) < 20 {
 	distance = 512;
@@ -34,7 +38,7 @@ switch (state) {
 					
 		if irandom(1) = 1 {		
 			
-			if point_distance(x,y,_inst.x,_inst.y) < distance {
+			if point_distance(x,y,target.x,target.y) < distance {
 				state = enemyState.knifeHunt;
 			} else state = enemyState.gunChase;
 									
@@ -45,30 +49,19 @@ switch (state) {
 	break;
 	case enemyState.gunChase:
 	
-		if objGun.owner = noone  {
-	
 			if check > 0 {
 				check--;
 			} else {
 					
-				if point_distance(x,y,_inst.x,_inst.y) < distance {
-					state = enemyState.knifeHunt;				
+				if point_distance(x,y,target.x,target.y) < distance {
+					state = enemyState.knifeHunt;
 				}
 			
-				check = 60;
+				check = 60 * (1 + objGun.owner);
 			}
 		
-			if point_distance(x,y,objGun.x,objGun.y) > 64 {
-				move_towards_point(objGun.x, objGun.y, maxSpeed);
-			}
+			move_towards_point(objGun.x, objGun.y, maxSpeed);
 		
-		} 
-		else if !instance_exists(objGun.owner) {
-			if point_distance(x,y,objGun.x,objGun.y) < 128 {
-				move_towards_point(objGun.x, objGun.y, maxSpeed);
-			}
-		}
-		else state = enemyState.knifeHunt;
 	
 	break;
 	case enemyState.knifeHunt:
@@ -87,30 +80,36 @@ switch (state) {
 			if(randomDirectionTime >= 0)
 			{
 				walkDirection = random(360);
-				randomDirectionTime = random(-1) - 0.4;
+				randomDirectionTime = random(-1) - 0.8;
+				
+				if(!item)
+				{
+					walkDirection = 0.5*(walkDirection + point_direction(x,y,target.x,target.y));
+				}
 			}
 			else randomDirectionTime += 1/room_speed;
+			
 			var _targetX = x + lengthdir_x(_dis,walkDirection);
 			var _targetY = y + lengthdir_y(_dis,walkDirection);
 			
-			move_towards_point(_targetX, _targetY, maxSpeed)
-			if (point_distance(x, y, target.x, target.y) > 120);
-			else
+			move_towards_point(_targetX, _targetY, maxSpeed);
+			
+			if (point_distance(x, y, target.x, target.y) < 120)
 			{
 				meleeStartTime += 1/room_speed;
 				meleeEndTime += 1/room_speed;
 				
 				if(meleeStartTime >= 0 && meleeChargeTime = -1)
 				{
-					meleeStartInput = true;
-					meleeStartTime += random(-1);
+					meleeChargeTime = 0;
+					meleeStartTime += random(-1) + 0.2*!item;
 				}
 				else meleeStartInput = false;
 				
 				if(meleeEndTime >= 0)
 				{
 					meleeEndInput = true;
-					meleeEndTime += random(-1) - 0.5;
+					meleeEndTime += random(-1) - 0.5 + 0.2*!item;
 				}
 				else meleeEndInput = false;
 				
