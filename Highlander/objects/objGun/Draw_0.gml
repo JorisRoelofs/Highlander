@@ -6,3 +6,4 @@ if(room = rmAction)
 	draw_self();
 	x += 19;
 }
+else draw_self();

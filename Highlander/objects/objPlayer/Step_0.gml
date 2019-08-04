@@ -31,10 +31,10 @@ if mouse_y < y {
 #region walk
 speed = 0;
 
-if(keyboard_check(vk_right) || keyboard_check(ord("D"))) hspeed = maxSpeed;
-if(keyboard_check(vk_left) || keyboard_check(ord("A"))) hspeed = -maxSpeed;
-if(keyboard_check(vk_down) || keyboard_check(ord("S"))) vspeed = maxSpeed;
-if(keyboard_check(vk_up) || keyboard_check(ord("W"))) vspeed = -maxSpeed;
+if(keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) hspeed = maxSpeed;
+if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) hspeed = -maxSpeed;
+if(keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) vspeed = maxSpeed;
+if(keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) vspeed = -maxSpeed;
 
 speed = clamp(speed,0,maxSpeed);
 #endregion

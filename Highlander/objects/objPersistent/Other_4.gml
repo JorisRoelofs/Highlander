@@ -1,8 +1,10 @@
 /// @description Insert description here
-audio_stop_all();
+audio_stop_sound(musicTitle);
 {
-	if(room = rmMenu) audio_play_sound(musicTitle,1,true);
-	else audio_play_sound(musicBattle,1,true);
+	if(room = rmMenu)
+	{
+		if(!audio_is_playing(musicTitle)) audio_play_sound(musicTitle,1,true);
+	} else if(!audio_is_playing(musicBattle)) audio_play_sound(musicBattle,1,true);
 }
 
 if(audioSetting != 0)
