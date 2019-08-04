@@ -10,7 +10,9 @@ if time < 10 {
 	alarm[0] = 8;
 
 } else {
+	time++;
 	visible = true;	
+	var _inst = instance_place(x,y,objEntity);
+	instance_destroy(_inst);
 	collisionMass = 100;
-	
 }

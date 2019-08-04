@@ -1,10 +1,14 @@
 /// @description Insert description here
+if instance_exists(objPlayer) {
+		x = objPlayer.x;
+		y = objPlayer.y;
+	}
+	
+scr_play_snd(sndWaterRush);
+
 with (objWater) {
-
 	sprite_index = sprWaterTile;
-	//instance_destroy();
 }
-
 
 for (var i = 1; i < 29; ++i) {
     var left = instance_create_layer(96,96+(i*64),"Water", objWater)
