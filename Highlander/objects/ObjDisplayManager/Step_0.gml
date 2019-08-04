@@ -6,7 +6,7 @@ if(keyboard_check_pressed(vk_escape)){
 
 
 if keyboard_check_pressed(ord("R")) {
-	game_restart();
+	room_restart();
 }
 
 /////Zoom camera
