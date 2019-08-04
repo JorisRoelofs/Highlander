@@ -8,8 +8,6 @@ alarm[4] = room_speed * 50;
 alarm[5] = room_speed * 60;
 alarm[6] = room_speed * 70;
 
-base = 1;
-
 for (var i = 1; i < 31; ++i) {
     var left = instance_create_layer(32,32+(i*64),"Water", objWater)
 		left.image_angle = 270;
@@ -23,7 +21,6 @@ for (var i = 1; i < 31; ++i) {
 	var up = instance_create_layer(32+(i*64),32,"Water", objWater);
 		up.image_angle = 180;
 }
-
 
 	var leftTop = instance_create_layer(32,32,"Water",objWater);
 		leftTop.sprite_index = sprWaterCorner;
