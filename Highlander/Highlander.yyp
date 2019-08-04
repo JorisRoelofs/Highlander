@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "601ff2c5-6b13-402e-99a9-60362948f5b1",
+            "Value": {
+                "id": "bff3de24-98a6-40b2-9f46-bd96a98ed658",
+                "resourcePath": "sounds\\musicBattle\\musicBattle.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "6c7d2526-e6e5-47e8-b7ad-ebd212382c04",
             "Value": {
                 "id": "c2a9b3b8-ab59-436b-8e3c-93469563544d",
