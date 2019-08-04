@@ -9,7 +9,7 @@ if back = -1 {
     draw_self();
 }
 
-if(dashTime >= 0) draw_sprite(sprPlayerDash,0,x+lengthdir_x(-dashSpeed*(dashTime-timeTillDash),direction),y+lengthdir_y(-dashSpeed*(dashTime-timeTillDash),direction));
+if(dashTime >= 0) draw_sprite(sprPlayerDash,0,x+lengthdir_x(dashSpeed*(timeTillDash-dashTime)*room_speed,direction),y+lengthdir_y(dashSpeed*(timeTillDash-dashTime)*room_speed,direction));
 
 if(meleeChargeTime >= 0)
 {
