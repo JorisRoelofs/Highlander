@@ -59,74 +59,21 @@ if debug_mode {
 						draw_sprite_ext(sprCrown,!item,pointerTargetX,pointerTargetY,crownScale,crownScale,0,c_white,1);
 					}
 				}
-		
-			} else {
-			
-				draw_set_font(fnt16);
-				draw_set_color(cpurple);
-				draw_set_halign(fa_center);
-				draw_set_valign(fa_top);
-				draw_text(ideal_width/2-1,ideal_height/2-64,"PLAYER DED");
-				
-				draw_set_font(fnt16);
-				draw_set_color(cpurple);
-				draw_set_halign(fa_center);
-				draw_set_valign(fa_top);
-				draw_text(ideal_width/2+1,ideal_height/2-64,"PLAYER DED");
-				
-				draw_set_font(fnt16);
-				draw_set_color(cpurple);
-				draw_set_halign(fa_center);
-				draw_set_valign(fa_top);
-				draw_text(ideal_width/2,ideal_height/2-64-1,"PLAYER DED");
-				
-				draw_set_font(fnt16);
-				draw_set_color(cpurple);
-				draw_set_halign(fa_center);
-				draw_set_valign(fa_top);
-				draw_text(ideal_width/2,ideal_height/2-64+1,"PLAYER DED");
-			
-				draw_set_font(fnt16);
-				draw_set_color(cyellow);
-				draw_set_halign(fa_center);
-				draw_set_valign(fa_top);
-				draw_text(ideal_width/2,ideal_height/2-64,"PLAYER DED");
-		
+
+			place = instance_number(objEntity);
+			kills = objPlayer.dashes;
+			}			
+			else
+			{
+				if(mouse_check_button_pressed(mb_left)) room_goto(room);
+				scrDrawText("Ded",48);
 			}
 			
-			var _instanceAmount = instance_number(objEntity);
-					
-		draw_set_font(fnt16);
-		draw_set_color(cpurple);
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		draw_text(ideal_width/2-1,16,_instanceAmount);
-		
-		draw_set_font(fnt16);
-		draw_set_color(cpurple);
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		draw_text(ideal_width/2+1,16,_instanceAmount);
-		
-		draw_set_font(fnt16);
-		draw_set_color(cpurple);
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		draw_text(ideal_width/2,16-1,_instanceAmount);
-		
-		draw_set_font(fnt16);
-		draw_set_color(cpurple);
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		draw_text(ideal_width/2,16+1,_instanceAmount);
-		
-		draw_set_font(fnt16);
-		draw_set_color(cyellow);
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
-		draw_text(ideal_width/2,16,_instanceAmount);
-		
-		} else {
+				scrDrawText("#"+string(place),16);
+				scrDrawText("X"+string(kills),32);
+
+		}				
+				else {
 			
 			draw_set_font(fnt8);
 			draw_set_color(cyellow);
