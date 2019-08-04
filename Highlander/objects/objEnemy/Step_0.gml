@@ -13,6 +13,12 @@ if _inst != id {
 	
 x += 10000;
 
+if instance_number(objEntity) < 20 {
+	distance = 512;
+} else if instance_number(objEntity) < 40 {
+	distance = 384;
+} else distance = 256;
+
 
 switch (state) {
 	case enemyState.spawn:
@@ -26,7 +32,7 @@ switch (state) {
 					
 		if irandom(1) = 1 {		
 			
-			if point_distance(x,y,_inst.x,_inst.y) < 256 {
+			if point_distance(x,y,_inst.x,_inst.y) < distance {
 				state = enemyState.knifeHunt;
 			} else state = enemyState.gunChase;
 									
@@ -43,7 +49,7 @@ switch (state) {
 				check--;
 			} else {
 					
-				if point_distance(x,y,_inst.x,_inst.y) < 256 {
+				if point_distance(x,y,_inst.x,_inst.y) < distance {
 					state = enemyState.knifeHunt;				
 				}
 			
@@ -66,7 +72,7 @@ switch (state) {
 	case enemyState.knifeHunt:
 		
 		//follow target
-		if instance_exists(target) {
+		if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance {
 			
 			var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
 			var _dir = point_direction(x,y,target.x,target.y) + 90;
@@ -85,20 +91,14 @@ switch (state) {
 				meleeAngleInput = point_direction(x,y,target.x,target.y);
 			
 			}
-  
-			if (point_distance(x, y, target.x, target.y) > 256)  {
-				state = enemyState.idle;
-			} 
-			
+ 			
 		} else state = enemyState.idle;
 	
 	break;
 	case enemyState.shooter:
 	
 		//follow target
-		if instance_exists(target) {
-			
-			if (point_distance(x, y, target.x, target.y) < 256)  {
+		if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance {
 			
 				var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
 				var _dir = point_direction(x,y,target.x,target.y) + 90;
@@ -119,9 +119,7 @@ switch (state) {
 				}
   
 			} else state = enemyState.idle;
-						
-		} else state = enemyState.idle;
-	
+							
 	break;
 	
 	case enemyState.death:
