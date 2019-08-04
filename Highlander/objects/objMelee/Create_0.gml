@@ -8,3 +8,5 @@ owner = noone;
 #endregion
 #endregion
 alarm[0]=1;
+
+scr_play_snd(sndSwordSwoosh);

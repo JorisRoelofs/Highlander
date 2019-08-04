@@ -13,3 +13,4 @@ pointerTargetY = 0.5*ideal_height;
 mode = 0;
 crownScale = 1;
 rate = 0.0015;
+footstep = 0;
