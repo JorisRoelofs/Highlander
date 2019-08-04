@@ -20,7 +20,7 @@ switch (camereState) {
 					
 		var _cur_x = camera_get_view_x(view_camera[0]);
 		var _cur_y = camera_get_view_y(view_camera[0]);
-					
+							
 		var _spd = .1;
 	
 		var _ran_x,_ran_y;
