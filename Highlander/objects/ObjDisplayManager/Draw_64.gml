@@ -26,10 +26,12 @@ if debug_mode {
 				for (var j = 0; j < _playerDash div 5; ++j) {
 					draw_sprite_ext(sprCrown,1,(_screenCenter)+(j*_sep),ideal_height-21,1.5,1.5,0,c_white,1);
 				}
-				if(_playerDash mod 5) for (var i = 0; i < _playerDash mod 5; ++i) {
+				for (var i = 0; i < _playerDash mod 5; ++i) {
 					draw_sprite(sprCrown,1,(_screenCenter)+((i+j)*_sep),ideal_height-21);
 				}
-
+//				draw_set_halign(fa_right);
+//				scrDrawText("New record: ",ideal_height-21,_screenCenter+((i+j)*_sep));
+//				draw_set_halign(fa_center);
 			
 			if instance_exists(objPlayer) {
 				
