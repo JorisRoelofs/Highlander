@@ -2,7 +2,7 @@
     "id": "d5702194-0e71-4a12-b060-0221860b12b4",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprBtn",
+    "name": "sprBtn0",
     "For3D": false,
     "HTile": false,
     "VTile": false,

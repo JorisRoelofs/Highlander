@@ -1,6 +1,8 @@
 /// @description Insert description here
 buttonEffect = instance_number(objButton) - 1;
 
+sprite_index += buttonEffect;
+
 var i = 0;
 startGame = i; i++;
 switchFullscreen = i; i++;

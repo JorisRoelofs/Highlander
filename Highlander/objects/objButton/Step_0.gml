@@ -3,6 +3,10 @@ if(instance_exists(objCursor)) selected = position_meeting(objCursor.x,objCursor
 input = mouse_check_button_pressed(mb_left);
 inputHeld = mouse_check_button(mb_left);
 
+if selected {
+	depth = -100;
+} else depth = buttonEffect;
+
 if(selected && input)
 {
 	switch(buttonEffect)
@@ -23,7 +27,7 @@ if(selected && input)
 	}
 }
 
-image_index = (3*buttonEffect) + (selected * (1 + inputHeld));
+image_index = (2*objPersistent.audioSetting) + selected;
 
 targetX = startX + selected*5*sin(0.5*pi*t);
 targetY = startY + selected*5*sin(0.8*pi*t + 0.2);

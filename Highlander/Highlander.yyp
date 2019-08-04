@@ -650,7 +650,7 @@
             "Key": "d5702194-0e71-4a12-b060-0221860b12b4",
             "Value": {
                 "id": "ba11e48b-6ea9-485c-888f-f83d43ae0c58",
-                "resourcePath": "sprites\\sprBtn\\sprBtn.yy",
+                "resourcePath": "sprites\\sprBtn0\\sprBtn0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -660,6 +660,14 @@
                 "id": "f010d541-9786-4efb-836e-a89768e6b6e2",
                 "resourcePath": "views\\d5b2cca7-7947-4e68-890d-eb9a63b6838c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d8ca3ad6-d371-4539-b66f-eca51e04950d",
+            "Value": {
+                "id": "dc2da545-6fc8-4c8c-8727-40d3b5c83998",
+                "resourcePath": "objects\\objActor\\objActor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
