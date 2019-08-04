@@ -30,7 +30,7 @@ if room = rmAction {
 
 } else {
 	
-	x = ideal_width/2-19;
+	x = ideal_width/2-2;
 	
 	y += 0.2*sin(0.75*pi*t);
 	t += 1/room_speed;

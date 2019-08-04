@@ -4,13 +4,15 @@ display_set_gui_size(ideal_width,ideal_height);
 
 
 if debug_mode {
-	{
-	draw_set_font(fnt8);
-	display_write_all_specs(32,32);
-	draw_text(display_get_gui_width()/2,display_get_gui_height()-10,fps);
+	//{
+	//draw_set_font(fnt8);
+	//display_write_all_specs(32,32);
+	//draw_text(display_get_gui_width()/2,display_get_gui_height()-10,fps);
 	
-	//draw_text(32,32,instance_number(objDrone));
-	}
+	////draw_text(32,32,instance_number(objDrone));
+	//}
+	
+	draw_rectangle_color(1,1,ideal_width-2,ideal_height-2,cyellow,cyellow,cyellow,cyellow,true);
 }
 
 
