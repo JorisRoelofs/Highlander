@@ -26,7 +26,7 @@ if keyboard_check_pressed(ord("R")) {
 //	alarm[0]=1;
 //  }
   
-}
+//}
 
 
 if(keyboard_check_pressed(vk_f4)) {
