@@ -72,7 +72,7 @@ if(ownKnife && meleeChargeTime >= 0)
 			var b;
 			b = instance_create_layer(x, y, "Instances", objBullet);
 			b.direction = gunDirection;
-			b.speed = 20*meleeCharge;
+			b.speed = 10*meleeCharge;
 //			b.hspeed += hspeed;
 //			b.vspeed += vspeed;
 			b.image_angle = b.direction;

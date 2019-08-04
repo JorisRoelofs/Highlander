@@ -10,7 +10,9 @@ _inst = instance_nearest(_xx, y, objEntity);
 if _inst != id {
 	target = _inst;
 }
-	
+
+//target = objPlayer;
+
 x += 10000;
 
 if instance_number(objEntity) < 20 {
@@ -75,6 +77,13 @@ switch (state) {
 		if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance {
 			
 			var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
+			
+			if(target != objPlayer)
+			{
+				if(point_distance(x,y,target.x,target.y) < 80) randomDirectionTime *= 0.5;
+				else if(point_distance(x,y,target.x,target.y) < 140) randomDirectionTime *= 0.8;
+			}
+			
 			if(randomDirectionTime >= 0)
 			{
 				walkDirection = random(360);
@@ -88,11 +97,21 @@ switch (state) {
 			if (point_distance(x, y, target.x, target.y) > 120);
 			else
 			{
-			
-				if(!irandom(10)) meleeStartInput = true;
+				meleeStartTime += 1/room_speed;
+				meleeEndTime += 1/room_speed;
+				
+				if(meleeStartTime >= 0 && meleeChargeTime = -1)
+				{
+					meleeStartInput = true;
+					meleeStartTime += random(-1);
+				}
 				else meleeStartInput = false;
 				
-				if(!irandom(60)) meleeEndInput = true;
+				if(meleeEndTime >= 0)
+				{
+					meleeEndInput = true;
+					meleeEndTime += random(-1) - 0.5;
+				}
 				else meleeEndInput = false;
 				
 				meleeAngleInput = point_direction(x,y,target.x,target.y);
