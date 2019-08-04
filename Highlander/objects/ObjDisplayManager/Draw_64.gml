@@ -52,6 +52,29 @@ if debug_mode {
 		
 			} else {
 			
+				draw_set_font(fnt16);
+				draw_set_color(cpurple);
+				draw_set_halign(fa_center);
+				draw_set_valign(fa_top);
+				draw_text(ideal_width/2-1,ideal_height/2-64,"PLAYER DED");
+				
+				draw_set_font(fnt16);
+				draw_set_color(cpurple);
+				draw_set_halign(fa_center);
+				draw_set_valign(fa_top);
+				draw_text(ideal_width/2+1,ideal_height/2-64,"PLAYER DED");
+				
+				draw_set_font(fnt16);
+				draw_set_color(cpurple);
+				draw_set_halign(fa_center);
+				draw_set_valign(fa_top);
+				draw_text(ideal_width/2,ideal_height/2-64-1,"PLAYER DED");
+				
+				draw_set_font(fnt16);
+				draw_set_color(cpurple);
+				draw_set_halign(fa_center);
+				draw_set_valign(fa_top);
+				draw_text(ideal_width/2,ideal_height/2-64+1,"PLAYER DED");
 			
 				draw_set_font(fnt16);
 				draw_set_color(cyellow);
