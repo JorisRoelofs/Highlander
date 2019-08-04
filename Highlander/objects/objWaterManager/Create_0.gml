@@ -2,6 +2,13 @@
 
 alarm[0] = room_speed * 10;
 alarm[1] = room_speed * 20;
+alarm[2] = room_speed * 30;
+alarm[3] = room_speed * 40;
+alarm[4] = room_speed * 50;
+alarm[5] = room_speed * 60;
+alarm[6] = room_speed * 70;
+
+base = 1;
 
 for (var i = 1; i < 31; ++i) {
     var left = instance_create_layer(32,32+(i*64),"Water", objWater)
