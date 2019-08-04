@@ -12,7 +12,7 @@ if back = -1 {
 if(meleeChargeTime >= 0)
 {
 	draw_set_color(c_yellow);
-	var _dis = 20;
+	var _dis = 20 + 10*!item;
 	draw_circle(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),5*meleeChargeTime,false);
 	draw_circle(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),5,true);
 }
