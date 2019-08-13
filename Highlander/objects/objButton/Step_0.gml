@@ -11,7 +11,10 @@ if(selected && input)
 {
 	switch(buttonEffect)
 	{
-		case startGame: room_goto_next();
+		case startGame: room_goto(rooms[roomChoice]);
+		break;
+		case switchRoom: 
+			roomChoice = ++roomChoice mod 2;
 		break;
 		case quitGame: game_end();
 		break;
