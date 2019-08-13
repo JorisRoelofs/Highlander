@@ -7,8 +7,8 @@ cursor_sprite = sprCursor;
 globalvar ideal_width,ideal_height, view_x,view_y,view_w,view_h;
 os_powersave_enable(false);
 
-ideal_width=576;//512
-ideal_height=324;//288
+ideal_width=512;//512 //576
+ideal_height=288;//288 //324
 
 
 display_width=display_get_width();
