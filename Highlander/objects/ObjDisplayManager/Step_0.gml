@@ -1,11 +1,4 @@
-if(keyboard_check_pressed(vk_escape)){
-	game_end();
-}
 
-
-if(keyboard_check_pressed(vk_f1)){
-	game_restart();
-}
 
 ///Zoom camera
 if keyboard_check(vk_f2) {
@@ -26,16 +19,15 @@ if(keyboard_check_pressed(vk_f3)) {
   
 }
 
-
-if(keyboard_check_pressed(vk_f4)) {
-	window_set_fullscreen(!window_get_fullscreen());	
+if(keyboard_check_pressed(vk_escape)){
+	game_end();
 }
+
 
 if(cameraZoom>maxCameraZoom)
 cameraZoom=1;
 
-if (window_get_fullscreen()) { cursor_sprite = sprCursorLarge; }
-else { cursor_sprite = sprCursor; }
+
 
 if target = undefined {
 	with (objDisplayManager) { camereState = camereState.nothing; }

@@ -1,5 +1,5 @@
 ///scr_play_snd(sound)
-if(objPersistent.audioSetting != 2)
+if(objSystemManager.audioSetting != 2)
 {
 	var _snd = argument[0]
 	if (scr_in_view()) {

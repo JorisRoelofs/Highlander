@@ -1,9 +1,6 @@
 ///Display Properties
 scr_singleton();
 
-window_set_cursor(cr_none);
-cursor_sprite = sprCursor;
-
 globalvar ideal_width,ideal_height, view_x,view_y,view_w,view_h;
 os_powersave_enable(false);
 

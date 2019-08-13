@@ -18,7 +18,7 @@ if(selected && input)
 		case switchFullscreen: window_set_fullscreen(!window_get_fullscreen());
 		break;
 		case switchSound: 
-		with(objPersistent)
+		with(objSystemManager)
 		{
 			audioSetting = ++audioSetting mod 3;
 			audio_sound_gain(musicTitle,!audioSetting,0.2);
@@ -29,7 +29,7 @@ if(selected && input)
 	}
 }
 
-image_index = (2*objPersistent.audioSetting) + selected;
+image_index = (2*objSystemManager.audioSetting) + selected;
 
 targetX = startX + selected*5*sin(0.5*pi*t);
 targetY = startY + selected*5*sin(0.8*pi*t + 0.2);
