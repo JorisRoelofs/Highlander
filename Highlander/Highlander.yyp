@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "32244c90-0945-4c74-b3ab-802813c0ab8f",
+            "Value": {
+                "id": "15ccfc38-024f-4527-94df-6eeeae2be6d3",
+                "resourcePath": "rooms\\rmVolcano\\rmVolcano.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "33269092-96f7-404a-8837-c06d05a2c75b",
             "Value": {
                 "id": "234a4b53-c31f-479f-a1b9-9d04bbb99cec",
@@ -407,6 +415,14 @@
             }
         },
         {
+            "Key": "59504fc3-e2cc-4235-8510-307aba6355ef",
+            "Value": {
+                "id": "f5312d20-05d8-47cc-a379-18660868f9d7",
+                "resourcePath": "views\\59504fc3-e2cc-4235-8510-307aba6355ef.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5c02799b-1a03-4477-b878-3e012a22c032",
             "Value": {
                 "id": "8e131eaa-9843-4f55-ab17-33e7ee158c0f",
@@ -499,6 +515,22 @@
             "Value": {
                 "id": "44fb98bb-c12b-4526-bbe3-f99084b84aa9",
                 "resourcePath": "views\\76ca96af-4686-4226-b2e6-f7cd79e62e1a.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7b0201d0-ebcd-4e5d-9b16-78f3d69d784e",
+            "Value": {
+                "id": "38101723-abdd-4b79-86c9-c440cd8ffe8f",
+                "resourcePath": "sprites\\sprSpear\\sprSpear.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "82391286-7ea0-4a22-b654-7c3ea9024e97",
+            "Value": {
+                "id": "2c46d016-97e7-482d-aabc-264d0901ec3d",
+                "resourcePath": "views\\82391286-7ea0-4a22-b654-7c3ea9024e97.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -858,7 +890,7 @@
             "Key": "dc63fd2f-f6dd-402b-b67a-c648f928e02b",
             "Value": {
                 "id": "9da1a025-ed2b-4120-b0cb-20f05ef879a5",
-                "resourcePath": "rooms\\rmAction\\rmAction.yy",
+                "resourcePath": "rooms\\rmIsland\\rmIsland.yy",
                 "resourceType": "GMRoom"
             }
         },

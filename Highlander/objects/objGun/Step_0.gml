@@ -1,5 +1,5 @@
 /// @description Insert description here
-if room = rmAction {
+if room != rmMenu {
 	
 	if(instance_exists(owner))
 	{

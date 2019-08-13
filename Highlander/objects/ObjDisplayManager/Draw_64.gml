@@ -17,7 +17,7 @@ if debug_mode {
 
 
 
-		if room = rmAction {
+		if room != rmMenu {
 			
 				var _playerDash = objDisplayManager.kills;
 				var _sep = 12;
