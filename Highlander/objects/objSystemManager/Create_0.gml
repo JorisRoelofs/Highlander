@@ -16,4 +16,4 @@ file_name = "SaveData.sav";
 //data_set("kills",0);
 
 
-//scrLoad();
+data_load();
