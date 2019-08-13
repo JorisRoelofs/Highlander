@@ -2,7 +2,7 @@
 buttonEffect = instance_number(objButton) - 1;
 
 sprite_index += buttonEffect;
-//image_speed = 0;
+
 
 var i = 0;
 startGame = i; i++;
