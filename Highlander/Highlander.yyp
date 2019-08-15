@@ -874,7 +874,7 @@
             "Key": "cd7fb49d-2178-435b-b5f6-0c0eba395d4d",
             "Value": {
                 "id": "6ed9a326-7a97-4c4b-ae0f-d6c9b8f1bc2f",
-                "resourcePath": "objects\\objWaterManager\\objWaterManager.yy",
+                "resourcePath": "objects\\objStageManager\\objStageManager.yy",
                 "resourceType": "GMObject"
             }
         },
