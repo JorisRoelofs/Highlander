@@ -23,3 +23,5 @@ t = random(1);
 
 artX = x;
 artY = y;
+
+//http_get();

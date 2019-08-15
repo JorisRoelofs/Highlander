@@ -1,39 +1,60 @@
 /// @description Insert description here
+//switch (room) {
+//	case rmIsland:
+//		sprTile =	sprWater;
+//		sprCorner = sprWaterCorner;
+//	break;
+//	case rmVolcano:
+//		sprTile = sprLava;
+//		sprCorner =  sprLavaCorner;
+//	break;
+//}
 
-alarm[0] = room_speed * 10;
-alarm[1] = room_speed * 20;
-alarm[2] = room_speed * 30;
-alarm[3] = room_speed * 40;
-alarm[4] = room_speed * 50;
-alarm[5] = room_speed * 60;
-alarm[6] = room_speed * 70;
+sprTile = sprLava;
+sprCorner =  sprLavaCorner;
 
-for (var i = 1; i < 31; ++i) {
-    var left = instance_create_layer(32,32+(i*64),"Water", objWater)
+range = 31;
+spacing = 32;
+
+
+
+
+for (var i = 1; i < range; ++i) {
+    var left = instance_create_layer(spacing,spacing+(i*64),"Water", objWater)
 		left.image_angle = 270;
+		left.sprite_index = sprTile;
 	
-	var bottom = instance_create_layer(32+(i*64),room_height-32,"Water", objWater);
+	var bottom = instance_create_layer(spacing+(i*64),room_height-spacing,"Water", objWater);
 		bottom.image_angle = 0;
+		bottom.sprite_index = sprTile;
 
-	var right =	instance_create_layer(room_width-32,32+(i*64),"Water", objWater);
+	var right =	instance_create_layer(room_width-spacing,spacing+(i*64),"Water", objWater);
 		right.image_angle = 90;
+		right.sprite_index = sprTile;
 		
-	var up = instance_create_layer(32+(i*64),32,"Water", objWater);
+	var up = instance_create_layer(spacing+(i*64),spacing,"Water", objWater);
 		up.image_angle = 180;
+		up.sprite_index = sprTile;
 }
 
-	var leftTop = instance_create_layer(32,32,"Water",objWater);
-		leftTop.sprite_index = sprWaterCorner;
+	var leftTop = instance_create_layer(spacing,spacing,"Water",objWater);
+		leftTop.sprite_index = sprCorner;
 		
-	var leftBottom = instance_create_layer(32,room_height-32,"Water",objWater);
-		leftBottom.sprite_index = sprWaterCorner;
+	var leftBottom = instance_create_layer(spacing,room_height-spacing,"Water",objWater);
+		leftBottom.sprite_index = sprCorner;
 		leftBottom.image_angle = 90;
 		
-	var rightBottom = instance_create_layer(room_width-32,room_height-32,"Water",objWater);
-		rightBottom.sprite_index = sprWaterCorner;
+	var rightBottom = instance_create_layer(room_width-spacing,room_height-spacing,"Water",objWater);
+		rightBottom.sprite_index = sprCorner;
 		rightBottom.image_angle = 180;
 		
-	var rightTop = instance_create_layer(room_width-32,32,"Water",objWater);
-		rightTop.sprite_index = sprWaterCorner;
+	var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater);
+		rightTop.sprite_index = sprCorner;
 		rightTop.image_angle = 270;
 	
+
+if range > 7 {
+	range -= 2;
+	spacing += 64;
+	alarm[0] = room_speed * 1;
+}
