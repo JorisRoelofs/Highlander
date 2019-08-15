@@ -1,10 +1,12 @@
 /// @description Insert description here
+#region input
 dashInput = mouse_check_button_pressed(mb_right);
 meleeStartInput = mouse_check_button_pressed(mb_left);
 meleeEndInput = mouse_check_button_released(mb_left);
 meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
+#endregion
 
-
+#region animation
 image_xscale = facing;
 if speed > 0 {
 	sprite_index = sprPlayerWalk;
@@ -27,6 +29,7 @@ if mouse_x > x {
 if mouse_y < y {
 	back = 1
 } else back = -1
+#endregion
 
 #region walk
 speed = 0;

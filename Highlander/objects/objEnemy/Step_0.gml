@@ -19,8 +19,8 @@ if(newTargetTime >= 0 || !instance_exists(target))
 }
 
 if(!instance_exists(target)) target = noone;
-
-newTargetTime += (1 + min((300-point_distance(x,y,target.x,target.y)/300) + (target != _inst),1))/room_speed;
+else newTargetTime += min((300-point_distance(x,y,target.x,target.y)/300) + (target != _inst),1)/room_speed;
+newTargetTime += 1/room_speed;
 
 //target = objPlayer;
 

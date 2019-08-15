@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+//Camera Setup
 view_enabled=true;
 view_visible[0]=true;
 cameraZoom = 1;

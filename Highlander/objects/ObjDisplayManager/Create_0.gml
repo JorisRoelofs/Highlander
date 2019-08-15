@@ -1,17 +1,26 @@
-///Display Properties
+//Setup
 scr_singleton();
+os_powersave_enable(false); //SHOULD NOT BE HERE
+instance_create_depth(0,0,0,objDebug); //SHOULD NOT BE HERE
 
+
+//Display Properties
 globalvar ideal_width,ideal_height, view_x,view_y,view_w,view_h;
-os_powersave_enable(false);
 
-ideal_width=576;//512 //576
-ideal_height=324;//288 //324
-
+ideal_width=576;//512
+ideal_height=324;//288
 
 display_width=display_get_width();
 display_height=display_get_height();
 aspect_ratio=display_width/display_height;
 ideal_width=round_n(ideal_height*aspect_ratio,2);
+
+
+//Text Properties
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_set_font(fnt8);
+draw_set_color(cyellow);
 
 
 //Calculate Max Zoom
@@ -25,7 +34,8 @@ surface_resize(application_surface,ideal_width*res_multiplier,ideal_height*res_m
 
 alarm[0]=1;
 
-//camera
+
+//Camera
 view_x = 0;
 view_y = 0
 view_w = ideal_width;
@@ -45,6 +55,8 @@ enum camereState {
 
 camereState = camereState.nothing;
 
+
+//Savedata
 ini_open("saveData.ini")
 placeRecord = ini_read_real("records","placeRecord",100);
 killRecord = ini_read_real("records","killRecord",0);
@@ -53,4 +65,6 @@ ini_close();
 place = 100;
 kills = 0;
 
+
+//End Setup
 room_goto_next();

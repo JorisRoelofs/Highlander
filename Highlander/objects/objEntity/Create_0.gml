@@ -11,7 +11,7 @@ meleeCharge = 0;
 meleeId = noone;
 invincible = false;
 item = 1; // 0 = sword, 1 = bow
-dashes = 0;
+dashes = 0; //TURN INTO KILLS
 meleeStartInput = false;
 meleeEndInput = false;
 meleeAngleInput = 0;
