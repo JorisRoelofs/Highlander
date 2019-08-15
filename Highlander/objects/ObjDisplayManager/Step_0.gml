@@ -1,12 +1,3 @@
-//Keyboard Shortcuts DON'T BELONG HERE
-if(keyboard_check_pressed(vk_escape)){
-	if(room != rmMenu) room_goto(rmMenu)
-	else game_end();
-}
-
-if(room != rmMenu && !instance_exists(objPlayer) && mouse_check_button_pressed(mb_left)) room_goto(room); //SHOULDN'T BE HERE
-
-
 ///Zoom Camera
 if keyboard_check(vk_f2) {
   cameraZoom++;
@@ -34,3 +25,8 @@ if(keyboard_check_pressed(vk_f3)) {
 if target = undefined {
 	with (objDisplayManager) { camereState = camereState.nothing; }
 }
+
+
+//Cursor
+if (window_get_fullscreen()) { cursor_sprite = sprCursorLarge; }
+else { cursor_sprite = sprCursor; }

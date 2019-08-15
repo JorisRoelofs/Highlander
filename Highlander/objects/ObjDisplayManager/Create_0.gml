@@ -3,6 +3,8 @@ scr_singleton();
 os_powersave_enable(false); //SHOULD NOT BE HERE
 instance_create_depth(0,0,0,objDebug); //SHOULD NOT BE HERE
 
+window_set_cursor(cr_none);
+cursor_sprite = sprCursor;
 
 //Display Properties
 globalvar ideal_width,ideal_height, view_x,view_y,view_w,view_h;
@@ -58,8 +60,8 @@ camereState = camereState.nothing;
 
 //Savedata
 ini_open("saveData.ini")
-placeRecord = ini_read_real("records","placeRecord",100);
-killRecord = ini_read_real("records","killRecord",0);
+	placeRecord = ini_read_real("records","placeRecord",100);
+	killRecord = ini_read_real("records","killRecord",0);
 ini_close();
 
 place = 100;

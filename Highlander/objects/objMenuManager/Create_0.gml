@@ -1,5 +1,4 @@
-/// @description Insert description here
-
+//Button Layout
 iMax = 5;
 for(var i = 0; i < iMax; i++)
 {
@@ -11,5 +10,6 @@ for(var i = 0; i < iMax; i++)
 	}
 }
 
-alarm[0] = 10;
 
+//Actor Spawning Timer
+alarm[0] = 10;

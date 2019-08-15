@@ -1,4 +1,4 @@
-/// @description Insert description here
+//Start & Stop Music
 audio_stop_sound(musicTitle);
 {
 	if(room = rmMenu)

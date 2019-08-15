@@ -1,3 +1,3 @@
-/// @description Insert description here
+//Follow Mouse
 x = mouse_x;
 y = mouse_y;

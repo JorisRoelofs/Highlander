@@ -1,8 +1,6 @@
-/// @description Insert description here
+//Button Function
 buttonEffect = instance_number(objButton) - 1;
-
 sprite_index += buttonEffect;
-
 
 var i = 0;
 startGame = i; i++;
@@ -19,9 +17,9 @@ roomChoice = 0;
 rooms[0] = rmIsland;
 rooms[1] = rmVolcano;
 
-t = random(1);
 
+//Variables
 artX = x;
 artY = y;
 
-//http_get();
+t = random(1);

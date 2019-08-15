@@ -1,5 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+//UNUSED
+
+
 scr_singleton();
 
 x = room_width/2;
