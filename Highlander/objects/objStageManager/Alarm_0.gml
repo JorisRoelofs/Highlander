@@ -1,10 +1,15 @@
-/// @description Insert description here
+/// @description Island
 scr_play_snd(sndWaterRush);
 
 with (objWater) {
 	sprite_index = sprWaterTile;
 }
 
+if range > 7 and room = rmIsland {
+	range -= 2;
+	spacing += 64;
+	alarm[0] = room_speed * 5;
+}
 
 for (var i = 1; i < range; ++i) {
     var left = instance_create_layer(spacing,spacing+(i*64),"Water", objWater)
@@ -41,11 +46,7 @@ for (var i = 1; i < range; ++i) {
 		rightTop.image_angle = 270;
 		
 	
-if range > 7 and room = rmIsland {
-	range -= 2;
-	spacing += 64;
-	alarm[0] = room_speed * 5;
-}
+
 
 
 

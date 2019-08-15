@@ -5,13 +5,18 @@ spacing = 32;
 switch (room) {
 	case rmIsland:
 		sprTile =	sprWater;
-		sprCorner = sprWaterCorner;		
+		sprCorner = sprWaterCorner;	
+		range -= 2;
+		spacing += 64;
+		alarm[1] = room_speed * 5;
 	break;
 	case rmVolcano:
 		sprTile = sprLava;
 		sprCorner =  sprLavaCorner;
+		alarm[1] = room_speed * 5;
 	break;
 }
+
 
 for (var i = 1; i < range; ++i) {
     var left = instance_create_layer(spacing,spacing+(i*64),"Water", objWater)
@@ -47,10 +52,11 @@ for (var i = 1; i < range; ++i) {
 		rightTop.sprite_index = sprCorner;
 		rightTop.image_angle = 270;
 		
-	
-if room = rmIsland {
-	range -= 2;
-	spacing += 64;
-	alarm[0] = room_speed * 1;
+
+
+for (var i = instance_number (objFoliage); i < 400; ++i) {
+    if !place_meeting(x,y,objFoliage) and  !place_meeting(x,y,objBowShrine) and  !place_meeting(x,y,objTree) {
+		instance_create_layer(random_range(0,room_width),random_range(0,room_height),"Foliage", objFoliage);
+	}
 }
 
