@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "594a2b72-5a2d-48ac-be7c-3970d7204b08",
+            "Value": {
+                "id": "738de8dc-b106-4b8a-a376-7a713d9cdd06",
+                "resourcePath": "objects\\objMeteorLanding\\objMeteorLanding.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "59504fc3-e2cc-4235-8510-307aba6355ef",
             "Value": {
                 "id": "f5312d20-05d8-47cc-a379-18660868f9d7",
