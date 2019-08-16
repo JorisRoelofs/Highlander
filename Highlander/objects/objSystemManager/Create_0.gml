@@ -1,8 +1,11 @@
-//Setup
+/// @description: Save Settings Setup
+
+
+//Object Setup
 scr_singleton();
 
 
-//Save Data Setup
+//Save Settings Setup
 ini_open("saveData.ini");
 	audioSetting = ini_read_real("settings", "audioSetting",0);
 	window_set_fullscreen(ini_read_real("settings", "fullscreenSetting",0));

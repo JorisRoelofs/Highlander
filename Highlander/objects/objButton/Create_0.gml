@@ -1,3 +1,6 @@
+/// @description: Button Function & Art Variables
+
+
 //Button Function
 buttonEffect = instance_number(objButton) - 1;
 sprite_index += buttonEffect;
@@ -18,7 +21,7 @@ rooms[0] = rmIsland;
 rooms[1] = rmVolcano;
 
 
-//Variables
+//Art Variables
 artX = x;
 artY = y;
 

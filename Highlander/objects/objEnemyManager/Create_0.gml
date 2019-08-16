@@ -1,2 +1,4 @@
-//Spawn Enemies On First Frame
+/// @description: First Frame Timer
+
+
 alarm[0]=1;
