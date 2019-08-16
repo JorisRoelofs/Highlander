@@ -1,3 +1,6 @@
+/// @description: Button Function & Art Variables
+
+
 //Inputs
 if(instance_exists(objCursor)) selected = position_meeting(objCursor.x,objCursor.y,self);
 input = mouse_check_button_pressed(mb_left);

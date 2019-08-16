@@ -1,3 +1,6 @@
+/// @description: Give Player Legendary Weapon
+
+
 with(objGun)
 {
 	if(instance_exists(owner)) owner.item = 1;

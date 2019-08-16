@@ -1,2 +1,4 @@
-//Center After Setup
+/// @description: First Frame Center Screen
+
+
 window_center();
