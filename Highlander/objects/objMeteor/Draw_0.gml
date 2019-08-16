@@ -1,3 +1,3 @@
 /// @description Insert description here
-draw_sprite(sprMeteorShade,0,x,y+distance);
+draw_sprite(sprMeteorShade,spriteNumber,x,y);
 draw_self();
