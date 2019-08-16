@@ -1,4 +1,5 @@
-///scr_play_snd(sound)
+/// @description plays a randomly pitch-shifted sound whose volume is based on the distance to player
+/// @param sound
 if(objSystemManager.audioSetting != 2)
 {
 	var _snd = argument[0]

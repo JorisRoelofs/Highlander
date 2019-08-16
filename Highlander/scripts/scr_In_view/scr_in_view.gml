@@ -1,8 +1,6 @@
-/// scr_In_view();
-
+/// @description: checks whether the object is in view
 var _cur_x = camera_get_view_x(view_camera[0]);
 var _cur_y = camera_get_view_y(view_camera[0]);
-
 
 if (x >= _cur_x - 64) {
     if (x <= _cur_x + ideal_width + 64) {

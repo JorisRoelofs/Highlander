@@ -1,4 +1,7 @@
-
+/// @description draws yellow text with a purple border
+/// @param text
+/// @param y
+/// @param [x]
 if(argument_count > 2) var _x = argument[2];
 else var _x = ideal_width/2;
 
