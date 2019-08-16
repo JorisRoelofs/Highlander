@@ -1,4 +1,2 @@
-/// @description: Screen Shake Off
-
-
+/// @description Shake Off
 shake = false;

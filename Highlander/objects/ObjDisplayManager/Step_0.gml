@@ -1,7 +1,4 @@
-/// @description: Camera Zoom
-
-
-///Zoom Camera
+/// @description Zoom Camera
 if keyboard_check(vk_f2) {
   cameraZoom++;
 	alarm[0]=1;
@@ -24,12 +21,12 @@ if(keyboard_check_pressed(vk_f3)) {
 }
 
 
-//Cursor
-if (window_get_fullscreen()) { cursor_sprite = sprCursorLarge; }
-else { cursor_sprite = sprCursor; }
-
-
 //Target Failsafe
 if target = undefined {
 	with (objDisplayManager) { camereState = camereState.nothing; }
 }
+
+
+//Cursor
+if (window_get_fullscreen()) { cursor_sprite = sprCursorLarge; }
+else { cursor_sprite = sprCursor; }

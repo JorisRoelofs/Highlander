@@ -1,6 +1,4 @@
-/// @description: Camera States
-
-
+/// @description  States and Camerapositioning
 switch (camereState) {
 	
 	
@@ -34,10 +32,9 @@ switch (camereState) {
 		//var _mousey = lengthdir_y(length,dir);
 		//var _zoomX = lerp(0,_mousex,.2);
 
-
-		//Screenshake
 		var _ran_x,_ran_y;
 
+		//Screenshake
 		if (shake) {
 			_ran_x = random_range(-intensity,intensity);
 			_ran_y = random_range(-intensity,intensity);

@@ -1,14 +1,10 @@
-/// @description: Display & Save Records Setup
-
-
-//General Setup
+/// @description Setup
 scr_singleton();
 os_powersave_enable(false); //SHOULD NOT BE HERE
 instance_create_depth(0,0,0,objDebug); //SHOULD NOT BE HERE
 
 window_set_cursor(cr_none);
 cursor_sprite = sprCursor;
-
 
 //Display Properties
 globalvar ideal_width,ideal_height, view_x,view_y,view_w,view_h;
