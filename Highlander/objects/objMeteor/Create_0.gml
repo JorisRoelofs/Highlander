@@ -1,2 +1,6 @@
 /// @description Insert description here
-distance = 512;
+targetX = 0;
+targetY = 0
+shadeID = noone;
+vspeed = 1;
+gravity = .3;

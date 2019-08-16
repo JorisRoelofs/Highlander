@@ -1,2 +1,2 @@
 /// @description Insert description here
-distance = 512;
+instance_destroy(shadeID);
