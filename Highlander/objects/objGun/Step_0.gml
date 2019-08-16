@@ -28,7 +28,11 @@ if room != rmMenu {
 
 	t += 1/room_speed;
 
-} else {
+}
+
+
+//Float In Menu
+else {
 	
 	x = ideal_width/2-2;
 	

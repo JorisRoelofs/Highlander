@@ -1,23 +1,25 @@
-/// @description Insert description here
-#region setup
+/// @description: Spawn Location & Animation
+
+
+//General Setup
 event_inherited();
 scr_singleton();
 
-randomize();
-x = random_range(78,room_width-78);
-y = random_range(78,room_height-78);
-#endregion
 
-#region variables
-//WHAT DO THESE DO?
+//Spawn Location
+randomize();
+x = random_range(100,room_width-100);
+y = random_range(100,room_height-100);
+
+
+//UI Pointer
 pointerTargetX = 0.5*ideal_width;
 pointerTargetY = 0.5*ideal_height;
 
-//UI crown scale
 mode = 0;
 crownScale = 1;
 rate = 0.0015;
 
-//animation
+
+//Animation
 footstep = 0;
-#endregion

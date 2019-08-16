@@ -1,6 +1,4 @@
 /// @description: Button Layout
-
-
 iMax = 5;
 for(var i = 0; i < iMax; i++)
 {

@@ -1,4 +1,2 @@
 /// @description: First Frame Timer
-
-
-alarm[0]=1;
+alarm[0]=-1;

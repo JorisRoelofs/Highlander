@@ -1,8 +1,18 @@
-/// @description Insert description here
+/// @description: Behavior
 
+
+//Reset Variables
 invincible = false;
 speed = 0;
 
+if instance_number(objEntity) < 20 {
+	distance = 512;
+} else if instance_number(objEntity) < 40 {
+	distance = 384;
+} else distance = 256;
+
+
+//Choose Target
 var _inst, _xx;
 _xx = x;
 x -= 100000;
@@ -12,45 +22,30 @@ x += 100000;
 if(newTargetTime >= 0 || !instance_exists(target))
 {
 	newTargetTime = -random(1);
-	if _inst != id {
-		target = _inst;
-	}
-	if(instance_exists(objGun.owner) && random(min((300-point_distance(x,y,objGun.owner.x,objGun.owner.x)/300),1) > 0.5)) target = objGun.owner;
+	if(_inst != id) target = _inst;
+	
+	
+	//If the legendary weapon is nearby, make it the target instead
+	if(instance_exists(objGun.owner) && random(min((300 - point_distance(x,y,objGun.owner.x,objGun.owner.x) / 300), 1) > 0.5)) target = objGun.owner;
 }
 
 if(!instance_exists(target)) target = noone;
-else newTargetTime += min((300-point_distance(x,y,target.x,target.y)/300) + (target != _inst),1)/room_speed;
+else newTargetTime += (min(((point_distance(x,y,target.x,target.y) - 300) / 300), 1) + (target != _inst))/room_speed; //Speed up choosing a new target the further away the current target is and if someone else is closer
 newTargetTime += 1/room_speed;
 
-//target = objPlayer;
 
-if instance_number(objEntity) < 20 {
-	distance = 512;
-} else if instance_number(objEntity) < 40 {
-	distance = 384;
-} else distance = 256;
+//Follow Target
+var _dis = point_distance(x,y,target.x,target.y)-sprite_width;
+
+if(instance_exists(target) && _dis < distance) {
 
 
-//follow target
-if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance {
-			
-	var _dis = point_distance(x,y,target.x,target.y)-2*sprite_width;
-			
-	if(target != objPlayer)
-	{
-		if(point_distance(x,y,target.x,target.y) < 80) randomDirectionTime *= 0.5;
-		else if(point_distance(x,y,target.x,target.y) < 140) randomDirectionTime *= 0.8;
-	}
-			
-	if(randomDirectionTime >= 0)
-	{
+	//Change Direction
+	if(randomDirectionTime >= 0) {
 		walkDirection = random(360);
 		randomDirectionTime = random(-1) - 0.8;
 				
-		if(!item)
-		{
-			walkDirection = 0.5*(walkDirection + point_direction(x,y,target.x,target.y));
-		}
+		if(!item) walkDirection = 0.5*(walkDirection + _dis);
 		
 		walkDirection += angle_difference(point_direction(x,y,objGun.x,objGun.y),walkDirection) * min(point_distance(x,y,objGun.x,objGun.y) < 300,1) * (0.3 + (0.7*(!instance_exists(objGun.owner))));
 		
@@ -59,25 +54,32 @@ if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance 
 	}
 	else randomDirectionTime += 1/room_speed;
 			
+	
+	//Change Direction Faster When Target Is Far Away
+	if(target != objPlayer) {
+		if(_dis < 100) randomDirectionTime *= 0.5;
+		else if(_dis < 160) randomDirectionTime *= 0.8;
+	}
+
+
+	//Set Location
 	var _targetX = x + lengthdir_x(_dis,walkDirection);
 	var _targetY = y + lengthdir_y(_dis,walkDirection);
-			
 	move_towards_point(_targetX, _targetY, maxSpeed);
-			
-	if (point_distance(x, y, target.x, target.y) < 120)
-	{
+
+
+	//Attack Timing
+	if(point_distance(x, y, target.x, target.y) < 120)	{
 		meleeStartTime += 1/room_speed;
 		meleeEndTime += 1/room_speed;
 				
-		if(meleeStartTime >= 0 && meleeChargeTime = -1)
-		{
+		if(meleeStartTime >= 0 && meleeChargeTime = -1) {
 			meleeChargeTime = 0;
 			meleeStartTime += random(-1) + 0.2*!item;
 		}
 		else meleeStartInput = false;
 				
-		if(meleeEndTime >= 0)
-		{
+		if(meleeEndTime >= 0) {
 			meleeEndInput = true;
 			meleeEndTime += random(-1) - 0.5 + 0.2*!item;
 		}
@@ -86,15 +88,19 @@ if instance_exists(target) and point_distance(x,y,target.x,target.y) < distance 
 		meleeAngleInput = point_direction(x,y,target.x,target.y);
 	}
 }
-else
-{
+
+
+//Move Towards Player
+else {
 	if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y, maxSpeed);
 	else move_towards_point(objGun.x, objGun.y, maxSpeed);
 }
 
+
+
+//Inheritance
 event_inherited();
 
-if(!scr_in_view() && random(1) > 0.001) invincible = true;
 
-if(!invincible && random(1) > 0.999) dashInput = true;
-else dashInput = false;
+//Semi-Invincible Off-Screen
+if(!scr_in_view() && random(1) > 0.001) invincible = true;
