@@ -1,15 +1,12 @@
-/// @description Insert description here
-if(deflectTime >= 0 && other.deflectTime >= 0)// && other.speed > 0)
+/// @description: Deflect
+if(deflectTime >= 0 && other.deflectTime >= 0)
 {
 	scr_play_snd(sndSword);
+	if(owner = objPlayer) scr_shake(5,2); //Practically invisible
 	
 	speed *= 0.8;
 	direction += 180 *(1 + (0.5*cos(pi*random(1))));
 	deflectTime = -0.2;
-	
-	if owner = objPlayer {
-		scr_shake(5,2);
-	}
 
 	with(other)
 	{

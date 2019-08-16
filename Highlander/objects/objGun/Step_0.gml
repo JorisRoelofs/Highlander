@@ -1,6 +1,17 @@
-/// @description Insert description here
-if room != rmMenu {
+/// @description: Floating & Pickup
+
+
+//Float In Menu
+if(room = rmMenu) {
+	x = ideal_width/2-2;
+	y += 0.2*sin(0.75*pi*t);
 	
+}
+else
+{
+
+
+	//Invisible When Owned
 	if(instance_exists(owner))
 	{
 		image_alpha = 0;
@@ -10,8 +21,12 @@ if room != rmMenu {
 	}
 	else
 	{
+		//Float
 		image_alpha = 1;
-
+		y += 0.5*sin(0.75*pi*t);
+		
+		
+		//Float To Entity If Nearby
 		var _entityNear = instance_nearest(x,y,objEntity);
 		speed = 4*max(64-point_distance(x,y,_entityNear.x,_entityNear.y),0)/room_speed;
 		direction -= (direction - point_direction(x,y,_entityNear.x,_entityNear.y)) * 0.9;
@@ -22,21 +37,9 @@ if room != rmMenu {
 			_entityNear.item = 0;
 			owner = _entityNear.id;
 		}
-
-		y += 0.5*sin(0.75*pi*t);
 	}
-
-	t += 1/room_speed;
-
 }
 
 
-//Float In Menu
-else {
-	
-	x = ideal_width/2-2;
-	
-	y += 0.2*sin(0.75*pi*t);
-	t += 1/room_speed;
-	
-}
+//Float Time
+t += 1/room_speed;

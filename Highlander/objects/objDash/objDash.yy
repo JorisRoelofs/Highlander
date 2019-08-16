@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "objDash",
     "eventList": [
-        
+        {
+            "id": "8e73b6e6-38fb-4b50-87fb-cd4e11e76a8b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "d3e7f991-73ee-4ceb-96d5-b0f3afec0017"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

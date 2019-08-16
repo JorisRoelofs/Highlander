@@ -1,4 +1,7 @@
-/// @description Insert description here
+/// @description: Damage / Deflect
+
+
+//Follow Owner
 if(instance_exists(owner))
 {
 	x = owner.x;
@@ -10,15 +13,16 @@ else
 	exit;
 }
 
-//image_index = 6;
 
+//Deflect / Parry
 if(image_index >= 3 && image_index <= 7)
 {
+
+
+	//Deflect Arrow
 	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
-		
-		
-		if(deflectTime >= 0)// && other.speed > 0)
+		if(deflectTime >= 0)
 		{
 			scr_play_snd(sndParry);
 	
@@ -30,12 +34,11 @@ if(image_index >= 3 && image_index <= 7)
 	}
 	
 
+	//Parry Sword
 	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
 		
-		if owner = objPlayer {
-			scr_shake(5,2);
-		}
+		if(owner = objPlayer) scr_shake(5,2);
 		
 		owner.speed = 30;
 		owner.direction = point_direction(other.owner.x,other.owner.y,owner.x,owner.y);
@@ -55,6 +58,8 @@ if(image_index >= 3 && image_index <= 7)
 	
 }
 
+
+//Deal Damage
 if(image_index = image_number-5)
 {
 	with(objEntity) if(!invincible && id != other.owner && point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(other.image_angle,point_direction(other.x,other.y,x,y))) < 120)
@@ -64,4 +69,6 @@ if(image_index = image_number-5)
 	}
 }
 
+
+//Destroy
 if(image_index = image_number-1) instance_destroy();

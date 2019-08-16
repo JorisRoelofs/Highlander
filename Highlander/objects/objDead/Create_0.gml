@@ -1,2 +1,2 @@
-/// @description Insert description here
+/// @description: Timer
 alarm[0] = 2;

@@ -1,3 +1,4 @@
+/// @description: Pickup
 if(!ownKnife && other.speed = 0)
 {
 	ownKnife = true;

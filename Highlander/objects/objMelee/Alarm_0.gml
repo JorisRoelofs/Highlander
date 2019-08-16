@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description: Charge Buff
 if(charge)
 {
 	image_xscale = 2;

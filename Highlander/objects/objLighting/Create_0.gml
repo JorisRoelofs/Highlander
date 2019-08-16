@@ -1,6 +1,4 @@
-//UNUSED
-
-
+/// @description: OBJECT UNUSED
 scr_singleton();
 
 x = room_width/2;

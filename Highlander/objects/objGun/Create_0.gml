@@ -1,4 +1,4 @@
-// @description: Variables
+/// @description: Variables
 owner = noone;
 
 image_speed = 0;

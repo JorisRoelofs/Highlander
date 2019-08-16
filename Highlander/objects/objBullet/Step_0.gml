@@ -1,7 +1,10 @@
-/// @description Insert description here
+/// @description: Speed, Wiggle & Despawn
 
+//Speed & Wiggle
 image_angle = direction + (10*sin(4*pi*t)/max(startSpeed,6));
 speed *= 0.95;
+
+//Afterwiggle
 if(speed <= 2)
 {
 	deflectTime = -1;
@@ -16,6 +19,8 @@ else
 	direction += 20*sign(angle_difference(direction,90))/startSpeed;
 }
 
+
+//Despawn
 if(instance_number(objBullet) > 300 && number >= smallestNumber)
 {
 	with(objBullet) smallestNumber++;

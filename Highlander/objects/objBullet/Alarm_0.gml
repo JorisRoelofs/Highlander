@@ -1,2 +1,2 @@
-/// @description Insert description here
+/// @description: Stop Arrow Wiggle
 alarm[0] = -1;

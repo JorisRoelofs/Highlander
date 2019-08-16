@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description: Draw Self & Weapon
 event_inherited();
 
 if back = -1 {
@@ -9,8 +9,8 @@ if back = -1 {
     draw_self();
 }
 
-if(dashTime >= 0) draw_sprite(sprPlayerDash,0,x+lengthdir_x(dashSpeed*(timeTillDash-dashTime)*room_speed,direction),y+lengthdir_y(dashSpeed*(timeTillDash-dashTime)*room_speed,direction));
 
+//Draw Weapon Charge
 if(meleeChargeTime >= 0)
 {
 	draw_set_color(make_color_rgb(251,242,54));

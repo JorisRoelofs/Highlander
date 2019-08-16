@@ -1,6 +1,8 @@
-/// @description Insert description here
-t = random(1);
-number = instance_number(objBullet);
-smallestNumber = 1;
+/// @description: Variables
 owner = noone;
 deflectTime = 0;
+t = random(1);
+
+//Despawning
+number = instance_number(objBullet);
+smallestNumber = 1;
