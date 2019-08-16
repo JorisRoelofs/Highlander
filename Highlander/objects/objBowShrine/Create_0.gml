@@ -1,15 +1,18 @@
-/// @description Insert description here
+/// @description: Spawn Location & Create Weapon
+
+
+//Setup
 scr_singleton();
 scr_BasicCollision_init(100);
 
-if room != rmMenu {
-x = room_width/2;
-y = room_height/2;
-} else {
-x = ideal_width/2;	
-	
+
+//Spawn Location
+if(room = rmMenu) x = ideal_width/2;	
+else {
+	x = room_width/2;
+	y = room_height/2;
 }
 
-t = random(1);
 
+//Create Weapon
 instance_create_layer(x-8,y-48,"Entities",objGun);

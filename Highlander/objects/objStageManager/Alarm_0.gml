@@ -1,11 +1,13 @@
 /// @description Island
-scr_play_snd(sndWaterRush);
 
-with (objWater) {
-	sprite_index = sprWaterTile;
-}
+//scr_play_snd(sndWaterRush); //Doesn't work, needs to be played in the player when near water.
 
 
+//Replace Art
+with (objWater) sprite_index = other.sprTileOld;
+
+
+//New Tiles
 for (var i = 1; i < range; ++i) {
     var left = instance_create_layer(spacing,spacing+(i*64),"Water", objWater)
 		left.image_angle = 270;
@@ -25,27 +27,26 @@ for (var i = 1; i < range; ++i) {
 }
 
 
-	var leftTop = instance_create_layer(spacing,spacing,"Water",objWater);
-		leftTop.sprite_index = sprCorner;
+//Corner Tiles
+var leftTop = instance_create_layer(spacing,spacing,"Water",objWater);
+	leftTop.sprite_index = sprCorner;
 		
-	var leftBottom = instance_create_layer(spacing,room_height-spacing,"Water",objWater);
-		leftBottom.sprite_index = sprCorner;
-		leftBottom.image_angle = 90;
+var leftBottom = instance_create_layer(spacing,room_height-spacing,"Water",objWater);
+	leftBottom.sprite_index = sprCorner;
+	leftBottom.image_angle = 90;
 		
-	var rightBottom = instance_create_layer(room_width-spacing,room_height-spacing,"Water",objWater);
-		rightBottom.sprite_index = sprCorner;
-		rightBottom.image_angle = 180;
+var rightBottom = instance_create_layer(room_width-spacing,room_height-spacing,"Water",objWater);
+	rightBottom.sprite_index = sprCorner;
+	rightBottom.image_angle = 180;
 		
-	var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater);
-		rightTop.sprite_index = sprCorner;
-		rightTop.image_angle = 270;
-		
+var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater);
+	rightTop.sprite_index = sprCorner;
+	rightTop.image_angle = 270;
+	
+
+//Prepare Next Wave
 if range > 7 and room = rmIsland {
 	range -= 2;
 	spacing += 64;
 	alarm[0] = room_speed * 5;
 }	
-
-
-
-

@@ -1,18 +1,12 @@
-/// @description Insert description here
+/// @description: Flickering
 if time < 10 {
-	
-	if visible = true {
-		visible = false;
-	} else visible = true;
-	
 	time++;
-	
 	alarm[0] = 8;
+	visible = !visible;
 
 } else {
 	time++;
 	visible = true;	
-	var _inst = instance_place(x,y,objEntity);
-	instance_destroy(_inst);
+	with(objEntity) if(place_meeting(x,y,other)) instance_destroy();
 	collisionMass = 100;
 }
