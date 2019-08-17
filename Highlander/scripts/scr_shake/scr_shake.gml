@@ -1,6 +1,6 @@
 /// @description scr_shake(intensity,duration)
 /// @param intensity
-/// @param  duration
+/// @param duration
 var _intensity = argument0;
 var _duration = argument1;
 

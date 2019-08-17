@@ -48,18 +48,19 @@ for (var i = 1; i < range; ++i) {
 //Corner Tiles
 var leftTop = instance_create_layer(spacing,spacing,"Water",objWater);
 	leftTop.sprite_index = sprCorner;
+	leftTop.image_angle = 270;
 		
 var leftBottom = instance_create_layer(spacing,room_height-spacing,"Water",objWater);
 	leftBottom.sprite_index = sprCorner;
-	leftBottom.image_angle = 90;
+	leftBottom.image_angle = 0;
 		
 var rightBottom = instance_create_layer(room_width-spacing,room_height-spacing,"Water",objWater);
 	rightBottom.sprite_index = sprCorner;
-	rightBottom.image_angle = 180;
+	rightBottom.image_angle = 90;
 		
 var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater);
 	rightTop.sprite_index = sprCorner;
-	rightTop.image_angle = 270;
+	rightTop.image_angle = 180;
 
 
 //Spawn Folliage

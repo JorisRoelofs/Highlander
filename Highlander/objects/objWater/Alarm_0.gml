@@ -12,5 +12,6 @@ if time < 10 {
 } else {
 	time++;
 	visible = true;	
+	active = true;
 	with(objEntity) if(place_meeting(x,y,other)) instance_destroy();
 }

@@ -14,8 +14,9 @@ if item  == 0 {
 
 
 	//Charging
-	if(meleeStartInput) meleeChargeTime = 0;
-	if(!ownKnife) meleeChargeTime = -1;
+	if(!ownKnife || instance_exists(meleeId)) meleeChargeTime = -1;
+	else if(meleeStartInput) meleeChargeTime = 0;
+
 	if(meleeChargeTime >= 0)
 	{
 		meleeChargeTime += 1/room_speed;
@@ -25,7 +26,7 @@ if item  == 0 {
 		
 		
 		//Release Attack
-		if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
+		if(meleeEndInput || meleeCharge = 1)
 		{
 			meleeChargeTime = -1;
 			meleeId = instance_create_layer(x,y,"Instances",objMelee);
@@ -67,7 +68,7 @@ else if item == 1 {
 			//Charge After Effect
 			var _dis = 20 + 10*!item;
 			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),"Instances",objChargeAfterEffect);
-			_afterCharge.maxT = 15*meleeCharge;
+			_afterCharge.tMax = 12 + (3*meleeCharge);
 		}
 	}
 }

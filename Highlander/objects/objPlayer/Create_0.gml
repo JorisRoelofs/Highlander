@@ -24,3 +24,8 @@ rate = 0.0015;
 
 //Animation
 footstep = 0;
+
+
+//Water Sound
+audio_play_sound(sndWaterRush,0,true);
+audio_sound_gain(sndWaterRush,0,0);

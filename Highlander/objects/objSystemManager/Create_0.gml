@@ -13,8 +13,17 @@ ini_open("saveData.ini");
 	window_set_fullscreen(ini_read_real("settings", "fullscreenSetting",0));
 ini_close();
 
+//Save Records Setup
+ini_open("saveData.ini")
+	objDisplayManager.placeRecord = ini_read_real("records","placeRecord",100);
+	objDisplayManager.killRecord = ini_read_real("records","killRecord",0);
+ini_close();
+
+
 save_data = ds_map_create();
 file_name = "SaveData.sav";
 
 //data_set("kills",0);
 data_load();
+
+

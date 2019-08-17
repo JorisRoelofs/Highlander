@@ -57,7 +57,7 @@ else {
 			
 			if(instance_exists(_target)) {
 				//Draw On Target If In View
-				if(abs(_target.x - camera_get_view_x(view_camera[0]) - (0.5*ideal_width)) < 0.5*ideal_width && abs(_target.y - camera_get_view_y(view_camera[0]) - (0.5*ideal_height)) < 0.5*ideal_height) {
+				if(scr_in_view(-30,_target)) {
 					var _dis = point_distance(camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height,_target.x,_target.y-20);
 					var _mul = max((300 - _dis)/400,0.05);
 					pointerTargetX += (_target.x - camera_get_view_x(view_camera[0]) - pointerTargetX) * _mul;
@@ -101,7 +101,7 @@ else {
 	if(place = 1 || !instance_exists(objPlayer))
 	{
 		if(place < placeRecord) _strPlace = string_insert("New record: ", _strPlace, 0);
-		if(kills > killRecord) string_insert("New record: ", _strKill, 0);
+		if(kills > killRecord) _strKill = string_insert("New record: ", _strKill, 0);
 	}
 		
 	scrDrawText(_strPlace,20);

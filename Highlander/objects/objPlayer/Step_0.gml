@@ -46,5 +46,9 @@ if mouse_y < y {
 } else back = -1
 
 
+//Water Sound
+if(objSystemManager.audioSetting != 2) with(instance_nearest(x,y,objWater)) audio_sound_gain(sndWaterRush, 0.5*(0.5*ideal_width-point_distance(x,y,other.x,other.y))/(0.5*ideal_width),0);
+else audio_sound_gain(sndWaterRush, 0, 0);
+
 //Inheritance
 event_inherited();

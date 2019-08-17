@@ -24,7 +24,14 @@ else
 //Despawn
 if(instance_number(objBullet) > 300 && number >= smallestNumber)
 {
-	with(objBullet) smallestNumber++;
-	instance_destroy();
-	exit;
+	//Delay destruction if in view
+	if(scr_in_view() && instance_number(objBullet) < 400) {
+		with(objBullet) smallestNumber += 2;
+		number += 30;
+	}
+	else {
+		with(objBullet) smallestNumber++;
+		instance_destroy();
+		exit;
+	}
 }

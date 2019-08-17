@@ -21,9 +21,10 @@ else
 	}
 	else
 	{
+		owner = noone;
+	
 		//Float
 		image_alpha = 1;
-		y += 0.5*sin(0.75*pi*t);
 		
 		
 		//Float To Entity If Nearby
@@ -36,6 +37,15 @@ else
 			scr_play_snd(sndSwordPickup);
 			_entityNear.item = 0;
 			owner = _entityNear.id;
+		}
+		
+		
+		//Wash Ashore
+		var _col = instance_place(x,y,objWater);
+		if(instance_exists(_col) && _col.active)
+		{
+			var _dir = _col.image_angle + 90;
+			move_towards_point(x + lengthdir_x(100, _dir), y + lengthdir_y(100, _dir), 1);
 		}
 	}
 }

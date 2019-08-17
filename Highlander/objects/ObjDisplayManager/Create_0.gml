@@ -62,15 +62,11 @@ enum camereState {
 camereState = camereState.nothing;
 
 
-//Savedata
-ini_open("saveData.ini")
-	placeRecord = ini_read_real("records","placeRecord",100);
-	killRecord = ini_read_real("records","killRecord",0);
-ini_close();
-
+//Counters
 place = 100;
 kills = 0;
-
+placeRecord = place;
+killRecord = kills;
 
 //End Setup
 room_goto_next();
