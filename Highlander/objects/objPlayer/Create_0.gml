@@ -8,8 +8,9 @@ scr_singleton();
 
 //Spawn Location
 randomize();
-x = random_range(100,room_width-100);
-y = random_range(100,room_height-100);
+var _dis = 200;
+x = random_range(_dis,room_width-_dis);
+y = random_range(_dis,room_height-_dis);
 
 
 //UI Pointer

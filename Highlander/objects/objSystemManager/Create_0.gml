@@ -1,8 +1,10 @@
 /// @description: Save Settings Setup
 
+instance_create_depth(0,0,0,objDebug);
 
-//Object Setup
+//Setup
 scr_singleton();
+os_powersave_enable(false);
 
 
 //Save Settings Setup

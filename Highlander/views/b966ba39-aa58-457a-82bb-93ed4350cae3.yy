@@ -10,7 +10,8 @@
         "fe7ef09d-ed0b-4940-b8fa-bfb60763c1c5",
         "d3e7f991-73ee-4ceb-96d5-b0f3afec0017",
         "61510d50-026e-43f8-8882-8fa1e9475e5f",
-        "594a2b72-5a2d-48ac-be7c-3970d7204b08"
+        "594a2b72-5a2d-48ac-be7c-3970d7204b08",
+        "62522564-b4e7-435f-a025-56470fe75600"
     ],
     "filterType": "GMObject",
     "folderName": "Temps",

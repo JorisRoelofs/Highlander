@@ -4,7 +4,7 @@
 //Standalone Functions
 if(meleeChargeTime >= 0) speed *= 0.5;
 
-gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,8); //(-7*(meleeChargeTime >= 0))
+gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,8-6*(meleeChargeTime >= 0));
 
 ownKnife = true; //CHECK THE IMPLICATIONS OF THIS
 
@@ -28,7 +28,7 @@ if item  == 0 {
 		if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
 		{
 			meleeChargeTime = -1;
-			meleeId = instance_create_depth(x,y,0,objMelee);
+			meleeId = instance_create_layer(x,y,"Instances",objMelee);
 			meleeId.charge = meleeCharge;
 			meleeId.owner = id;
 			meleeId.image_angle = gunDirection;
@@ -62,6 +62,12 @@ else if item == 1 {
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;
+			
+			
+			//Charge After Effect
+			var _dis = 20 + 10*!item;
+			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),"Instances",objChargeAfterEffect);
+			_afterCharge.maxT = 15*meleeCharge;
 		}
 	}
 }

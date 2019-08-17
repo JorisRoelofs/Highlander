@@ -13,7 +13,7 @@ if back = -1 {
 //Draw Weapon Charge
 if(meleeChargeTime >= 0)
 {
-	draw_set_color(make_color_rgb(251,242,54));
+	draw_set_color(cyellow);
 	var _dis = 20 + 10*!item;
 	draw_circle(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),5*meleeChargeTime,false);
 	draw_circle(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),5,true);

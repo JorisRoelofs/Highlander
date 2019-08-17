@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "62522564-b4e7-435f-a025-56470fe75600",
+            "Value": {
+                "id": "e655c41a-0375-4272-83ad-19e218e2dc6c",
+                "resourcePath": "objects\\objChargeAfterEffect\\objChargeAfterEffect.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "692490c1-5043-4fe3-ac8c-a059e476ba50",
             "Value": {
                 "id": "3e682161-ad5c-4778-8360-01d2a23b6069",

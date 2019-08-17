@@ -26,11 +26,11 @@ if(newTargetTime >= 0 || !instance_exists(target))
 	
 	
 	//If the legendary weapon is nearby, make it the target instead
-	if(instance_exists(objGun.owner) && random(min((300 - point_distance(x,y,objGun.owner.x,objGun.owner.x) / 300), 1) > 0.5)) target = objGun.owner;
+	if(instance_exists(objGun.owner) && random(min(((300 - point_distance(x,y,objGun.owner.x,objGun.owner.x)) / 300), 1) > 0.5)) target = objGun.owner;
 }
 
 if(!instance_exists(target)) target = noone;
-else newTargetTime += (min(((point_distance(x,y,target.x,target.y) - 300) / 300), 1) + (target != _inst))/room_speed; //Speed up choosing a new target the further away the current target is and if someone else is closer
+else newTargetTime += (clamp(((point_distance(x,y,target.x,target.y) - 300) / 300), 0, 1) + (target != _inst))/room_speed; //Speed up choosing a new target the further away the current target is and if someone else is closer
 newTargetTime += 1/room_speed;
 
 
@@ -43,7 +43,7 @@ if(instance_exists(target) && _dis < distance) {
 	//Change Direction
 	if(randomDirectionTime >= 0) {
 		walkDirection = random(360);
-		randomDirectionTime = random(-1) - 0.8;
+		randomDirectionTime = random(-1) - 0.4;
 				
 		if(!item) walkDirection = 0.5*(walkDirection + _dis);
 		
@@ -55,11 +55,11 @@ if(instance_exists(target) && _dis < distance) {
 	else randomDirectionTime += 1/room_speed;
 			
 	
-	//Change Direction Faster When Target Is Far Away
+	/*//Change Direction Faster When Target Is Far Away
 	if(target != objPlayer) {
 		if(_dis < 100) randomDirectionTime *= 0.5;
 		else if(_dis < 160) randomDirectionTime *= 0.8;
-	}
+	}*/
 
 
 	//Set Location
@@ -91,10 +91,15 @@ if(instance_exists(target) && _dis < distance) {
 
 
 //Move Towards Player
-else {
-	if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y, maxSpeed);
-	else move_towards_point(objGun.x, objGun.y, maxSpeed);
-}
+else if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y, maxSpeed);
+
+
+//Move Towards Gun
+else if(instance_exists(objGun) && instance_exists(objGun.owner) && objGun.owner.id != id) move_towards_point(objGun.x, objGun.y, maxSpeed);
+
+
+//Move Towards Target Anyways
+else if(instance_exists(target)) move_towards_point(target.x, target.y, maxSpeed);
 
 
 

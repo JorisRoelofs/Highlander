@@ -1,11 +1,11 @@
 /// @description Setup
 
 
-//General Setup
+//Object Setup
 scr_singleton();
-os_powersave_enable(false); //SHOULD NOT BE HERE
-instance_create_depth(0,0,0,objDebug); //SHOULD NOT BE HERE
 
+
+//Mouse Properties
 window_set_cursor(cr_none);
 cursor_sprite = sprCursor;
 

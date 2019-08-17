@@ -1,6 +1,6 @@
 /// @description: Corpse
-instance_create_layer(x,y,"Foliage", objDead);
+var _corpse = instance_create_layer(x,y,"Foliage", objDead);
 with (objDisplayManager) { 
-	target = other.id;
+	target = _corpse;
 	camereState = camereState.nothing;
 }
