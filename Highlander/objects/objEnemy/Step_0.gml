@@ -26,7 +26,7 @@ if(newTargetTime >= 0 || !instance_exists(target))
 	
 	
 	//If the legendary weapon is nearby, make it the target instead
-	if(instance_exists(objGun.owner) && random(min(((300 - point_distance(x,y,objGun.owner.x,objGun.owner.x)) / 300), 1) > 0.5)) target = objGun.owner;
+	if(instance_exists(objLegendary.owner) && random(min(((300 - point_distance(x,y,objLegendary.owner.x,objLegendary.owner.x)) / 300), 1) > 0.5)) target = objLegendary.owner;
 }
 
 if(!instance_exists(target)) target = noone;
@@ -47,7 +47,7 @@ if(instance_exists(target) && _dis < distance) {
 				
 		if(!item) walkDirection = 0.5*(walkDirection + _dis);
 		
-		walkDirection += angle_difference(point_direction(x,y,objGun.x,objGun.y),walkDirection) * min(point_distance(x,y,objGun.x,objGun.y) < 300,1) * (0.3 + (0.7*(!instance_exists(objGun.owner))));
+		walkDirection += angle_difference(point_direction(x,y,objLegendary.x,objLegendary.y),walkDirection) * min(point_distance(x,y,objLegendary.x,objLegendary.y) < 300,1) * (0.3 + (0.7*(!instance_exists(objLegendary.owner))));
 		
 		var _waterNear = instance_nearest(x,y,objWater);
 		walkDirection += point_direction(x,y,_waterNear.x,_waterNear.y) * clamp((300 - point_distance(x,y,_waterNear.x,_waterNear.y))/300,0,1);
@@ -70,20 +70,20 @@ if(instance_exists(target) && _dis < distance) {
 
 	//Attack Timing
 	if(point_distance(x, y, target.x, target.y) < 120)	{
-		meleeStartTime += 1/room_speed;
-		meleeEndTime += 1/room_speed;
+		weaponStartTime += 1/room_speed;
+		weaponEndTime += 1/room_speed;
 				
-		if(meleeStartTime >= 0 && meleeChargeTime = -1) {
-			meleeChargeTime = 0;
-			meleeStartTime += random(-1) + 0.2*!item;
+		if(weaponStartTime >= 0 && weaponChargeTime = -1) {
+			weaponChargeTime = 0;
+			weaponStartTime += random(-1) + 0.2*!item;
 		}
-		else meleeStartInput = false;
+		else weaponStartInput = false;
 				
-		if(meleeEndTime >= 0) {
-			meleeEndInput = true;
-			meleeEndTime += random(-1) - 0.5 + 0.2*!item;
+		if(weaponEndTime >= 0) {
+			weaponEndInput = true;
+			weaponEndTime += random(-1) - 0.5 + 0.2*!item;
 		}
-		else meleeEndInput = false;
+		else weaponEndInput = false;
 				
 		meleeAngleInput = point_direction(x,y,target.x,target.y);
 	}
@@ -95,7 +95,7 @@ else if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y,
 
 
 //Move Towards Gun
-else if(instance_exists(objGun) && instance_exists(objGun.owner) && objGun.owner.id != id) move_towards_point(objGun.x, objGun.y, maxSpeed);
+else if(instance_exists(objLegendary) && instance_exists(objLegendary.owner) && objLegendary.owner.id != id) move_towards_point(objLegendary.x, objLegendary.y, maxSpeed);
 
 
 //Move Towards Target Anyways

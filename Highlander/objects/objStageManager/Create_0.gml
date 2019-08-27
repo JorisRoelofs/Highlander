@@ -66,7 +66,7 @@ spacing += 64;
 
 //Spawn Folliage
 for (var i = instance_number (objFoliage); i < 400; ++i) {
-    if !place_meeting(x,y,objFoliage) and  !place_meeting(x,y,objBowShrine) and  !place_meeting(x,y,objTree) {
+    if !place_meeting(x,y,objFoliage) and  !place_meeting(x,y,objShrine) and  !place_meeting(x,y,objTree) {
 		instance_create_layer(random_range(0,room_width),random_range(0,room_height),"Foliage", objFoliage);
 	}
 }

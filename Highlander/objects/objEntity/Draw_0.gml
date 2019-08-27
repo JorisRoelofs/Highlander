@@ -1,20 +1,28 @@
 /// @description: Draw Self & Weapon
 event_inherited();
 
-if back = -1 {
-    draw_self();
-	if(ownKnife && !instance_exists(meleeId)) draw_sprite_ext(sprKnife+item,0,x,y+4,1,back,gunDirection,c_white,1);
-} else if back = 1 {
-    if(ownKnife && !instance_exists(meleeId)) draw_sprite_ext(sprKnife+item,0,x,y+4,1,back,gunDirection,c_white,1);
-    draw_self();
-}
+var _dir = weaponAngle;
 
 
-//Draw Weapon Charge
-if(meleeChargeTime >= 0)
+//if back = -1 {
+    draw_self();
+    if(carryingWeapon && !instance_exists(meleeId)) draw_sprite_ext(sprKnife+item,0,x,y+4,1,back,_dir,c_white,1);
+/*} else if back = 1 {
+    if(carryingWeapon && !instance_exists(meleeId)) draw_sprite_ext(sprKnife+item,0,x,y+4,1,back,_dir,c_white,1);
+    draw_self();
+}*/
+
+
+var _dis = weaponChargeDistance[item];
+draw_set_color(c_red);
+draw_point(x+lengthdir_x(_dis,_dir),y+4+lengthdir_y(_dis,_dir));
+
+
+/*//Draw Weapon Charge
+if(weaponChargeTime >= 0)
 {
 	draw_set_color(cyellow);
-	var _dis = 20 + 10*!item;
-	draw_circle(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),5*meleeChargeTime,false);
-	draw_circle(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),5,true);
+	var _dis = weaponChargeDistance[item];
+	draw_circle(x+lengthdir_x(_dis,_dir),y+4+lengthdir_y(_dis,_dir),5*weaponChargeTime,false);
+	draw_circle(x+lengthdir_x(_dis,_dir),y+4+lengthdir_y(_dis,_dir),5,true);
 }

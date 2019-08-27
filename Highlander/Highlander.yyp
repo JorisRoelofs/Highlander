@@ -346,7 +346,7 @@
             "Key": "347d3557-3adc-4ceb-8c06-4c779025fe34",
             "Value": {
                 "id": "d789b217-9d69-4708-96a2-9e2244109f23",
-                "resourcePath": "objects\\objBowShrine\\objBowShrine.yy",
+                "resourcePath": "objects\\objShrine\\objShrine.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -434,7 +434,7 @@
             "Key": "54756911-1907-44ed-9e4e-d899ca69d9ce",
             "Value": {
                 "id": "b197aab6-59dd-4e38-9249-79b1188b216b",
-                "resourcePath": "objects\\objGun\\objGun.yy",
+                "resourcePath": "objects\\objLegendary\\objLegendary.yy",
                 "resourceType": "GMObject"
             }
         },

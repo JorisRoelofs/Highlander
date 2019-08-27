@@ -35,7 +35,7 @@ else {
 	if instance_exists(objPlayer) {
 		//Set Place & Kills
 		objDisplayManager.place = instance_number(objEntity);
-		objDisplayManager.kills = objPlayer.dashes;
+		objDisplayManager.kills = objPlayer.kills;
 	
 	
 		with(objPlayer) {
@@ -52,7 +52,7 @@ else {
 			
 			
 			//Determine Pointer Location
-			if(item) var _target = objGun;
+			if(item) var _target = objLegendary;
 			else var _target = instance_nearest(x,y,objEnemy);
 			
 			if(instance_exists(_target)) {

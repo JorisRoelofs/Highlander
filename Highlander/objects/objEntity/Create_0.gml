@@ -11,24 +11,25 @@ maxSpeed = 2;
 
 
 //Variables
-meleeCharge = 0;
+weaponCharge = 0;
 meleeId = noone;
 invincible = false;
 item = 1; // 0 = sword, 1 = bow
-ownKnife = true;
-dashes = 0; //TURN INTO KILLS
-
+carryingWeapon = true;
+kills = 0; //TURN INTO KILLS
+weaponChargeDistance[0] = 28;
+weaponChargeDistance[1] = 20;
 
 //Inputs
-meleeStartInput = false;
-meleeEndInput = false;
+weaponStartInput = false;
+weaponEndInput = false;
 meleeAngleInput = 0;
 dashInput = false;
 
 
 //Timers
-meleeChargeTime = -1;
-timeTillMeleeCharge = 1;
+weaponChargeTime = -1;
+timeTillweaponCharge = 1;
 timeTillGunCharge = 1;
 dashTime = -1;
 //timeTillDash = 0.5;
@@ -37,7 +38,7 @@ dashTime = -1;
 //Weapon Orientation
 facing = 1;
 back = 1;
-gunDirection = image_angle;
+weaponAngle = image_angle;
 
 
 //Character
