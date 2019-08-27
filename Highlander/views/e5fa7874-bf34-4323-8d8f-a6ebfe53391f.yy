@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "e5fa7874-bf34-4323-8d8f-a6ebfe53391f",
     "children": [
-        
+        "e97a909b-87eb-4d64-8637-9a14aeba6875"
     ],
     "filterType": "GMExtension",
     "folderName": "extensions",
