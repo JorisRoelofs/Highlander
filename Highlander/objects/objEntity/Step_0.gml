@@ -57,13 +57,12 @@ else if item == bow {
 			
 			scr_play_snd(sndBow);
 			
-			var b = instance_create_layer(x, y, "Instances", objBullet);
+			var b = instance_create_layer(x, y, "Instances", objArrow);
 			b.direction = weaponAngle;
 			b.speed = 10*weaponCharge;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;
-			
 			
 			//Charge After Effect
 			var _dis = 20 + 10*!item;

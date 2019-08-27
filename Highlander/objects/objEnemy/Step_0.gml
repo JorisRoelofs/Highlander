@@ -35,8 +35,11 @@ newTargetTime += 1/room_speed;
 
 
 //Follow Target
-var _dis = point_distance(x,y,target.x,target.y)-sprite_width;
-var _dir = point_direction(x,y,target.x,target.y);
+if(instance_exists(target))
+{
+	var _dis = point_distance(x,y,target.x,target.y)-sprite_width;
+	var _dir = point_direction(x,y,target.x,target.y);
+}
 
 if(instance_exists(target) && _dis < distance) {
 

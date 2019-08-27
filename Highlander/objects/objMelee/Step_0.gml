@@ -20,7 +20,7 @@ if(image_index >= 3 && image_index <= 7)
 
 
 	//Deflect Arrow
-	with(objBullet) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
+	with(objArrow) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
 		if(deflectTime >= 0)
 		{

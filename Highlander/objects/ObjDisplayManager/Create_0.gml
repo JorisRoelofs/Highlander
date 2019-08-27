@@ -1,5 +1,6 @@
 /// @description Setup
 
+backgroundSurface = -1000;
 
 //Object Setup
 scr_singleton();
