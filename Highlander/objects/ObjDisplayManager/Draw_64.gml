@@ -52,7 +52,7 @@ else {
 			
 			
 			//Determine Pointer Location
-			if(item) var _target = objLegendary;
+			if(item != objLegendary.item) var _target = objLegendary;
 			else var _target = instance_nearest(x,y,objEnemy);
 			
 			if(instance_exists(_target)) {
@@ -75,8 +75,8 @@ else {
 				
 				
 				//Draw Pointers
-				draw_sprite_ext(sprCrown,!item,pointerTargetX,pointerTargetY,crownScale,crownScale,0,c_white,1);
-				if(!item) draw_sprite_ext(sprCrown,0,x-camera_get_view_x(view_camera[0]),y-20-camera_get_view_y(view_camera[0]),crownScale,crownScale,0,c_white,1);
+				draw_sprite_ext(sprCrown,(item=objLegendary.item),pointerTargetX,pointerTargetY,crownScale,crownScale,0,c_white,1);
+				if(item = objLegendary.item) draw_sprite_ext(sprCrown,0,x-camera_get_view_x(view_camera[0]),y-20-camera_get_view_y(view_camera[0]),crownScale,crownScale,0,c_white,1);
 			}
 		}
 		

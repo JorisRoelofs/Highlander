@@ -35,7 +35,7 @@ else
 		if(point_distance(x,y,_entityNear.x,_entityNear.y) < 12)
 		{
 			scr_play_snd(sndSwordPickup);
-			_entityNear.item = 0;
+			_entityNear.item = item;
 			owner = _entityNear.id;
 		}
 		

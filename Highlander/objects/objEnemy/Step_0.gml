@@ -36,6 +36,7 @@ newTargetTime += 1/room_speed;
 
 //Follow Target
 var _dis = point_distance(x,y,target.x,target.y)-sprite_width;
+var _dir = point_direction(x,y,target.x,target.y);
 
 if(instance_exists(target) && _dis < distance) {
 
@@ -45,7 +46,7 @@ if(instance_exists(target) && _dis < distance) {
 		walkDirection = random(360);
 		randomDirectionTime = random(-1) - 0.4;
 				
-		if(!item) walkDirection = 0.5*(walkDirection + _dis);
+		if(item = sword) walkDirection = 0.5*(walkDirection + _dir);
 		
 		walkDirection += angle_difference(point_direction(x,y,objLegendary.x,objLegendary.y),walkDirection) * min(point_distance(x,y,objLegendary.x,objLegendary.y) < 300,1) * (0.3 + (0.7*(!instance_exists(objLegendary.owner))));
 		
@@ -75,13 +76,15 @@ if(instance_exists(target) && _dis < distance) {
 				
 		if(weaponStartTime >= 0 && weaponChargeTime = -1) {
 			weaponChargeTime = 0;
-			weaponStartTime += random(-1) + 0.2*!item;
+			weaponStartTime += random(-1);
+			if(item = sword) weaponStartTime += 0.2;
 		}
 		else weaponStartInput = false;
 				
 		if(weaponEndTime >= 0) {
 			weaponEndInput = true;
-			weaponEndTime += random(-1) - 0.5 + 0.2*!item;
+			weaponEndTime += random(-1) - 0.5
+			if(item = sword) weaponEndTime += 0.2;
 		}
 		else weaponEndInput = false;
 				

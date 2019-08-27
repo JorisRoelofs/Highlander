@@ -10,7 +10,7 @@ carryingWeapon = true; //CHECK THE IMPLICATIONS OF THIS
 
 
 //Sword
-if item  == 0 {
+if item  == sword {
 
 
 	//Charging
@@ -39,7 +39,7 @@ if item  == 0 {
 
 
 //Bow
-else if item == 1 {
+else if item == bow {
 
 
 	//Charging
@@ -51,7 +51,7 @@ else if item == 1 {
 		
 		
 		//Release Attack
-		if(!instance_exists(meleeId) && (weaponEndInput || weaponCharge = 1))
+		if(weaponEndInput || weaponCharge = 1)
 		{
 			weaponChargeTime = -1;
 			
@@ -102,4 +102,3 @@ if(dashTime >= 0)
 
 if(dashTime >= timeTillDash) dashTime = -1;
 */#endregion
-

@@ -14,11 +14,11 @@ maxSpeed = 2;
 weaponCharge = 0;
 meleeId = noone;
 invincible = false;
-item = 1; // 0 = sword, 1 = bow
+item = bow;
 carryingWeapon = true;
-kills = 0; //TURN INTO KILLS
-weaponChargeDistance[0] = 28;
-weaponChargeDistance[1] = 20;
+kills = 0;
+weaponChargeDistance[sword] = 28;
+weaponChargeDistance[bow] = 20;
 
 //Inputs
 weaponStartInput = false;
