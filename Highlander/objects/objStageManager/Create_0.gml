@@ -13,8 +13,6 @@ switch (room) {
 		sprTileOld = sprWaterTile;
 		sprCorner = sprWaterCorner;	
 		alarm[0] = room_speed * 5;
-		range -= 2;
-		spacing += 64;
 	break;
 	case rmVolcano:
 		sprTile = sprLava;
@@ -61,6 +59,9 @@ var rightBottom = instance_create_layer(room_width-spacing,room_height-spacing,"
 var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater);
 	rightTop.sprite_index = sprCorner;
 	rightTop.image_angle = 180;
+	
+range -= 2;
+spacing += 64;
 
 
 //Spawn Folliage
