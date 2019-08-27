@@ -375,14 +375,6 @@
             }
         },
         {
-            "Key": "3469fba2-9a64-4ef0-8193-643324244844",
-            "Value": {
-                "id": "4bcf7b2d-f640-4b84-994d-9fd0a363af15",
-                "resourcePath": "rooms\\rmIce\\rmIce.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "347d3557-3adc-4ceb-8c06-4c779025fe34",
             "Value": {
                 "id": "d789b217-9d69-4708-96a2-9e2244109f23",
@@ -1444,6 +1436,14 @@
                 "id": "fa466873-6c6b-4ca7-a2fb-a738c3b6847d",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f6304d4d-6cba-460e-b689-1a2e524c4ed2",
+            "Value": {
+                "id": "b3b8acae-4ea9-4890-a683-72a316c42231",
+                "resourcePath": "rooms\\rmIce\\rmIce.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
