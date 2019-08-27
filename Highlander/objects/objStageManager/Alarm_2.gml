@@ -1,43 +1,13 @@
-/// @description: Spawn Tiles & Foliage
+/// @description Ice
+
+//scr_play_snd(sndWaterRush); //Doesn't work, needs to be played in the player when near water.
 
 
-//Variables
-range = 31;
-spacing = 32;
+//Replace Art
+with (objWater) sprite_index = other.sprTileOld;
 
 
-//States
-switch (room) {
-	case rmIsland:
-		sprTile = sprWater;
-		sprTileOld = sprWaterTile;
-		sprCorner = sprWaterCorner;	
-		alarm[0] = room_speed * 5;
-		
-		//Spawn Folliage
-		for (var i = instance_number (objFoliage); i < 400; ++i) {
-		    if !place_meeting(x,y,objFoliage) and  !place_meeting(x,y,objShrine) and  !place_meeting(x,y,objTree) {
-				instance_create_layer(random_range(0,room_width),random_range(0,room_height),"Foliage", objFoliage);
-			}
-		}
-
-	break;
-	case rmVolcano:
-		sprTile = sprLava;
-		sprTileOld = sprLava;
-		sprCorner =  sprLavaCorner;
-		alarm[1] = room_speed * 5;
-	break;
-	case rmIce:
-		sprTile = sprIce;
-		sprTileOld = sprWaterTile;
-		sprCorner =  sprIceCorner;
-		alarm[2] = room_speed * 10;
-	break;
-}
-
-
-//Spawn Tiles
+//New Tiles
 for (var i = 1; i < range; ++i) {
     var left = instance_create_layer(spacing,spacing+(i*64),"Water", objWater)
 		left.image_angle = 270;
@@ -61,7 +31,7 @@ for (var i = 1; i < range; ++i) {
 var leftTop = instance_create_layer(spacing,spacing,"Water",objWater);
 	leftTop.sprite_index = sprCorner;
 	leftTop.image_angle = 270;
-		
+
 var leftBottom = instance_create_layer(spacing,room_height-spacing,"Water",objWater);
 	leftBottom.sprite_index = sprCorner;
 	leftBottom.image_angle = 0;
@@ -74,6 +44,10 @@ var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater
 	rightTop.sprite_index = sprCorner;
 	rightTop.image_angle = 180;
 	
-range -= 2;
-spacing += 64;
 
+//Prepare Next Wave
+if range > 7 and room = rmIsland {
+	range -= 2;
+	spacing += 64;
+	alarm[0] = room_speed * 5;
+}	

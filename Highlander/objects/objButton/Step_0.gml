@@ -6,6 +6,7 @@ if(instance_exists(objCursor)) selected = position_meeting(objCursor.x,objCursor
 input = mouse_check_button_pressed(mb_left);
 inputHeld = mouse_check_button(mb_left);
 
+if keyboard_check(vk_tab) { room_goto(rmIce);}
 
 //On CLick
 if(selected && input)
@@ -33,7 +34,9 @@ if(selected && input)
 if(selected) depth = -100;
 else depth = buttonEffect;
 
-image_index = (2 * objSystemManager.audioSetting) + selected;
+image_index = selected;
+if(buttonEffect = switchSound) image_index += 2 * objSystemManager.audioSetting;
+if(buttonEffect = switchRoom) image_index += 2 * roomChoice;
 
 var _targetX = startX + (selected * 5 * sin(0.5 * pi * t));
 var _targetY = startY + (selected * 5 * sin((0.8 * pi * t) + 0.2));

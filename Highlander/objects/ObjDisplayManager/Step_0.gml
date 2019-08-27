@@ -30,3 +30,4 @@ if target = undefined {
 //Cursor
 if (window_get_fullscreen()) { cursor_sprite = sprCursorLarge; }
 else { cursor_sprite = sprCursor; }
+

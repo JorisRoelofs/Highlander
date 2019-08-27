@@ -19,6 +19,7 @@ roomChoice = 0;
 
 rooms[0] = rmIsland;
 rooms[1] = rmVolcano;
+rooms[2] = rmIce;
 
 
 //Art Variables
