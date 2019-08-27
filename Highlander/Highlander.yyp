@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "3469fba2-9a64-4ef0-8193-643324244844",
+            "Value": {
+                "id": "4bcf7b2d-f640-4b84-994d-9fd0a363af15",
+                "resourcePath": "rooms\\rmIce\\rmIce.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "347d3557-3adc-4ceb-8c06-4c779025fe34",
             "Value": {
                 "id": "d789b217-9d69-4708-96a2-9e2244109f23",
