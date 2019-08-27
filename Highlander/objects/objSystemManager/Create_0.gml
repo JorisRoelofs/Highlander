@@ -1,6 +1,7 @@
 /// @description: Save Settings Setup
 
 instance_create_depth(0,0,0,objDebug);
+randomize();
 
 //Setup
 scr_singleton();

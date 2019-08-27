@@ -2,11 +2,11 @@
 
 
 //Standalone Functions
-if(meleeChargeTime >= 0) speed *= 0.5;
+if(weaponChargeTime >= 0) speed *= 0.5;
 
-gunDirection = angle_rotate_towards(gunDirection,meleeAngleInput,8-6*(meleeChargeTime >= 0));
+weaponAngle = angle_rotate_towards(weaponAngle,meleeAngleInput,8-6*(weaponChargeTime >= 0));
 
-ownKnife = true; //CHECK THE IMPLICATIONS OF THIS
+carryingWeapon = true; //CHECK THE IMPLICATIONS OF THIS
 
 
 //Sword
@@ -14,25 +14,25 @@ if item  == 0 {
 
 
 	//Charging
-	if(!ownKnife || instance_exists(meleeId)) meleeChargeTime = -1;
-	else if(meleeStartInput) meleeChargeTime = 0;
+	if(!carryingWeapon || instance_exists(meleeId)) weaponChargeTime = -1;
+	else if(weaponStartInput) weaponChargeTime = 0;
 
-	if(meleeChargeTime >= 0)
+	if(weaponChargeTime >= 0)
 	{
-		meleeChargeTime += 1/room_speed;
+		weaponChargeTime += 1/room_speed;
 	
-		if(meleeChargeTime >= timeTillMeleeCharge) meleeCharge = 1;
-		else meleeCharge = 0;
+		if(weaponChargeTime >= timeTillweaponCharge) weaponCharge = 1;
+		else weaponCharge = 0;
 		
 		
 		//Release Attack
-		if(meleeEndInput || meleeCharge = 1)
+		if(weaponEndInput || weaponCharge = 1)
 		{
-			meleeChargeTime = -1;
+			weaponChargeTime = -1;
 			meleeId = instance_create_layer(x,y,"Instances",objMelee);
-			meleeId.charge = meleeCharge;
+			meleeId.charge = weaponCharge;
 			meleeId.owner = id;
-			meleeId.image_angle = gunDirection;
+			meleeId.image_angle = weaponAngle;
 		}
 	}
 }
@@ -43,23 +43,23 @@ else if item == 1 {
 
 
 	//Charging
-	if(meleeStartInput) meleeChargeTime = 0;
-	if(meleeChargeTime >= 0)
+	if(weaponStartInput) weaponChargeTime = 0;
+	if(weaponChargeTime >= 0)
 	{
-		meleeChargeTime += 1/room_speed;
-		meleeCharge = min(meleeChargeTime / timeTillGunCharge, 1);
+		weaponChargeTime += 1/room_speed;
+		weaponCharge = min(weaponChargeTime / timeTillGunCharge, 1);
 		
 		
 		//Release Attack
-		if(!instance_exists(meleeId) && (meleeEndInput || meleeCharge = 1))
+		if(!instance_exists(meleeId) && (weaponEndInput || weaponCharge = 1))
 		{
-			meleeChargeTime = -1;
+			weaponChargeTime = -1;
 			
 			scr_play_snd(sndBow);
 			
 			var b = instance_create_layer(x, y, "Instances", objBullet);
-			b.direction = gunDirection;
-			b.speed = 10*meleeCharge;
+			b.direction = weaponAngle;
+			b.speed = 10*weaponCharge;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;
@@ -67,8 +67,8 @@ else if item == 1 {
 			
 			//Charge After Effect
 			var _dis = 20 + 10*!item;
-			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,gunDirection),y+4+lengthdir_y(_dis,gunDirection),"Instances",objChargeAfterEffect);
-			_afterCharge.tMax = 12 + (3*meleeCharge);
+			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Instances",objChargeAfterEffect);
+			_afterCharge.tMax = 12 + (3*weaponCharge);
 		}
 	}
 }
@@ -84,9 +84,9 @@ else if speed > 0 {
 
 
 #region dash [REMOVED]
-/*if(dashes && dashInput)
+/*if(kills && dashInput)
 {
-	dashes-=1;
+	kills-=1;
 	dashTime = 0;
 	dashDirection = direction;
 	if(speed = 0) dashDirection = point_direction(x,y,objCursor.x,objCursor.y);

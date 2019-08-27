@@ -1,7 +1,7 @@
 /// @description: Pickup
-if(!ownKnife && other.speed = 0)
+if(!carryingWeapon && other.speed = 0)
 {
-	ownKnife = true;
+	carryingWeapon = true;
 	instance_destroy(other);
 	var _hit = choose(sndDamage0,sndDamage1,sndDamage2);
 		

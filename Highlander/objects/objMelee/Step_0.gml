@@ -42,14 +42,14 @@ if(image_index >= 3 && image_index <= 7)
 		
 		owner.speed = 30;
 		owner.direction = point_direction(other.owner.x,other.owner.y,owner.x,owner.y);
-		owner.ownKnife = false;
+		owner.carryingWeapon = false;
 		instance_create_layer(x,y,"Instances",objKnife);
 		instance_destroy();
 		with(other)
 		{
 			owner.speed = 30;
 			owner.direction = other.owner.direction - 180;
-			owner.ownKnife = false;
+			owner.carryingWeapon = false;
 			instance_create_layer(x,y,"Instances",objKnife);
 			instance_destroy();
 		}
@@ -64,7 +64,7 @@ if(image_index = image_number-5)
 {
 	with(objEntity) if(!invincible && id != other.owner && point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(other.image_angle,point_direction(other.x,other.y,x,y))) < 120)
 	{
-		other.owner.dashes++;
+		other.owner.kills++;
 		instance_destroy();
 	}
 }

@@ -378,7 +378,7 @@
             "Key": "347d3557-3adc-4ceb-8c06-4c779025fe34",
             "Value": {
                 "id": "d789b217-9d69-4708-96a2-9e2244109f23",
-                "resourcePath": "objects\\objBowShrine\\objBowShrine.yy",
+                "resourcePath": "objects\\objShrine\\objShrine.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -506,7 +506,7 @@
             "Key": "54756911-1907-44ed-9e4e-d899ca69d9ce",
             "Value": {
                 "id": "b197aab6-59dd-4e38-9249-79b1188b216b",
-                "resourcePath": "objects\\objGun\\objGun.yy",
+                "resourcePath": "objects\\objLegendary\\objLegendary.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -651,6 +651,14 @@
             "Value": {
                 "id": "fd2f0ff7-4feb-43d0-b010-11cebc32a592",
                 "resourcePath": "sprites\\sprFoliage\\sprFoliage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6e5b5b4e-ec12-404d-ba70-ae3f32ab6c69",
+            "Value": {
+                "id": "67f65128-f8a8-4efa-b9ac-8c14154070c8",
+                "resourcePath": "sprites\\sprIceCorner\\sprIceCorner.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1412,6 +1420,14 @@
                 "id": "a1031071-ceb7-438d-a15e-5f0ad20744f4",
                 "resourcePath": "sounds\\musicTitle\\musicTitle.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "f36362c2-ea69-4f8e-930d-6f1d84d9b7bf",
+            "Value": {
+                "id": "0b5ac98f-1d1c-4aa9-88b6-7b35d21481d3",
+                "resourcePath": "sprites\\sprIcePieces\\sprIcePieces.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
