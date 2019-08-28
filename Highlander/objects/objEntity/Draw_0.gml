@@ -1,6 +1,4 @@
 /// @description: Draw Self & Weapon
-event_inherited();
-
 var _dis = weaponChargeDistance[item];
 var _dir = weaponAngle;
 

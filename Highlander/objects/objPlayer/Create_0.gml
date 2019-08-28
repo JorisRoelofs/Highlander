@@ -10,7 +10,7 @@ scr_singleton();
 var _dis = 200;
 x = random_range(_dis,room_width-_dis);
 y = random_range(_dis,room_height-_dis);
-
+instance_create_layer(x,y,"Entities", objIndicator);
 
 //UI Pointer
 pointerTargetX = 0.5*ideal_width;
