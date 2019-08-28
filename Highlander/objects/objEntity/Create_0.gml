@@ -30,7 +30,7 @@ dashInput = false;
 //Timers
 weaponChargeTime = -1;
 timeTillweaponCharge = 1;
-timeTillGunCharge = 1;
+timeTillWeaponCharge = 1;
 dashTime = -1;
 //timeTillDash = 0.5;
 

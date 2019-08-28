@@ -47,7 +47,7 @@ else if item == bow {
 	if(weaponChargeTime >= 0)
 	{
 		weaponChargeTime += 1/room_speed;
-		weaponCharge = min(weaponChargeTime / timeTillGunCharge, 1);
+		weaponCharge = min(weaponChargeTime / timeTillWeaponCharge, 1);
 		
 		
 		//Release Attack
