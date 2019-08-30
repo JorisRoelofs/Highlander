@@ -9,7 +9,7 @@ meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
 
 
 //Walking
-speed = 0;
+//speed = 0;
 
 if(keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) hspeed = maxSpeed;
 if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) hspeed = -maxSpeed;

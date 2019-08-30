@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "79e3e462-492e-4021-a38a-9c0af0fb27ec",
+            "Value": {
+                "id": "cfa7fb0e-2c4b-47e8-b9d8-f667fdead68a",
+                "resourcePath": "sprites\\sprPlayer3Walk\\sprPlayer3Walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7b0201d0-ebcd-4e5d-9b16-78f3d69d784e",
             "Value": {
                 "id": "38101723-abdd-4b79-86c9-c440cd8ffe8f",
@@ -923,6 +931,14 @@
             "Value": {
                 "id": "e8734311-1391-433d-bb64-240f41521efd",
                 "resourcePath": "sprites\\sprBtn1\\sprBtn1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a77da25a-5bb8-4a82-aa43-1673d59a728c",
+            "Value": {
+                "id": "d108abb7-2e70-4283-a645-ecc749bf1f64",
+                "resourcePath": "sprites\\sprPlayer3Idle\\sprPlayer3Idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1219,6 +1235,14 @@
             "Value": {
                 "id": "90f82c83-fe5c-4c49-8c3d-f20dcb05df52",
                 "resourcePath": "sprites\\vjoy_Theme_Line_Light\\vjoy_Theme_Line_Light.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "de5fbc7b-896b-4233-856d-df78b34013ea",
+            "Value": {
+                "id": "f40590ef-4eb5-4e9b-8b0b-ca5486bb1225",
+                "resourcePath": "sprites\\sprIceBlocks\\sprIceBlocks.yy",
                 "resourceType": "GMSprite"
             }
         },

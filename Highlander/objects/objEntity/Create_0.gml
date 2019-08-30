@@ -42,7 +42,7 @@ weaponAngle = image_angle;
 
 
 //Character
-type = irandom(1);
+type = irandom(2);
 
 if type = 0 {
 	sprIdle = sprPlayerIdle;
@@ -52,4 +52,9 @@ if type = 0 {
 	sprIdle = sprPlayer2Idle;
 	sprWalk = sprPlayer2Walk;
 	sprDashing = sprPlayer2Dash; 
+}  else if type = 2 {
+	sprIdle = sprPlayer3Idle;
+	sprWalk = sprPlayer3Walk;
+	sprDashing = sprPlayer2Dash; 
 }
+

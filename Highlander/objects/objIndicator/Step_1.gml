@@ -1,3 +1,5 @@
 /// @description Insert description here
-x = objPlayer.x;
-y = objPlayer.y - 32;
+if instance_exists(objPlayer) {
+	x = objPlayer.x;
+	y = objPlayer.y - 38;
+} else instance_destroy();
