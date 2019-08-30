@@ -1,20 +1,30 @@
 /// @description: Input, Movement & Animation
 
+// Controller checking
+var _device;
+var _maxpads = gamepad_get_device_count();for (var i = 0; i < _maxpads; i++) {
+    if (gamepad_is_connected(i)) {
+        _device = i;
+        }
+    }
 
 //Input
-dashInput = mouse_check_button_pressed(mb_right);
-weaponStartInput = mouse_check_button_pressed(mb_left);
-weaponEndInput = mouse_check_button_released(mb_left);
-meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y)
+var _hraxis = gamepad_axis_value(_device, gp_axisrh);
+var _vraxis = gamepad_axis_value(_device, gp_axisrv);
+
+dashInput = mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(_device,gp_face1);
+weaponStartInput = mouse_check_button_pressed(mb_left)  || gamepad_button_check_pressed(_device,gp_shoulderrb);
+weaponEndInput = mouse_check_button_released(mb_left) || gamepad_button_check_released(_device,gp_shoulderrb);
+meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y) || point_direction(x, y, _hraxis,_vraxis);
 
 
 //Walking
 //speed = 0;
 
-if(keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) hspeed = maxSpeed;
-if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) hspeed = -maxSpeed;
-if(keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) vspeed = maxSpeed;
-if(keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) vspeed = -maxSpeed;
+if(keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) || gamepad_button_check(0,gp_padr) hspeed = maxSpeed;
+if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) || gamepad_button_check(0,gp_padl)hspeed = -maxSpeed;
+if(keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) || gamepad_button_check(0,gp_padd)vspeed = maxSpeed;
+if(keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) || gamepad_button_check(0,gp_padu)vspeed = -maxSpeed;
 
 speed = clamp(speed,0,maxSpeed);
 
