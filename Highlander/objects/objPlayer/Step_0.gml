@@ -5,7 +5,7 @@ var _device;
 var _maxpads = gamepad_get_device_count();for (var i = 0; i < _maxpads; i++) {
     if (gamepad_is_connected(i)) {
         _device = i;
-        }
+        } else _device = noone;
     }
 
 //Input
@@ -15,7 +15,7 @@ var _vraxis = gamepad_axis_value(_device, gp_axisrv);
 dashInput = mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(_device,gp_face1);
 weaponStartInput = mouse_check_button_pressed(mb_left)  || gamepad_button_check_pressed(_device,gp_shoulderrb);
 weaponEndInput = mouse_check_button_released(mb_left) || gamepad_button_check_released(_device,gp_shoulderrb);
-meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y) || point_direction(x, y, _hraxis,_vraxis);
+meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y); /*|| point_direction(x, y, _hraxis,_vraxis) */
 
 
 //Walking
