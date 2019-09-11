@@ -14,7 +14,7 @@ race = irandom(3);
 weaponCharge = 0;
 meleeId = noone;
 invincible = false;
-item = bow;
+item = bomb;
 carryingWeapon = true;
 kills = 1;
 weaponChargeDistance[sword] = 28;
@@ -42,6 +42,7 @@ timeTillweaponCharge = 1;
 timeTillWeaponCharge = 1;
 dashTime = -1;
 timeTillDash = 0.5;
+weaponDischargeTime = 0;
 
 
 //Weapon Orientation

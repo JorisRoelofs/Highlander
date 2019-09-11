@@ -75,7 +75,8 @@ else if item == bomb {
 
 
 	//Charging
-	if(weaponStartInput) weaponChargeTime = 0;
+	weaponDischargeTime -= 1/room_speed;
+	if(weaponStartInput && weaponDischargeTime < 0) weaponChargeTime = 0;
 	if(weaponChargeTime >= 0)
 	{
 		weaponChargeTime += 1/room_speed;
@@ -83,21 +84,21 @@ else if item == bomb {
 		
 		
 		//Release Attack
-		if(weaponEndInput || weaponCharge = 1)
+		if(weaponChargeTime >= 0)//weaponEndInput || weaponCharge = 1)
 		{
 			weaponChargeTime = -1;
+			weaponDischargeTime = (0.5 * (1 - weaponCharge)) + 0.2;
 			
 			scr_play_snd(sndBow);
 			
-			var _dis = 10;
+			var _dis = 30;
 			var _dir = weaponAngle;
 			var b = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb);
-			b.deathDistance = 100 * (weaponCharge + 1);
+			b.deathDistanceMax = (30 * weaponCharge) + 120;
+			b.deathDistance = b.deathDistanceMax;
 			b.direction = weaponAngle;
-			b.speedIncrease = (0.2*weaponCharge) + 0.05;
-			b.image_angle = b.direction;
+			b.speedIncrease = (0.05*weaponCharge) + 0.05;
 			b.charge = weaponCharge;
-			b.startSpeed = b.speed;
 			b.owner = id;
 			
 			//Charge After Effect

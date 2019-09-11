@@ -73,7 +73,7 @@ if(instance_exists(target) && _dis < distance) {
 
 
 	//Attack Timing
-	if(point_distance(x, y, target.x, target.y) < 120)	{
+	if(point_distance(x, y, target.x, target.y) < weaponAttackDistance[item])	{
 		if(weaponChargeTime = -1) weaponStartTime += 1/room_speed;
 		else weaponEndTime += 1/room_speed;
 		//weaponStartTime += 1/room_speed;
@@ -110,6 +110,12 @@ else if(instance_exists(objLegendary) && ((instance_exists(objLegendary.owner) &
 
 //Move Towards Target Anyways
 else if(instance_exists(target)) move_towards_point(target.x, target.y, maxSpeed);
+
+
+//DEBUGGING
+//speed = 0
+//weaponChargeTime = -1;
+
 
 //Inheritance
 event_inherited();
