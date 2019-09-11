@@ -9,11 +9,24 @@ display_set_gui_size(ideal_width,ideal_height);
 if room = rmMenu {
 	draw_set_font(fnt8);
 	draw_set_color(cyellow);
-	
+	draw_set_halign(fa_center)
 	draw_text(ideal_width/2,48,"CREATION OF JORIS ROELOFS AND TOM JONGENS");
 
-	scrDrawText("#"+string(placeRecord),ideal_height-30,100);
-	scrDrawText("X"+string(killRecord),ideal_height-30,ideal_width-100);
+	//scrDrawText("#"+string(placeRecord),ideal_height-32,32);
+	//scrDrawText("X"+string(killRecord),ideal_height-32,32);
+	
+	
+	
+	
+	draw_set_font(fnt16);
+	draw_set_color(cpurple);
+	draw_set_halign(fa_center)
+	
+	draw_rectangle_color(0-16,ideal_height-32,ideal_width+16,ideal_height-16,cyellow,cyellow,cyellow,cyellow,false);
+	draw_text(ideal_width/2, ideal_height-32,"KILL ONE HUNDRED ENEMIES: " +string(killRecord) + " /100");
+	
+	draw_rectangle_color(0-16,ideal_height-48,ideal_width+16,ideal_height-32,cyellow,cyellow,cyellow,cyellow,false);
+	draw_text(ideal_width/2, ideal_height-48,"ACHIEVE 10 KILL STREAK " +string(killRecord) + " /10");
 }
 
 

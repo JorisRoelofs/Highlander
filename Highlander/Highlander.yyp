@@ -202,7 +202,7 @@
             "Key": "15f8edaf-e79b-4263-924a-08f9b89896a0",
             "Value": {
                 "id": "6427328b-48d2-458c-be23-30f53a97a955",
-                "resourcePath": "sprites\\sprBtn2\\sprBtn2.yy",
+                "resourcePath": "sprites\\sprBtnFS\\sprBtnFS.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -463,6 +463,14 @@
             }
         },
         {
+            "Key": "45469300-f9a0-40e0-b768-987fdecd4ed8",
+            "Value": {
+                "id": "aa1bdfdd-3935-44f8-b609-ca67ea99f897",
+                "resourcePath": "scripts\\scr_isTouchingMe\\scr_isTouchingMe.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "48245ff6-e2f3-4821-afd5-81b74bc0c823",
             "Value": {
                 "id": "cbf8522f-588e-4697-af60-4455b59ba4db",
@@ -492,6 +500,14 @@
                 "id": "b1984ed7-02f9-4145-85f4-8829d2dc6fea",
                 "resourcePath": "objects\\objIndicator\\objIndicator.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4e6039cd-cb1a-4a2e-a5b1-e9566d049b10",
+            "Value": {
+                "id": "7b64c502-19cd-46e3-91dc-9da8756b6e67",
+                "resourcePath": "sprites\\sprBtnSelectionArrow\\sprBtnSelectionArrow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -588,6 +604,14 @@
                 "id": "f5312d20-05d8-47cc-a379-18660868f9d7",
                 "resourcePath": "views\\59504fc3-e2cc-4235-8510-307aba6355ef.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5aa57cfe-051d-4dea-b748-2082c85b87b7",
+            "Value": {
+                "id": "783b6e6c-9803-4490-9eb8-047151a478ee",
+                "resourcePath": "sprites\\sprBtnSquare\\sprBtnSquare.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -946,7 +970,7 @@
             "Key": "a053e383-1f14-4cfb-b8d5-34626db9fcc2",
             "Value": {
                 "id": "d9982829-905d-4846-bcf8-650dde3f8d64",
-                "resourcePath": "sprites\\sprBtn3\\sprBtn3.yy",
+                "resourcePath": "sprites\\sprBtnMute\\sprBtnMute.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -971,6 +995,14 @@
             "Value": {
                 "id": "bfb67562-8cf4-4d78-a8e2-166c6ac7b5af",
                 "resourcePath": "objects\\objAudioManager\\objAudioManager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a65050f1-f1b5-429b-80a8-86b5d1ce6c88",
+            "Value": {
+                "id": "af0bd690-5624-42c0-8ca6-6030a7bfd4cf",
+                "resourcePath": "objects\\objButtonSelection\\objButtonSelection.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1282,7 +1314,7 @@
             "Key": "d5702194-0e71-4a12-b060-0221860b12b4",
             "Value": {
                 "id": "ba11e48b-6ea9-485c-888f-f83d43ae0c58",
-                "resourcePath": "sprites\\sprBtn0\\sprBtn0.yy",
+                "resourcePath": "sprites\\sprBtnPlay\\sprBtnPlay.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1330,7 +1362,7 @@
             "Key": "dd53aaf6-40d0-41a1-8fa5-8a2016e3c4cc",
             "Value": {
                 "id": "3d001168-9174-4b5b-be02-4f9c6ba12025",
-                "resourcePath": "sprites\\sprGun\\sprGun.yy",
+                "resourcePath": "sprites\\sprBow\\sprBow.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1450,7 +1482,7 @@
             "Key": "e6f0949b-6abc-442a-a10f-894c44bfad8e",
             "Value": {
                 "id": "01dc3f7e-df45-431d-8a73-adb82e83ec3d",
-                "resourcePath": "sprites\\sprBtn4\\sprBtn4.yy",
+                "resourcePath": "sprites\\sprBtnQuit\\sprBtnQuit.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1649,7 +1681,8 @@
         "567fb572-9af6-41f4-bbd1-e6d874b42b1c",
         "426e8e40-fff6-4471-a842-e59a9586882b",
         "042f2883-544d-48f4-baa7-d3637d9f7c7b",
-        "bd27700a-5867-41de-b674-d6309ec72da9"
+        "bd27700a-5867-41de-b674-d6309ec72da9",
+        "45469300-f9a0-40e0-b768-987fdecd4ed8"
     ],
     "tutorial": ""
 }

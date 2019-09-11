@@ -3,7 +3,7 @@
 
 //Button Function
 buttonEffect = instance_number(objButton) - 1;
-sprite_index += buttonEffect;
+//sprite_index += buttonEffect;
 
 var i = 0;
 startGame = i; i++;

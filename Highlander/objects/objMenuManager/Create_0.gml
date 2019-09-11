@@ -1,14 +1,9 @@
 /// @description: Button Layout
-iMax = 5;
-for(var i = 0; i < iMax; i++)
-{
-	var _button = instance_create_layer(0.5*ideal_width,(0.25+(0.40*i/(iMax-1)))*room_height,"Menu",objButton);
-	with(_button)
-	{
-		startX = x;
-		startY = y;
-	}
-}
+x = ideal_width/2;
+y = 32;
+characterSelec = 0;
+weaponPrimarySelec = 0;
+weaponSecondarySelec = 0;
 
 
 //Actor Spawning Timer
