@@ -32,7 +32,7 @@ speed = clamp(speed,0,maxSpeed);
 //Animation
 image_xscale = facing;
 if speed > 0 {
-	sprite_index = sprPlayerWalk;
+	sprite_index = sprWalk;
 	
 	footstep += 1;
 	if footstep == 15 {
@@ -42,7 +42,7 @@ if speed > 0 {
 	
 } else {
 	footstep = 0;
-	sprite_index = sprPlayerIdle;
+	sprite_index = sprIdle;
 }
 
 
