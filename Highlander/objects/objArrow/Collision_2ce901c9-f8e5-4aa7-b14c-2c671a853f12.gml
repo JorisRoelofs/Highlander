@@ -1,10 +1,10 @@
 /// @description: Damage
-if(speed > 0 && other.id != owner && !other.invincible)
+if(speed > 0 && other != owner && !other.invincible)
 {
 	speed = 0;
 
 	if(instance_exists(owner)) owner.kills++;
-	other.hp--;
+	instance_destroy(other);
 
 	var _hit = choose(sndDamage0,sndDamage1,sndDamage2);
 	scr_play_snd(_hit);

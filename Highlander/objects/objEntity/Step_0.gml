@@ -59,7 +59,7 @@ else if item == bow {
 			
 			var b = instance_create_layer(x, y, "Instances", objArrow);
 			b.direction = weaponAngle;
-			b.speed = (10*weaponCharge)+3;
+			b.speed = (6.5*weaponCharge)+2.5;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;

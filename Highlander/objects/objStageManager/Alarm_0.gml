@@ -50,4 +50,4 @@ if range > 7 and room = rmIsland {
 	range -= 2;
 	spacing += 64;
 	alarm[0] = room_speed * 5;
-}	
+}

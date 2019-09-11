@@ -53,11 +53,11 @@ if(instance_exists(target) && _dis < distance) {
 		
 		walkDirection += angle_difference(point_direction(x,y,objLegendary.x,objLegendary.y),walkDirection) * min(point_distance(x,y,objLegendary.x,objLegendary.y) < 300,1) * (0.3 + (0.7*(!instance_exists(objLegendary.owner))));
 		
-		var _waterNear = instance_nearest(x,y,objWater);
-		walkDirection += point_direction(x,y,_waterNear.x,_waterNear.y) * clamp((300 - point_distance(x,y,_waterNear.x,_waterNear.y))/300,0,1);
 	}
 	else randomDirectionTime += 1/room_speed;
 			
+	var _waterNear = instance_nearest(x,y,objWater);
+	walkDirection += angle_difference(point_direction(_waterNear.x,_waterNear.y,x,y),walkDirection) * clamp((120 - point_distance(x,y,_waterNear.x,_waterNear.y))/120,0,1);
 	
 	/*//Change Direction Faster When Target Is Far Away
 	if(target != objPlayer) {
@@ -74,10 +74,12 @@ if(instance_exists(target) && _dis < distance) {
 
 	//Attack Timing
 	if(point_distance(x, y, target.x, target.y) < 120)	{
-		weaponStartTime += 1/room_speed;
-		weaponEndTime += 1/room_speed;
+		if(weaponChargeTime = -1) weaponStartTime += 1/room_speed;
+		else weaponEndTime += 1/room_speed;
+		//weaponStartTime += 1/room_speed;
+		//weaponEndTime += 1/room_speed;
 				
-		if(weaponStartTime >= 0 && weaponChargeTime = -1) {
+		if(weaponStartTime >= 0/* && weaponChargeTime = -1*/) {
 			weaponChargeTime = 0;
 			weaponStartTime += random(-1);
 			if(item = sword) weaponStartTime += 0.2;
@@ -103,7 +105,7 @@ else if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y,
 
 
 //Move Towards Weapon
-else if(instance_exists(objLegendary) && ((instance_exists(objLegendary.owner) && objLegendary.owner.id != id) || !instance_exists(objLegendary.owner))) move_towards_point(objLegendary.x, objLegendary.y, maxSpeed);
+else if(instance_exists(objLegendary) && ((instance_exists(objLegendary.owner) && objLegendary.owner.id != id)/* || !instance_exists(objLegendary.owner)*/)) move_towards_point(objLegendary.x, objLegendary.y, maxSpeed);
 
 
 //Move Towards Target Anyways
