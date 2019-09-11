@@ -112,12 +112,6 @@ scrAbility();
 //Animation
 image_xscale = facing;
 
-if(dashTime >= 0) sprite_index = sprDashing;
-else if speed > 0 {
-	sprite_index = sprWalk;
-} else sprite_index = sprIdle;
-
-
 #region dash [REMOVED]
 /*if(kills && dashInput)
 {
