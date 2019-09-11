@@ -14,7 +14,6 @@ if(selected && input)
 	switch(buttonEffect)
 	{
 			   case startGame: room_goto(rooms[roomChoice]);
-		break; case switchRoom: roomChoice = ++roomChoice mod array_length_1d(rooms);
 		break; case quitGame: game_end();
 		break; case switchFullscreen: window_set_fullscreen(!window_get_fullscreen());
 		break; case switchSound: 
@@ -26,6 +25,7 @@ if(selected && input)
 				show_debug_message(!(audioSetting - 1));
 			}
 		break;
+		case switchRoom: roomChoice = ++roomChoice mod array_length_1d(rooms); break;
 	}
 }
 
