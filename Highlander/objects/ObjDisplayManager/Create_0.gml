@@ -47,7 +47,7 @@ view_x = 0;
 view_y = 0
 view_w = ideal_width;
 view_h = ideal_height;
-target = noone;
+target = self;
 
 cameraZoom = 1;
 maxCameraZoom = 3;
