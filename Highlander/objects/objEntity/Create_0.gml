@@ -19,7 +19,7 @@ carryingWeapon = true;
 kills = 0;
 weaponChargeDistance[sword] = 28;
 weaponChargeDistance[bow] = 20;
-weaponChargeDistance[bomb] = 0;
+weaponChargeDistance[bomb] = 35;
 
 
 // Temp frictions setup
