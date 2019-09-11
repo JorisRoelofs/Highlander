@@ -1215,6 +1215,14 @@
             }
         },
         {
+            "Key": "d0bed5df-2114-4b10-9484-3890ade52b9f",
+            "Value": {
+                "id": "8f62ec0b-4789-4ed8-ac60-1d7724f34449",
+                "resourcePath": "sprites\\sprHeart\\sprHeart.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d175c3eb-fcbf-4416-ba5f-e58f6b8816d1",
             "Value": {
                 "id": "34f3ebc0-f6fd-4dc1-ba95-3312bef221b7",

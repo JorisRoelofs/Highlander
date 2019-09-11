@@ -20,14 +20,47 @@ switch (race) {
 	   // start timer
 	   // resurface rabbit
 	   // make rabbit vunerable
+	   
+	    if(kills && dashInput) {
+			kills-=1;
+			dashTime = 0;
+			speed = 0;
+			invincible = true;
+		}
+
+		if(dashTime >= 0) {
+			dashTime += 1/room_speed;
+		}
+
+		if (dashTime >= 2) {
+			dashTime = -1;
+			invincible = false;
+		}
+		
+		if (dashTime >= 0) sprite_index = sprBunnyHide;
+		
 		
 	break;
 	case 2: // pig can grow tough skin, 2 lives
 	
-		if(kills && dashInput) and hp < 2  {
-			kills-=1;
-			hp++;
-			//speed decrease
+		if hp < 2 {
+		
+			if(kills && dashInput) {
+				kills-=1;
+				dashTime = 0;
+			}
+
+			if(dashTime >= 0) {
+				dashTime += 1/room_speed;
+			}
+
+			if (dashTime >= 2) {
+				dashTime = -1;
+				hp++;
+			}
+		
+			if (dashTime >= 0) sprite_index = sprPigBoost;
+		
 		}
 		
 	break;

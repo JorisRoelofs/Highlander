@@ -11,6 +11,10 @@ if back = -1 {
     draw_self();
 }
 
+if hp > 1 {
+	draw_sprite_ext(sprHeart,0,x,y+12,facing,1,0,c_white,1);
+}
+
 
 //Draw Weapon Charge
 if(weaponChargeTime >= 0)
@@ -21,4 +25,5 @@ if(weaponChargeTime >= 0)
 }
 
 
-draw_text(x,y-32,race);
+
+//draw_text(x,y-32,race);
