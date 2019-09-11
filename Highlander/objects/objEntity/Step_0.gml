@@ -92,10 +92,11 @@ else if item == bomb {
 			var _dis = 10;
 			var _dir = weaponAngle;
 			var b = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb);
-			b.deathTime -= 2*weaponCharge;
+			b.deathDistance = 100 * (weaponCharge + 1);
 			b.direction = weaponAngle;
-			b.speed = 0;//(2*weaponCharge)+1;
+			b.speedIncrease = (0.2*weaponCharge) + 0.05;
 			b.image_angle = b.direction;
+			b.charge = weaponCharge;
 			b.startSpeed = b.speed;
 			b.owner = id;
 			

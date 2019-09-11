@@ -1,4 +1,5 @@
 /// @description: 
 /// @description Insert description here
-deathTime -= 1/room_speed;
-if(deathTime <= 0) instance_destroy();
+if(deathDistance <= 0) instance_destroy();
+speed += speedIncrease;
+deathDistance -= speed;
