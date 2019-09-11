@@ -59,13 +59,48 @@ else if item == bow {
 			
 			var b = instance_create_layer(x, y, "Instances", objArrow);
 			b.direction = weaponAngle;
-			b.speed = 10*weaponCharge;
+			b.speed = (10*weaponCharge)+3;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;
 			
 			//Charge After Effect
-			var _dis = 20 + 10*!item;
+			var _dis = weaponChargeDistance[item];
+			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Instances",objChargeAfterEffect);
+			_afterCharge.tMax = 12 + (3*weaponCharge);
+		}
+	}
+}
+else if item == bomb {
+
+
+	//Charging
+	if(weaponStartInput) weaponChargeTime = 0;
+	if(weaponChargeTime >= 0)
+	{
+		weaponChargeTime += 1/room_speed;
+		weaponCharge = min(weaponChargeTime / timeTillWeaponCharge, 1);
+		
+		
+		//Release Attack
+		if(weaponEndInput || weaponCharge = 1)
+		{
+			weaponChargeTime = -1;
+			
+			scr_play_snd(sndBow);
+			
+			var _dis = 10;
+			var _dir = weaponAngle;
+			var b = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb);
+			b.deathTime -= 2*weaponCharge;
+			b.direction = weaponAngle;
+			b.speed = (5*weaponCharge)+2;
+			b.image_angle = b.direction;
+			b.startSpeed = b.speed;
+			b.owner = id;
+			
+			//Charge After Effect
+			var _dis = weaponChargeDistance[item];
 			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Instances",objChargeAfterEffect);
 			_afterCharge.tMax = 12 + (3*weaponCharge);
 		}

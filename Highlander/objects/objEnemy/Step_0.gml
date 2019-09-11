@@ -101,13 +101,11 @@ else if(instance_exists(objPlayer)) move_towards_point(objPlayer.x, objPlayer.y,
 
 
 //Move Towards Weapon
-else if(instance_exists(objLegendary) && instance_exists(objLegendary.owner) && objLegendary.owner.id != id) move_towards_point(objLegendary.x, objLegendary.y, maxSpeed);
+else if(instance_exists(objLegendary) && ((instance_exists(objLegendary.owner) && objLegendary.owner.id != id) || !instance_exists(objLegendary.owner))) move_towards_point(objLegendary.x, objLegendary.y, maxSpeed);
 
 
 //Move Towards Target Anyways
 else if(instance_exists(target)) move_towards_point(target.x, target.y, maxSpeed);
-
-
 
 //Inheritance
 event_inherited();

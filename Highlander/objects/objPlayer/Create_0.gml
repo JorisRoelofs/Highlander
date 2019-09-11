@@ -20,13 +20,6 @@ mode = 0;
 crownScale = 1;
 rate = 0.0015;
 
-// Temp frictions setup
-if room = rmIsland {
-	friction = .1;
-} else if room = rmIce {
-	friction = -.2;
-}
-
 
 //Animation
 footstep = 0;

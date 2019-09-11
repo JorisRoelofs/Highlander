@@ -2,3 +2,4 @@
 #macro cyellow make_colour_rgb(251,242,54)
 #macro sword 0
 #macro bow 1
+#macro bomb 2

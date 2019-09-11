@@ -14,11 +14,20 @@ maxSpeed = 2;
 weaponCharge = 0;
 meleeId = noone;
 invincible = false;
-item = bow;
+item = bomb;
 carryingWeapon = true;
 kills = 0;
 weaponChargeDistance[sword] = 28;
 weaponChargeDistance[bow] = 20;
+weaponChargeDistance[bomb] = 0;
+
+
+// Temp frictions setup
+if room = rmIsland {
+	friction = .1;
+} else if room = rmIce {
+	friction = -.2;
+}
 
 //Inputs
 weaponStartInput = false;

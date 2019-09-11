@@ -29,14 +29,17 @@ else
 		
 		//Float To Entity If Nearby
 		var _entityNear = instance_nearest(x,y,objEntity);
-		speed = 4*max(64-point_distance(x,y,_entityNear.x,_entityNear.y),0)/room_speed;
-		direction -= (direction - point_direction(x,y,_entityNear.x,_entityNear.y)) * 0.9;
-
-		if(point_distance(x,y,_entityNear.x,_entityNear.y) < 12)
+		if(instance_exists(_entityNear))
 		{
-			scr_play_snd(sndSwordPickup);
-			_entityNear.item = item;
-			owner = _entityNear.id;
+			speed = 4*max(64-point_distance(x,y,_entityNear.x,_entityNear.y),0)/room_speed;
+			direction -= (direction - point_direction(x,y,_entityNear.x,_entityNear.y)) * 0.9;
+
+			if(point_distance(x,y,_entityNear.x,_entityNear.y) < 12)
+			{
+				scr_play_snd(sndSwordPickup);
+				_entityNear.item = item;
+				owner = _entityNear.id;
+			}
 		}
 		
 		
