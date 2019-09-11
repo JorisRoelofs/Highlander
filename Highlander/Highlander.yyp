@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "163a5b93-9d31-47c2-89a1-f7042336ec80",
+            "Value": {
+                "id": "32ce4e52-f04f-4b7b-a98e-519941ddc9a9",
+                "resourcePath": "sprites\\sprBoomerang\\sprBoomerang.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "17113a2b-4559-4808-8310-d0ebbf6b7a8e",
             "Value": {
                 "id": "588948ac-55bf-4a2b-a6ea-15934c2208f1",
@@ -407,6 +415,14 @@
             }
         },
         {
+            "Key": "3ce66c94-0be2-4be5-a5b1-8ec39bbfb9f6",
+            "Value": {
+                "id": "6c329976-cf2e-4521-8931-ec43a7046fde",
+                "resourcePath": "sprites\\sprBomb\\sprBomb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3d2d7c0d-bc52-46cc-b270-cad18f73a402",
             "Value": {
                 "id": "348bec53-9d1f-4ffc-89aa-40bb50f34714",
@@ -492,6 +508,14 @@
                 "id": "890179ea-fa6a-4351-b50e-e31e5493fa83",
                 "resourcePath": "objects\\obj_LeftStick\\obj_LeftStick.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "517a46d2-a4ba-4ba6-83d8-1d2922e0e273",
+            "Value": {
+                "id": "e1216d01-754e-4e3a-a1d7-29a308623d63",
+                "resourcePath": "sprites\\sprBazooka\\sprBazooka.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1087,6 +1111,14 @@
             }
         },
         {
+            "Key": "bff86e1a-9ebd-451f-8abd-590422edbb40",
+            "Value": {
+                "id": "d8a6c6e8-342f-4842-86f1-5abd31ebf666",
+                "resourcePath": "sprites\\sprUzi\\sprUzi.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c00af120-6f6a-4582-a6e7-00759f81a408",
             "Value": {
                 "id": "68dcc022-93e1-4473-a9a0-e0050fc3595e",
@@ -1380,6 +1412,14 @@
                 "id": "8123b211-c0b9-4206-8d1d-e9389d4b8f4a",
                 "resourcePath": "extensions\\Virtual_Joy\\Virtual_Joy.yy",
                 "resourceType": "GMExtension"
+            }
+        },
+        {
+            "Key": "ea915be7-0e8a-4750-b80a-93ed6048dfbd",
+            "Value": {
+                "id": "95b03237-16ef-4c1f-9572-20fc74b348e2",
+                "resourcePath": "sprites\\sprEgg\\sprEgg.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
