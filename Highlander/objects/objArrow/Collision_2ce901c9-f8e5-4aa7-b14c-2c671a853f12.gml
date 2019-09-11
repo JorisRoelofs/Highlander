@@ -1,5 +1,5 @@
 /// @description: Damage
-if(speed > 0 && other.id != owner && !other.invincible)
+if(speed > 0 && other != owner && !other.invincible)
 {
 	speed = 0;
 

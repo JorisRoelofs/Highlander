@@ -1,6 +1,6 @@
 /// @description: Speed, Wiggle & Despawn
 t += 1/room_speed;
-speed *= 0.95;
+speed *= 0.975;//0.95;
 
 //Afterwiggle & Deflection Prevention
 if(speed <= 2)
@@ -17,7 +17,7 @@ else
 	deflectTime += 1/room_speed;
 	image_angle = direction + (10*sin(4*pi*t)/max(startSpeed,6));
 	alarm[0] = room_speed;
-	direction += 20*sign(angle_difference(direction,90))/startSpeed;
+	direction += 4.5*sign(angle_difference(direction,90))/startSpeed; //20*
 }
 
 

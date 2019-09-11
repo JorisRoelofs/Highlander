@@ -24,7 +24,7 @@ weaponChargeDistance[bomb] = 35;
 
 // Temp frictions setup
 if room = rmIsland {
-	friction = .1;
+	friction = .2;
 } else if room = rmIce {
 	friction = -.2;
 }

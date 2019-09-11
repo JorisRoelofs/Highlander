@@ -1,5 +1,5 @@
 /// @description: 
-deathTimeMax = 0.3;
+deathTimeMax = 0.1;
 deathTime = deathTimeMax;
 
 image_xscale = 0;
