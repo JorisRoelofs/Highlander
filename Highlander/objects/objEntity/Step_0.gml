@@ -94,7 +94,7 @@ else if item == bomb {
 			var b = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb);
 			b.deathTime -= 2*weaponCharge;
 			b.direction = weaponAngle;
-			b.speed = (5*weaponCharge)+2;
+			b.speed = 0;//(2*weaponCharge)+1;
 			b.image_angle = b.direction;
 			b.startSpeed = b.speed;
 			b.owner = id;
@@ -107,6 +107,7 @@ else if item == bomb {
 	}
 }
 
+scrAbility();
 
 //Animation
 image_xscale = facing;

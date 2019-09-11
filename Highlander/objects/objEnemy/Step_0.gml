@@ -81,6 +81,7 @@ if(instance_exists(target) && _dis < distance) {
 			weaponChargeTime = 0;
 			weaponStartTime += random(-1);
 			if(item = sword) weaponStartTime += 0.2;
+			//if(item = bomb) weaponStartTime -= 1.5;
 		}
 		else weaponStartInput = false;
 				
@@ -88,6 +89,7 @@ if(instance_exists(target) && _dis < distance) {
 			weaponEndInput = true;
 			weaponEndTime += random(-1) - 0.5
 			if(item = sword) weaponEndTime += 0.2;
+			//if(item = bomb) weaponEndTime -= 0.2;
 		}
 		else weaponEndInput = false;
 				

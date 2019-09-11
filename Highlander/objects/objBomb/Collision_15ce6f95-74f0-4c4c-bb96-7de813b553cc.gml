@@ -1,2 +1,2 @@
 /// @description: 
-//if(other != owner) instance_destroy();
+if(other != owner) instance_destroy();
