@@ -8,7 +8,7 @@ scr_BasicCollision_init(1);
 //Constants
 maxSpeed = 2;
 dashSpeed = 3*maxSpeed;
-
+race = irandom(3);
 
 //Variables
 weaponCharge = 0;
@@ -16,11 +16,11 @@ meleeId = noone;
 invincible = false;
 item = bow;
 carryingWeapon = true;
-kills = 0;
+kills = 1;
 weaponChargeDistance[sword] = 28;
 weaponChargeDistance[bow] = 20;
 weaponChargeDistance[bomb] = 35;
-
+hp = 1;
 
 // Temp frictions setup
 if room = rmIsland {
@@ -51,19 +51,25 @@ weaponAngle = image_angle;
 
 
 //Character
-race = irandom(2);
 
-if race = 0 { // chicken
-	sprIdle = sprPlayerIdle;
-	sprWalk = sprPlayerWalk;
-	sprDashing = sprPlayerDash; 
-} else if race = 1 { // rabbit
-	sprIdle = sprPlayer2Idle;
-	sprWalk = sprPlayer2Walk;
-	sprDashing = sprPlayer2Dash; 
-}  else if race = 2 { // pig
-	sprIdle = sprPlayer3Idle;
-	sprWalk = sprPlayer3Walk;
-	sprDashing = sprPlayer2Dash; 
+
+switch (race) {
+    case 0:
+        sprIdle = sprChickenIdle;
+		sprWalk = sprChickenWalk;
+    break;
+    case 1:
+        sprIdle = sprBunnyIdle;
+		sprWalk = sprBunnyWalk;
+    break;
+	case 2:
+        sprIdle = sprPigIdle;
+		sprWalk = sprPigWalk;
+    break;
+	case 3:
+        sprIdle = sprGoatIdle;
+		sprWalk = sprGoatWalk;
+		sprDashing = sprGoatDash; 
+    break;
 }
 

@@ -113,22 +113,10 @@ scrAbility();
 //Animation
 image_xscale = facing;
 
-#region dash [REMOVED]
-/*if(kills && dashInput)
-{
-	kills-=1;
-	dashTime = 0;
-	dashDirection = direction;
-	if(speed = 0) dashDirection = point_direction(x,y,objCursor.x,objCursor.y);
+
+// Death
+
+if hp <= 0 {
+	instance_destroy();
 }
 
-if(dashTime >= 0)
-{
-	dashTime += 1/room_speed;
-	
-	speed = dashSpeed;
-	direction = dashDirection;
-}
-
-if(dashTime >= timeTillDash) dashTime = -1;
-*/#endregion

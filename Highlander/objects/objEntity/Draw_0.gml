@@ -19,3 +19,6 @@ if(weaponChargeTime >= 0)
 	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),5*weaponChargeTime,false);
 	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),5,true);
 }
+
+
+draw_text(x,y-32,race);

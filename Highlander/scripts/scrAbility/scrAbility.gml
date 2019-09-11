@@ -2,12 +2,19 @@ switch (race) {
 	case 0: // chicken lays an egg, can respawn at egg
 		
 		if(kills && dashInput) {
-			show_debug_message("just made an egg");
+			
+			kills-=1;
+			
+			// TODO: destroy old egg
+			with instance_create_layer(x,y,"Entities", objEgg) {
+				owner = other.id;
+			}
+						
 		}
 			
 	break;
 	case 1: // rabbit hides underground
-	
+		
 	   // create earth sprite
 	   // make rabbit invincible
 	   // start timer
@@ -17,9 +24,7 @@ switch (race) {
 	break;
 	case 2: // pig can grow tough skin, 2 lives
 	
-		var hp = 2;
-		
-		 if(kills && dashInput) and hp < 2  {
+		if(kills && dashInput) and hp < 2  {
 			kills-=1;
 			hp++;
 			//speed decrease
