@@ -23,6 +23,19 @@ if(weaponChargeTime >= 0)
 	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),5*weaponChargeTime,false);
 	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),5,true);
 }
+else if(weaponDischargeTime > 0)
+{
+	draw_set_color(cyellow);
+	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),0.5+(5*weaponDischargeTime),true);
+}
+
+if(item = bomb && weaponChargeTime >= 0)
+{
+	_dis = 200;
+	_dir = weaponAngle;
+//	draw_line(x,y,x+lengthdir_x(_dis,_dir),y+lengthdir_y(_dis,_dir));
+//	draw_circle(x+lengthdir_x(_dis,_dir),y+lengthdir_y(_dis,_dir),5,true);
+}
 
 
 
