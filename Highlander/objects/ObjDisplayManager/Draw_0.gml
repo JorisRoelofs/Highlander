@@ -6,7 +6,7 @@ surface_set_target(backgroundSurface);
 	{
 		draw_self();
 		instance_destroy();
-	}
+	}		
 	with(objArrow)
 	{
 		if(speed = 0 && alarm[0] = -1)

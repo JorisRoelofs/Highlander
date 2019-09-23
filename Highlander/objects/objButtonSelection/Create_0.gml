@@ -12,14 +12,14 @@ raceSelec[i++] = sprPigIdle;
 raceSelec[i++] = sprGoatIdle;
 
 var i = 0;
-primary = i;
+primary = objSystemManager.primary;
 primarySelec[i++] = sprBow;
 primarySelec[i++] = sprKnife;
 primarySelec[i++] = sprSpear;
 primarySelec[i++] = sprBazooka;
 
 var i = 0;
-secundairy = i;
+secundairy = objSystemManager.secundairy;
 secundairySelec[i++] = sprBow;
 secundairySelec[i++] = sprMelee;
 secundairySelec[i++] = sprSpear;

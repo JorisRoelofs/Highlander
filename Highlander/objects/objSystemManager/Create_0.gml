@@ -31,12 +31,12 @@ ini_open("savaData.ini");
 ini_close();
 
 //Unlocks
-ini_open("savaData.ini");
-	bunny = ini_read_real("unlocks", "bunny",false);
-	pig = ini_read_real("unlocks", "pig" ,false);
-	goat = ini_read_real("unlocks", "goat", false);
-	bazooka = ini_read_real("unlocks", "bazooka", false);
-ini_close();
+//ini_open("savaData.ini");
+//	bunny = ini_read_real("unlocks", "bunny",false);
+//	pig = ini_read_real("unlocks", "pig" ,false);
+//	goat = ini_read_real("unlocks", "goat", false);
+//	bazooka = ini_read_real("unlocks", "bazooka", false);
+//ini_close();
 
 
 //Counters
@@ -44,10 +44,18 @@ place = 100;
 kills = 0;
 
 
-//save_data = ds_map_create();
-//file_name = "SaveData.sav";
+save_data = ds_map_create();
+file_name = "SaveData.sav";
 
-//data_set("kills",0);
-//data_load();
+
+data_set("0", 1); // pig
+data_set("1", 1); // goat
+data_set("2", 1); // bunny
+data_set("3", 0); // bazooka
+
+data_load();
+
+
+
 
 
