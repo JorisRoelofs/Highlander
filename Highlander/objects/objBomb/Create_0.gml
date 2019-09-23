@@ -1,3 +1,6 @@
 /// @description: 
 //scr_BasicCollision_init(0.5);
-deathDistance = 100;
+deathDistanceMax = 140;
+deathDistance = deathDistanceMax;
+speedIncrease = 0.15;
+owner = noone;

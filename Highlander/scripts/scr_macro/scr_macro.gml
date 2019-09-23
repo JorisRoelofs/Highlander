@@ -3,3 +3,4 @@
 #macro sword 0
 #macro bow 1
 #macro bomb 2
+#macro weaponCount 3

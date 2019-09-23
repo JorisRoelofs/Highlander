@@ -19,8 +19,9 @@ carryingWeapon = true;
 kills = 1;
 weaponChargeDistance[sword] = 28;
 weaponChargeDistance[bow] = 20;
-weaponChargeDistance[bomb] = 35;
+weaponChargeDistance[bomb] = 40;
 hp = 1;
+myBomb = noone;
 
 // Temp frictions setup
 if room = rmIsland {

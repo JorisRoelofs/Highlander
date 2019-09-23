@@ -1,6 +1,6 @@
 /// @description: 
-with(instance_create_layer(x,y,"Instances",objBombExplosion))
+with(instance_create_layer(x,y+4,"Instances",objBombExplosion))
 {
 	owner = other.owner;
-	charge = other.charge;
+	charge = 1 - (other.deathDistance / other.deathDistanceMax);
 }

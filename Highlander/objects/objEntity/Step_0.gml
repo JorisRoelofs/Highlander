@@ -2,7 +2,7 @@
 
 
 //Standalone Functions
-if(weaponChargeTime >= 0) speed *= 0.5;
+if(weaponChargeTime >= 0 || instance_exists(myBomb)) speed *= 0.5;
 
 weaponAngle = angle_rotate_towards(weaponAngle,meleeAngleInput,8-6*(weaponChargeTime >= 0));
 
@@ -87,19 +87,15 @@ else if item == bomb {
 		if(weaponChargeTime >= 0)//weaponEndInput || weaponCharge = 1)
 		{
 			weaponChargeTime = -1;
-			weaponDischargeTime = (0.5 * (1 - weaponCharge)) + 0.2;
+			weaponDischargeTime = 0;//(0.5 * (1 - weaponCharge)) + 0.2;
 			
 			scr_play_snd(sndBow);
 			
-			var _dis = 30;
+			var _dis = weaponChargeDistance[item];
 			var _dir = weaponAngle;
-			var b = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb);
-			b.deathDistanceMax = (30 * weaponCharge) + 120;
-			b.deathDistance = b.deathDistanceMax;
-			b.direction = weaponAngle;
-			b.speedIncrease = (0.05*weaponCharge) + 0.05;
-			b.charge = weaponCharge;
-			b.owner = id;
+			myBomb = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb)
+			myBomb.direction = weaponAngle;
+			myBomb.owner = id;
 			
 			//Charge After Effect
 			var _dis = weaponChargeDistance[item];
