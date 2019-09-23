@@ -5,7 +5,6 @@
 event_inherited();
 scr_singleton();
 
-
 //Spawn Location
 instance_create_layer(x,y,"Entities", objIndicator);
 

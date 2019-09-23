@@ -5,11 +5,11 @@
 buttonEffect = instance_number(objButton) - 1;
 
 var i = 0;
-character = i;
-characterSelec[i++] = sprChickenIdle;
-characterSelec[i++] = sprBunnyIdle;
-characterSelec[i++] = sprPigIdle;
-characterSelec[i++] = sprGoatIdle;
+race = i;
+raceSelec[i++] = sprChickenIdle;
+raceSelec[i++] = sprBunnyIdle;
+raceSelec[i++] = sprPigIdle;
+raceSelec[i++] = sprGoatIdle;
 
 var i = 0;
 primary = i;

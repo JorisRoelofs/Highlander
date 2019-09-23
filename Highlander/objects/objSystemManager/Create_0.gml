@@ -20,11 +20,18 @@ ini_open("saveData.ini")
 	objDisplayManager.killRecord = ini_read_real("records","killRecord",0);
 ini_close();
 
+//Run
+ini_open("savaData.ini");
+	primary = ini_read_real("run", "primary",0);
+	secundairy = ini_read_real("run", "secundairy" ,0);
+	race = ini_read_real("run", "race", 0);
+ini_close();
 
-save_data = ds_map_create();
-file_name = "SaveData.sav";
+
+//save_data = ds_map_create();
+//file_name = "SaveData.sav";
 
 //data_set("kills",0);
-data_load();
+//data_load();
 
 

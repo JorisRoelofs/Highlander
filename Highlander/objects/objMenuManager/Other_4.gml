@@ -32,7 +32,7 @@ with instance_create_layer(ideal_width-96,ideal_height-96,"Menu",objButton) {
 
 with instance_create_layer(ideal_width/6*2,128,"Menu",objButtonSelection) {
 	buttonEffect = 0;
-	draw = characterSelec[0];
+	draw = raceSelec[0];
 	sprite_index = sprChickenWalk;
 	startX = x;
 	startY = y;
