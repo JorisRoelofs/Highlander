@@ -8,7 +8,7 @@ scr_BasicCollision_init(1);
 //Constants
 maxSpeed = 2;
 dashSpeed = 3*maxSpeed;
-race = irandom(3);
+race = 0;
 
 //Variables
 weaponCharge = 0;
@@ -51,27 +51,9 @@ facing = 1;
 back = 1;
 weaponAngle = image_angle;
 
-
 //Character
+sprIdle = sprChickenIdle;
+sprWalk = sprChickenWalk;
+sprAbility = sprGoatDash; 
 
-
-switch (race) {
-    case 0:
-        sprIdle = sprChickenIdle;
-		sprWalk = sprChickenWalk;
-    break;
-    case 1:
-        sprIdle = sprBunnyIdle;
-		sprWalk = sprBunnyWalk;
-    break;
-	case 2:
-        sprIdle = sprPigIdle;
-		sprWalk = sprPigWalk;
-    break;
-	case 3:
-        sprIdle = sprGoatIdle;
-		sprWalk = sprGoatWalk;
-		sprDashing = sprGoatDash; 
-    break;
-}
 

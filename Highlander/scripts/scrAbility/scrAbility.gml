@@ -37,7 +37,7 @@ switch (race) {
 			invincible = false;
 		}
 		
-		if (dashTime >= 0) sprite_index = sprBunnyHide;
+		if (dashTime >= 0) sprite_index = sprAbility;
 		
 		
 	break;
@@ -59,7 +59,7 @@ switch (race) {
 				hp++;
 			}
 		
-			if (dashTime >= 0) sprite_index = sprPigBoost;
+			if (dashTime >= 0) sprite_index = sprAbility;
 		
 		}
 		
@@ -82,7 +82,7 @@ switch (race) {
 
 		if (dashTime >= timeTillDash) dashTime = -1;
 		
-		if (dashTime >= 0) sprite_index = sprDashing;
+		if (dashTime >= 0) sprite_index = sprAbility;
 		else if speed > 0 {
 			sprite_index = sprWalk;
 		} else sprite_index = sprIdle;

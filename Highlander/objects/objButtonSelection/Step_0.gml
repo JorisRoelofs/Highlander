@@ -13,14 +13,17 @@ if(selected && input)
 {
 	switch(buttonEffect)
 	{
-		case 0: // character
-			character = ++character mod 3;
+		case 0: // race
+			race = ++race mod 4;
+			objSystemManager.race = race;
 		break; 
 		case 1: // primary
 			primary = ++primary mod 3;
+			objSystemManager.primary = primary;
 		break; 
 		case 2: // secundairy
 			secundairy = ++secundairy mod 3;
+			objSystemManager.secundairy = secundairy;
 		break; 
 	}
 }
