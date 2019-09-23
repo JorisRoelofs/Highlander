@@ -1,5 +1,6 @@
 /// @description: Attack & Animation
 
+scrAbility();
 
 //Standalone Functions
 if(weaponChargeTime >= 0 || instance_exists(myBomb)) speed *= 0.5;
@@ -105,7 +106,7 @@ else if item == bomb {
 	}
 }
 
-scrAbility();
+
 
 //Animation
 image_xscale = facing;

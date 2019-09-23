@@ -4,6 +4,14 @@
 //Setup
 display_set_gui_size(ideal_width,ideal_height);
 
+var _kills = objSystemManager.kills;
+var _place = objSystemManager.place;
+var _killRecord = objSystemManager.killRecord;
+var _placeRecord = objSystemManager.placeRecord;
+var _firstRecord = objSystemManager.firstRecord;
+var _killTotal = objSystemManager.killTotal;
+var _legendaryKills = objSystemManager.legendaryKills;
+
 
 //Menu Screen
 if room = rmMenu {
@@ -16,39 +24,78 @@ if room = rmMenu {
 	//scrDrawText("X"+string(killRecord),ideal_height-32,32);
 	
 	
-	
-	
 	draw_set_font(fnt16);
-	draw_set_color(cpurple);
 	draw_set_halign(fa_center)
+			
+	var _colbg = cyellow;
 	
-	draw_rectangle_color(0-16,ideal_height-32,ideal_width+16,ideal_height-16,cyellow,cyellow,cyellow,cyellow,false);
-	draw_text(ideal_width/2, ideal_height-32,"KILL ONE HUNDRED ENEMIES: " +string(killRecord) + " /100");
 	
-	draw_rectangle_color(0-16,ideal_height-48,ideal_width+16,ideal_height-32,cyellow,cyellow,cyellow,cyellow,false);
-	draw_text(ideal_width/2, ideal_height-48,"ACHIEVE 10 KILL STREAK " +string(killRecord) + " /10");
+	// PIG
+	if _firstRecord < 10 {
+		_colbg = cyellow;
+		draw_set_color(cpurple);
+	} else {
+		_colbg = cpurple; draw_set_color(cyellow);
+	}
+	
+	draw_rectangle_color(0-16,ideal_height-32,ideal_width+16,ideal_height-16,_colbg,_colbg,_colbg,_colbg,false);
+	draw_text(ideal_width/2, ideal_height-32,"GET 1ST PLACE 10 TIMES: " +string(_firstRecord) + " /10");
+	
+	//BAZOOKA
+	if _killTotal < 100 {
+		_colbg = cyellow;
+		draw_set_color(cpurple);
+	} else {
+		_colbg = cpurple; draw_set_color(cyellow);
+	}
+	
+	draw_rectangle_color(0-16,ideal_height-48,ideal_width+16,ideal_height-32,_colbg,_colbg,_colbg,_colbg,false);
+	draw_text(ideal_width/2, ideal_height-48,"TOTAL 100 KILLS: " +string(_killTotal) + " /100");
+	
+	//GOAT
+	if _legendaryKills < 10 {
+		_colbg = cyellow;
+		draw_set_color(cpurple);
+	} else {
+		_colbg = cpurple; draw_set_color(cyellow);
+	}
+	draw_rectangle_color(0-16,ideal_height-64,ideal_width+16,ideal_height-48,_colbg,_colbg,_colbg,_colbg,false);
+	draw_text(ideal_width/2, ideal_height-64,"10 LEGENDARY KILLS: " +string(_legendaryKills) + " /10");
+	
+	//BUNNY
+	if _killRecord < 20 {
+		_colbg = cyellow;
+		draw_set_color(cpurple);
+	} else {
+		_colbg = cpurple; draw_set_color(cyellow);
+	}
+	draw_rectangle_color(0-16,ideal_height-80,ideal_width+16,ideal_height-64,_colbg,_colbg,_colbg,_colbg,false);
+	draw_text(ideal_width/2, ideal_height-80,"20 KILL STREAK: " +string(_killRecord) + " /10");
+	
 }
 
 
 //GUI
 else {
-	//Skull Kill Counter
-	var _sep = 12;
-	var _screenCenter = ideal_width/2-((((kills div 5) + (kills mod 5))/2)*_sep);
 	
-	for (var j = 0; j < kills div 5; ++j) {
-		draw_sprite_ext(sprCrown,1,(_screenCenter)+(j*_sep),ideal_height-21,1.5,1.5,0,c_white,1);
-	}
-		
-	for (var i = 0; i < kills mod 5; ++i) {
-		draw_sprite(sprCrown,1,(_screenCenter)+((i+j)*_sep),ideal_height-21);
-	}
 	
 	
 	if instance_exists(objPlayer) {
 		//Set Place & Kills
-		objDisplayManager.place = instance_number(objEntity);
-		objDisplayManager.kills = objPlayer.kills;
+		_place = instance_number(objEntity);
+		_kills = objPlayer.kills;
+		
+		//Skull Kill Counter
+		var _sep = 12;
+		var _screenCenter = ideal_width/2-((((_kills div 5) + (_kills mod 5))/2)*_sep);
+	
+		for (var j = 0; j < _kills div 5; ++j) {
+			draw_sprite_ext(sprCrown,1,(_screenCenter)+(j*_sep),ideal_height-21,1.5,1.5,0,c_white,1);
+		}
+		
+		for (var i = 0; i < _kills mod 5; ++i) {
+			draw_sprite(sprCrown,1,(_screenCenter)+((i+j)*_sep),ideal_height-21);
+		}
 	
 	
 		with(objPlayer) {
@@ -95,7 +142,7 @@ else {
 		
 		
 		//Victory Message
-		if(place = 1) scrDrawText("Winner winner chicken dinner",0.5*ideal_height);
+		if(_place = 1) scrDrawText("Winner winner chicken dinner",0.5*ideal_height);
 	}
 	
 	
@@ -108,13 +155,13 @@ else {
 	
 	
 	//Kill & Place Counters
-	var _strPlace = "#" + string(place);
-	var _strKill = "X" + string(kills);
+	var _strPlace = "#" + string(_place);
+	var _strKill = "X" + string(_kills);
 
-	if(place = 1 || !instance_exists(objPlayer))
+	if(_place = 1 || !instance_exists(objPlayer))
 	{
-		if(place < placeRecord) _strPlace = string_insert("New record: ", _strPlace, 0);
-		if(kills > killRecord) _strKill = string_insert("New record: ", _strKill, 0);
+		if(_place < _placeRecord) _strPlace = string_insert("New record: ", _strPlace, 0);
+		if(_kills > _killRecord) _strKill = string_insert("New record: ", _strKill, 0);
 	}
 		
 	scrDrawText(_strPlace,20);

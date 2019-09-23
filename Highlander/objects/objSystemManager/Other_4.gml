@@ -18,3 +18,4 @@ else
 	audio_sound_gain(musicTitle,1,0);
 	audio_sound_gain(musicBattle,1,0);
 }
+

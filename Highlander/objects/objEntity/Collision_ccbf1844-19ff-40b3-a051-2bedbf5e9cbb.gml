@@ -7,7 +7,6 @@ if race = 3 {
 		
 		with (other) {
 			
-			
 			carryingWeapon = false;
 			
 			var dir, dis;

@@ -16,8 +16,11 @@ ini_close();
 
 //Save Records Setup
 ini_open("saveData.ini")
-	objDisplayManager.placeRecord = ini_read_real("records","placeRecord",100);
-	objDisplayManager.killRecord = ini_read_real("records","killRecord",0);
+	placeRecord = ini_read_real("records","placeRecord",0);
+	killRecord = ini_read_real("records","killRecord",0);
+	killTotal = ini_read_real("records","killTotal",0);
+	firstRecord = ini_read_real("records","firstRecord",0);
+	legendaryKills = ini_read_real("records","legendaryKills",0); // kills with legendary weapon
 ini_close();
 
 //Run
@@ -26,6 +29,19 @@ ini_open("savaData.ini");
 	secundairy = ini_read_real("run", "secundairy" ,0);
 	race = ini_read_real("run", "race", 0);
 ini_close();
+
+//Unlocks
+ini_open("savaData.ini");
+	bunny = ini_read_real("unlocks", "bunny",false);
+	pig = ini_read_real("unlocks", "pig" ,false);
+	goat = ini_read_real("unlocks", "goat", false);
+	bazooka = ini_read_real("unlocks", "bazooka", false);
+ini_close();
+
+
+//Counters
+place = 100;
+kills = 0;
 
 
 //save_data = ds_map_create();
