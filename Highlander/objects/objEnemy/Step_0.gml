@@ -74,24 +74,29 @@ if(instance_exists(target) && _dis < distance) {
 
 	//Attack Timing
 	if(point_distance(x, y, target.x, target.y) < weaponAttackDistance[item])	{
-		if(weaponChargeTime = -1) weaponStartTime += 1/room_speed;
-		else weaponEndTime += 1/room_speed;
-		//weaponStartTime += 1/room_speed;
-		//weaponEndTime += 1/room_speed;
-				
-		if(weaponStartTime >= 0/* && weaponChargeTime = -1*/) {
-			weaponChargeTime = 0;
-			weaponStartTime += random(-1);
-			if(item = sword) weaponStartTime += 0.2;
-			//if(item = bomb) weaponStartTime -= 1.5;
+		weaponStartInput = false;
+		weaponEndInput = false;
+		
+		if(weaponEndTime >= 0)
+		{
+			weaponStartTime += 1/room_speed;
+			if(weaponStartTime >= 0) {
+				weaponStartInput = true;//weaponChargeTime = 0;
+				weaponEndTime = random(-1) - 0.5
+				if(item = sword) weaponEndTime += 0.2;
+				//if(item = bomb) weaponEndTime -= 0.2;
+			}
 		}
-		else weaponStartInput = false;
 				
-		if(weaponEndTime >= 0) {
-			weaponEndInput = true;
-			weaponEndTime += random(-1) - 0.5
-			if(item = sword) weaponEndTime += 0.2;
-			//if(item = bomb) weaponEndTime -= 0.2;
+		if(weaponStartTime >= 0) {
+			weaponEndTime += 1/room_speed;
+			if(weaponEndTime >= 0)
+			{
+				weaponEndInput = true;
+				weaponStartTime = random(-1);
+				if(item = sword) weaponStartTime += 0.2;
+				//if(item = bomb) weaponStartTime -= 1.5;
+			}
 		}
 		else weaponEndInput = false;
 				

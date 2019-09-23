@@ -93,7 +93,7 @@ else if item == bomb {
 			
 			var _dis = weaponChargeDistance[item];
 			var _dir = weaponAngle;
-			myBomb = instance_create_layer(x + lengthdir_x(_dis, _dir), y + lengthdir_y(_dis, _dir), "Instances", objBomb)
+			myBomb = instance_create_layer(x + lengthdir_x(_dis, _dir), y + 3 + lengthdir_y(_dis, _dir), "Instances", objBomb)
 			myBomb.direction = weaponAngle;
 			myBomb.owner = id;
 			
