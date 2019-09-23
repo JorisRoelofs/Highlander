@@ -95,7 +95,7 @@ if(instance_exists(target) && _dis < distance) {
 				weaponEndInput = true;
 				weaponStartTime = random(-1);
 				if(item = sword) weaponStartTime += 0.2;
-				//if(item = bomb) weaponStartTime -= 1.5;
+				if(item = bomb) weaponStartTime += 0.5;
 			}
 		}
 		else weaponEndInput = false;

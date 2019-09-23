@@ -1,5 +1,5 @@
 /// @description: 
-with(instance_create_layer(x,y,"Instances",objBombExplosion))
+with(instance_create_layer(x+hspeed,y+vspeed,"Entities",objBombExplosion))
 {
 	owner = other.owner;
 	charge = other.charge;

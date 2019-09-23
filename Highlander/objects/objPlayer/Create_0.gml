@@ -2,7 +2,7 @@
 
 
 //General Setup
-event_inherited();
+event_inherited(); item = bow;
 scr_singleton();
 
 //Spawn Location

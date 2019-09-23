@@ -30,7 +30,7 @@ if item  == sword {
 		if(weaponEndInput || weaponCharge = 1)
 		{
 			weaponChargeTime = -1;
-			meleeId = instance_create_layer(x,y,"Instances",objMelee);
+			meleeId = instance_create_layer(x,y,"Entities",objMelee);
 			meleeId.charge = weaponCharge;
 			meleeId.owner = id;
 			meleeId.image_angle = weaponAngle;
@@ -58,7 +58,7 @@ else if item == bow {
 			
 			scr_play_snd(sndBow);
 			
-			var b = instance_create_layer(x, y, "Instances", objArrow);
+			var b = instance_create_layer(x, y, "Entities", objArrow);
 			b.direction = weaponAngle;
 			b.speed = (6.5*weaponCharge)+2.5;
 			b.image_angle = b.direction;
@@ -67,7 +67,7 @@ else if item == bow {
 			
 			//Charge After Effect
 			var _dis = weaponChargeDistance[item];
-			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Instances",objChargeAfterEffect);
+			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Entities",objChargeAfterEffect);
 			_afterCharge.tMax = 12 + (3*weaponCharge);
 		}
 	}
@@ -94,13 +94,13 @@ else if item == bomb {
 			
 			var _dis = weaponChargeDistance[item];
 			var _dir = weaponAngle;
-			myBomb = instance_create_layer(x + lengthdir_x(_dis, _dir), y + 3 + lengthdir_y(_dis, _dir), "Instances", objBomb)
+			myBomb = instance_create_layer(x + lengthdir_x(_dis, _dir), y + 3 + lengthdir_y(_dis, _dir), "Entities", objBomb);
 			myBomb.direction = weaponAngle;
 			myBomb.owner = id;
 			
 			//Charge After Effect
 			var _dis = weaponChargeDistance[item];
-			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Instances",objChargeAfterEffect);
+			var _afterCharge =  instance_create_layer(x+lengthdir_x(_dis,weaponAngle),y+4+lengthdir_y(_dis,weaponAngle),"Entities",objChargeAfterEffect);
 			_afterCharge.tMax = 12 + (3*weaponCharge);
 		}
 	}

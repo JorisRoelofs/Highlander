@@ -9,5 +9,5 @@ else
 	image_index = image_number * charge;
 	collision = false;
 
-	direction += 0.5*angle_difference(owner.weaponAngle,direction);
+	direction += 0.1*angle_difference(owner.weaponAngle,direction);
 }

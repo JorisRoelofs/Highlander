@@ -43,14 +43,14 @@ if(image_index >= 3 && image_index <= 7)
 		owner.speed = 30;
 		owner.direction = point_direction(other.owner.x,other.owner.y,owner.x,owner.y);
 		owner.carryingWeapon = false;
-		instance_create_layer(x,y,"Instances",objKnife);
+		instance_create_layer(x,y,"Entities",objKnife);
 		instance_destroy();
 		with(other)
 		{
 			owner.speed = 30;
 			owner.direction = other.owner.direction - 180;
 			owner.carryingWeapon = false;
-			instance_create_layer(x,y,"Instances",objKnife);
+			instance_create_layer(x,y,"Entities",objKnife);
 			instance_destroy();
 		}
 		exit;

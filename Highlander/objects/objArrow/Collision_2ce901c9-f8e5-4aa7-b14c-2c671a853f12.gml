@@ -3,7 +3,7 @@ if(speed > 0 && other != owner && !other.invincible)
 {
 	speed = 0;
 
-	if(instance_exists(owner)) owner.kills++; owner.abilityCount++;
+	if(instance_exists(owner)){ owner.kills++; owner.abilityCount++;}
 	other.hp--;
 
 	var _hit = choose(sndDamage0,sndDamage1,sndDamage2);

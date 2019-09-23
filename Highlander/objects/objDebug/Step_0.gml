@@ -8,7 +8,7 @@ if(keyboard_check_pressed(vk_f4)) {
 }
 
 if keyboard_check(vk_alt) {
-	instance_create_layer(mouse_x,mouse_y,"Instances", objMeteorLanding);
+	instance_create_layer(mouse_x,mouse_y,"Entities", objMeteorLanding);
 	show_debug_message("spawn meteor");
 }
 

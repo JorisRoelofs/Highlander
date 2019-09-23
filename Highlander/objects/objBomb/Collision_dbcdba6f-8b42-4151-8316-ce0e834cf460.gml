@@ -1,4 +1,5 @@
 /// @description: 
+//charge *= 0.5;
 instance_destroy();
 /*if(other.speed <= 0.2)
 {
