@@ -1,9 +1,9 @@
 switch (race) {
 	case 0: // chicken lays an egg, can respawn at egg
 		
-		if(kills && dashInput) {
+		if(abilityCount && dashInput) {
 			
-			kills-=1;
+			abilityCount-=1;
 			
 			// TODO: destroy old egg
 			with instance_create_layer(x,y,"Entities", objEgg) {
@@ -14,15 +14,9 @@ switch (race) {
 			
 	break;
 	case 1: // rabbit hides underground
-		
-	   // create earth sprite
-	   // make rabbit invincible
-	   // start timer
-	   // resurface rabbit
-	   // make rabbit vunerable
-	   
-	    if(kills && dashInput) {
-			kills-=1;
+			   
+	    if(abilityCount && dashInput) {
+			abilityCount-=1;
 			dashTime = 0;
 			speed = 0;
 			invincible = true;
@@ -37,7 +31,13 @@ switch (race) {
 			invincible = false;
 		}
 		
-		if (dashTime >= 0) sprite_index = sprAbility;
+		if (dashTime >= 0) {
+			sprite_index = sprAbility; 
+			weaponStartInput = false; 
+			weaponEndInput = false;
+		}
+		
+		
 		
 		
 	break;
@@ -45,8 +45,8 @@ switch (race) {
 	
 		if hp < 2 {
 		
-			if(kills && dashInput) {
-				kills-=1;
+			if(abilityCount && dashInput) {
+				abilityCount-=1;
 				dashTime = 0;
 			}
 
@@ -66,8 +66,8 @@ switch (race) {
 	break;
 	case 3: // goat charges at you
 	
-		 if(kills && dashInput) {
-			kills-=1;
+		 if(abilityCount && dashInput) {
+			abilityCount-=1;
 			dashTime = 0;
 			dashDirection = direction;
 			if(speed = 0) dashDirection = point_direction(x,y,objCursor.x,objCursor.y);

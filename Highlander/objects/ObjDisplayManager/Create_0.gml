@@ -63,11 +63,5 @@ enum camereState {
 camereState = camereState.nothing;
 
 
-//Counters
-place = 100;
-kills = 0;
-placeRecord = place;
-killRecord = kills;
-
 //End Setup
 room_goto_next();

@@ -9,21 +9,25 @@ var _y = argument[1];
 var _instance = argument[2];
 var _race = argument[3];
 
-raceSpr [0,1] = sprChickenIdle;
-raceSpr [0,2] = sprChickenWalk;
-raceSpr [0,3] = sprChickenWalk;
+var i = 0;
+raceSpr [0,i++] = sprChickenIdle;
+raceSpr [0,i++] = sprChickenWalk;
+raceSpr [0,i++] = sprChickenWalk;
 
-raceSpr [1,0] = sprBunnyIdle;
-raceSpr [1,1] = sprBunnyWalk;
-raceSpr [1,2] = sprBunnyHide;
+var i = 0;
+raceSpr [1,i++] = sprBunnyIdle;
+raceSpr [1,i++] = sprBunnyWalk;
+raceSpr [1,i++] = sprBunnyHide;
 
-raceSpr [2,0] = sprPigIdle;
-raceSpr [2,1] = sprPigWalk;
-raceSpr [2,2] = sprPigBoost;
+var i = 0;
+raceSpr [2,i++] = sprPigIdle;
+raceSpr [2,i++] = sprPigWalk;
+raceSpr [2,i++] = sprPigBoost;
 
-raceSpr [3,0] = sprGoatIdle;
-raceSpr [3,1] = sprGoatWalk;
-raceSpr [3,2] = sprGoatDash; 
+var i = 0;
+raceSpr [3,i++] = sprGoatIdle;
+raceSpr [3,i++] = sprGoatWalk;
+raceSpr [3,i++] = sprGoatDash; 
 
 
 var _entity =  instance_create_layer(_x,_y , "Entities", _instance);

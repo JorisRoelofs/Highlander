@@ -5,7 +5,7 @@
 buttonEffect = instance_number(objButton) - 1;
 
 var i = 0;
-race = i;
+race = objSystemManager.race;
 raceSelec[i++] = sprChickenIdle;
 raceSelec[i++] = sprBunnyIdle;
 raceSelec[i++] = sprPigIdle;
