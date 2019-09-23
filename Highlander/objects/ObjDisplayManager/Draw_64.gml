@@ -39,7 +39,9 @@ if room = rmMenu {
 	}
 	
 	draw_rectangle_color(0-16,ideal_height-32,ideal_width+16,ideal_height-16,_colbg,_colbg,_colbg,_colbg,false);
-	draw_text(ideal_width/2, ideal_height-32,"GET 1ST PLACE 10 TIMES: " +string(_firstRecord) + " /10");
+	draw_text(ideal_width/2, ideal_height-32,"PIG: GET 1ST PLACE 10 TIMES " +string(_firstRecord) + " /10");
+	
+	/*
 	
 	//BAZOOKA
 	if _killTotal < 100 {
@@ -50,7 +52,7 @@ if room = rmMenu {
 	}
 	
 	draw_rectangle_color(0-16,ideal_height-48,ideal_width+16,ideal_height-32,_colbg,_colbg,_colbg,_colbg,false);
-	draw_text(ideal_width/2, ideal_height-48,"TOTAL 100 KILLS: " +string(_killTotal) + " /100");
+	draw_text(ideal_width/2, ideal_height-48,"BAZOOKA: GET TOTAL 100 KILLS " +string(_killTotal) + " /100");
 	
 	//GOAT
 	if _legendaryKills < 10 {
@@ -60,7 +62,7 @@ if room = rmMenu {
 		_colbg = cpurple; draw_set_color(cyellow);
 	}
 	draw_rectangle_color(0-16,ideal_height-64,ideal_width+16,ideal_height-48,_colbg,_colbg,_colbg,_colbg,false);
-	draw_text(ideal_width/2, ideal_height-64,"10 LEGENDARY KILLS: " +string(_legendaryKills) + " /10");
+	draw_text(ideal_width/2, ideal_height-64,"GOAT: GET 10 LEGENDARY KILLS " +string(_legendaryKills) + " /10");
 	
 	//BUNNY
 	if _killRecord < 20 {
@@ -70,7 +72,9 @@ if room = rmMenu {
 		_colbg = cpurple; draw_set_color(cyellow);
 	}
 	draw_rectangle_color(0-16,ideal_height-80,ideal_width+16,ideal_height-64,_colbg,_colbg,_colbg,_colbg,false);
-	draw_text(ideal_width/2, ideal_height-80,"20 KILL STREAK: " +string(_killRecord) + " /10");
+	draw_text(ideal_width/2, ideal_height-80,"BUNNY: GET 20 KILL STREAK " +string(_killRecord) + " /20");
+	
+	*/
 	
 }
 

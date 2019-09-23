@@ -27,11 +27,11 @@ ini_open("savaData.ini");
 	ini_write_real("run", "race", race);
 ini_close();
 
-//Unlocks
-ini_open("savaData.ini");
-	ini_write_real("unlocks", "bunny",bunny);
-	ini_write_real("unlocks", "pig" ,pig);
-	ini_write_real("unlocks", "goat", goat);
-	ini_write_real("unlocks", "bazooka", bazooka);
-ini_close();
+////Unlocks
+//ini_open("savaData.ini");
+//	ini_write_real("unlocks", "bunny",bunny);
+//	ini_write_real("unlocks", "pig" ,pig);
+//	ini_write_real("unlocks", "goat", goat);
+//	ini_write_real("unlocks", "bazooka", bazooka);
+//ini_close();
 

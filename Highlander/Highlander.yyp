@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        
+
     ],
     "option_ecma": false,
     "parentProject": {
@@ -25,7 +25,7 @@
             }
         ],
         "hiddenResources": [
-            
+
         ],
         "projectPath": "${base_project}"
     },
@@ -700,6 +700,14 @@
                 "id": "3e682161-ad5c-4778-8360-01d2a23b6069",
                 "resourcePath": "sprites\\sprMeteor\\sprMeteor.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6b80c4d9-1923-4807-b1ca-f0b199f7d8be",
+            "Value": {
+                "id": "d2a3259f-5bae-49dd-b17e-95f942173bad",
+                "resourcePath": "scripts\\data_save\\data_save.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1623,19 +1631,19 @@
             }
         },
         {
-            "Key": "f6304d4d-6cba-460e-b689-1a2e524c4ed2",
-            "Value": {
-                "id": "b3b8acae-4ea9-4890-a683-72a316c42231",
-                "resourcePath": "rooms\\rmIce\\rmIce.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "fae83746-00a2-482b-85ab-4fa3db05cb6b",
             "Value": {
                 "id": "a77a9438-24ef-42aa-8482-ff0a0a505be2",
                 "resourcePath": "objects\\objBomb\\objBomb.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f6304d4d-6cba-460e-b689-1a2e524c4ed2",
+            "Value": {
+                "id": "b3b8acae-4ea9-4890-a683-72a316c42231",
+                "resourcePath": "rooms\\rmIce\\rmIce.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1687,6 +1695,7 @@
         "575f7057-a0f2-46d2-bffe-19acece3a1c2",
         "3e1877c5-440d-4d15-837b-4ee5fead3344",
         "567fb572-9af6-41f4-bbd1-e6d874b42b1c",
+        "6b80c4d9-1923-4807-b1ca-f0b199f7d8be",
         "426e8e40-fff6-4471-a842-e59a9586882b",
         "042f2883-544d-48f4-baa7-d3637d9f7c7b",
         "bd27700a-5867-41de-b674-d6309ec72da9",
