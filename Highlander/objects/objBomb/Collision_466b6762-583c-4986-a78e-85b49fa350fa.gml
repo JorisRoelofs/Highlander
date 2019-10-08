@@ -2,16 +2,38 @@
 //scr_BasicCollision();
 if(!collision)
 {
-	direction = point_direction(other.x,other.y,x,y);
-	x += hspeed;
-	y += vspeed;
+	var _speedMultiplier = 0.5;
+	var _hspd = hspeed;
+	var _vspd = vspeed;
+	
+	speedIncrease = 0;
+	hspeed = _speedMultiplier * other.hspeed;
+	vspeed = _speedMultiplier * other.vspeed;
 	collision = true;
+	if(other.owner = objPlayer) owner = objPlayer;
+	
 	with(other)
 	{
-		direction = other.direction + 180;
-		x += hspeed;
-		y += vspeed;
+		speedIncrease = 0;
+		hspeed = _speedMultiplier * _hspd;
+		vspeed = _speedMultiplier * _vspd;
 		collision = true;
+		if(other.owner = objPlayer) owner = objPlayer;
+	}
+	
+	repeat(100)
+	{
+		if(!place_meeting(x, y, other)) break;
+		else
+		{
+			x += lengthdir_x(1, direction);
+			y += lengthdir_y(1, direction);
+			with(other)
+			{
+				x += lengthdir_x(1, direction);
+				y += lengthdir_y(1, direction);
+			}
+		}
 	}
 }
 /*

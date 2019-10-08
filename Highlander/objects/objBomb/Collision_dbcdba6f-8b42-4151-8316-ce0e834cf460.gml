@@ -1,5 +1,7 @@
 /// @description: 
 //charge *= 0.5;
+if(other.owner = objPlayer) owner = objPlayer;
+
 instance_destroy();
 /*if(other.speed <= 0.2)
 {

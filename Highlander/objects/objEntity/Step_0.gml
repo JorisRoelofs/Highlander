@@ -5,7 +5,11 @@ scrAbility();
 //Standalone Functions
 if(weaponChargeTime >= 0 || instance_exists(myBomb)) speed *= 0.5;
 
-weaponAngle = angle_rotate_towards(weaponAngle,meleeAngleInput,8-6*(weaponChargeTime >= 0));
+weaponAngleChange = 8;
+if(weaponChargeTime >= 0) weaponAngleChange = 2;
+if(instance_exists(myBomb)) weaponAngleChange = 4;
+
+weaponAngle = angle_rotate_towards(weaponAngle,meleeAngleInput,weaponAngleChange);
 
 carryingWeapon = true; //CHECK THE IMPLICATIONS OF THIS
 
@@ -72,6 +76,9 @@ else if item == bow {
 		}
 	}
 }
+
+
+//Bomb
 else if item == bomb {
 
 

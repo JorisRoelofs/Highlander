@@ -9,5 +9,4 @@ image_xscale = 0;
 image_yscale = image_xscale;
 image_speed = 0;
 
-craterSize = 40;
 firstFrame = true;

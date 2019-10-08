@@ -18,18 +18,34 @@ else
 if(image_index >= 3 && image_index <= 7)
 {
 
+	//Deflect Bomb
+	with(objBomb) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
+	{
+		if(!collision)
+		{
+			collision = true;
+			speedIncrease = 0;
+			speed += 2;
+			direction = point_direction(other.x,other.y,x,y);
+			x += hspeed;
+			y += vspeed;
+			if(other.owner = objPlayer) owner = objPlayer;
+	
+			scr_play_snd(sndParry);
+		}
+	}
 
 	//Deflect Arrow
 	with(objArrow) if(point_distance(x,y,other.x,other.y) < 0.5*(sprite_width + other.sprite_width) && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
 		if(deflectTime >= 0)
 		{
-			scr_play_snd(sndParry);
-	
+			deflectTime = -0.2;	
 			speed *= 0.8;
 			direction += 180 *(1 + (0.5*cos(pi*random(1))));
-			deflectTime = -0.2;	
+			if(other.owner = objPlayer) owner = objPlayer;
 			
+			scr_play_snd(sndParry);
 		}
 	}
 	

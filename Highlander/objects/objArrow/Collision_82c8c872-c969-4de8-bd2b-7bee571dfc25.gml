@@ -1,5 +1,5 @@
 /// @description: 
-if(deflectTime >= 0)
+/*if(deflectTime >= 0)
 {
 	scr_play_snd(sndSword);
 	if(owner = objPlayer) scr_shake(5,2); //Practically invisible
