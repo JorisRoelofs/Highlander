@@ -122,17 +122,17 @@ else {
 			if(instance_exists(_target)) {
 				//Draw On Target If In View
 				if(scr_in_view(-30,_target)) {
-					var _dis = point_distance(camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height,_target.x,_target.y-20);
+					var _dis = point_distance(other.cameraX+0.5*ideal_width,other.cameraY+0.5*ideal_height,_target.x,_target.y-20);
 					var _mul = max((300 - _dis)/400,0.05);
-					pointerTargetX += (_target.x - camera_get_view_x(view_camera[0]) - pointerTargetX) * _mul;
-					pointerTargetY += (_target.y + - 20 - camera_get_view_y(view_camera[0]) - pointerTargetY) * _mul;
+					pointerTargetX += (_target.x - other.cameraX - pointerTargetX) * _mul;
+					pointerTargetY += (_target.y - 20 - other.cameraY - pointerTargetY) * _mul;
 				}
 				
 				
 				//Point To Target If Outside View
 				else {
-					var _dis = min(0.4*ideal_height, point_distance(camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height,_target.x,_target.y-10));
-					var _dir = point_direction(camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height,_target.x,_target.y-20);
+					var _dis = min(0.4*ideal_height, point_distance(other.cameraX+0.5*ideal_width,other.cameraY+0.5*ideal_height,_target.x,_target.y-10));
+					var _dir = point_direction(other.cameraX+0.5*ideal_width,other.cameraY+0.5*ideal_height,_target.x,_target.y-20);
 					pointerTargetX += (0.5*ideal_width+lengthdir_x(_dis,_dir) - pointerTargetX)*0.05;
 					pointerTargetY += (0.5*ideal_height+lengthdir_y(_dis,_dir) - pointerTargetY)*0.05;
 				}
@@ -140,7 +140,7 @@ else {
 				
 				//Draw Pointers
 				draw_sprite_ext(sprCrown,(item=objLegendary.item),pointerTargetX,pointerTargetY,crownScale,crownScale,0,c_white,1);
-				if(item = objLegendary.item) draw_sprite_ext(sprCrown,0,x-camera_get_view_x(view_camera[0]),y-20-camera_get_view_y(view_camera[0]),crownScale,crownScale,0,c_white,1);
+				if(item = objLegendary.item) draw_sprite_ext(sprCrown,0,x-other.cameraX,y-20-other.cameraY,crownScale,crownScale,0,c_white,1);
 			}
 		}
 		

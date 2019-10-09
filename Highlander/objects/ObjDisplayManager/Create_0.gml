@@ -22,6 +22,12 @@ display_height=display_get_height();
 aspect_ratio=display_width/display_height;
 ideal_width=round_n(ideal_height*aspect_ratio,2);
 
+target = noone;
+targetX = 0;
+targetY = 0;
+cameraX = 0;
+cameraY = 0;
+
 
 //Text Properties
 draw_set_halign(fa_center);
@@ -54,13 +60,6 @@ maxCameraZoom = 3;
 
 shake = false;
 intensity = 1;
-
-enum camereState {
-   nothing = 0,
-   followPlayer = 1,
-}
-
-camereState = camereState.nothing;
 
 
 //End Setup

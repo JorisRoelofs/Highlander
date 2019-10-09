@@ -14,13 +14,13 @@ race = 0;
 weaponCharge = 0;
 meleeId = noone;
 invincible = false;
-item = sword;
+item = bomb;
 carryingWeapon = true;
 kills = 0;
 abilityCount = 1;
 weaponChargeDistance[sword] = 28;
 weaponChargeDistance[bow] = 20;
-weaponChargeDistance[bomb] = 40;
+weaponChargeDistance[bomb] = 35;
 hp = 1;
 myBomb = noone;
 

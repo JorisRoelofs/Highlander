@@ -1,4 +1,4 @@
-/// @description: 
+/// @description: Background Surface
 if(!surface_exists(backgroundSurface)) backgroundSurface = surface_create(room_width,room_height);
 
 surface_set_target(backgroundSurface);

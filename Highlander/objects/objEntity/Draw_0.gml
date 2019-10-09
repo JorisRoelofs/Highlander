@@ -17,10 +17,12 @@ if hp > 1 {
 
 
 //Draw Weapon Charge
-if(weaponChargeTime >= 0)
+if(weaponChargeTime >= 0 || instance_exists(myBomb))
 {
 	draw_set_color(cyellow);
-	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),5*weaponChargeTime,false);
+	var _size = 5*weaponChargeTime;
+	if(instance_exists(myBomb)) _size = 5 * (1 - (myBomb.deathDistance / myBomb.deathDistanceMax));
+	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),_size,false);
 	draw_circle(x+lengthdir_x(_dis,_dir),y+3+lengthdir_y(_dis,_dir),5,true);
 }
 else if(weaponDischargeTime > 0)

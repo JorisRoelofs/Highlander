@@ -4,12 +4,12 @@
 //Reset Variables
 invincible = false;
 speed = 0;
+weaponStartInput = false;
+weaponEndInput = false;
 
-if instance_number(objEntity) < 20 {
-	distance = 512;
-} else if instance_number(objEntity) < 40 {
-	distance = 384;
-} else distance = 256;
+if(instance_number(objEntity) < 20) distance = 512;
+else if(instance_number(objEntity) < 40) distance = 384;
+else distance = 256;
 
 
 //Choose Target
@@ -74,9 +74,6 @@ if(instance_exists(target) && _dis < distance) {
 
 	//Attack Timing
 	if(point_distance(x, y, target.x, target.y) < weaponAttackDistance[item])	{
-		weaponStartInput = false;
-		weaponEndInput = false;
-		
 		if(weaponEndTime >= 0)
 		{
 			weaponStartTime += 1/room_speed;
