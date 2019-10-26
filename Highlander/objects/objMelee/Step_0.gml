@@ -1,5 +1,5 @@
 /// @description: Damage / Deflect
-if(instance_exists(objPlayer) && owner = objPlayer.id) image_blend = c_black;
+
 
 //Follow Owner
 if(instance_exists(owner))
