@@ -3,7 +3,7 @@ if(deflectTime >= 0 && other.deflectTime >= 0)
 {
 	scr_play_snd(sndSword);
 	if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
-	if(owner = objPlayer) scr_shake(5,2); //Practically invisible
+	scr_shake(3, 4, owner, x, y);
 	
 	speed *= 0.5;
 	direction += 180 *(1 + (0.5*cos(pi*random(1))));

@@ -54,7 +54,7 @@ if(image_index >= 3 && image_index <= 7)
 	with(objMelee) if(id != other.id && instance_exists(owner) && image_index >= 3 && image_index <= 7 && point_distance(x,y,other.x,other.y) < sprite_width && abs(angle_difference(image_angle,point_direction(x,y,other.x,other.y))) < 120)
 	{
 		
-		if(owner = objPlayer) scr_shake(5,2);
+		scr_shake(10, 2, owner, x, y);
 		
 		owner.speed = 30;
 		owner.direction = point_direction(other.owner.x,other.owner.y,owner.x,owner.y);

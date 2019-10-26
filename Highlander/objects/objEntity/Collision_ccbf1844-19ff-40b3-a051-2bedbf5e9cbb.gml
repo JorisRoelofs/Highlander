@@ -3,7 +3,8 @@
 if race = 3 {
 	if dashTime > 0 {
 		
-		scr_shake(10,20);
+		scr_shake(2, 5, id, x, y);
+
 		
 		with (other) {
 			

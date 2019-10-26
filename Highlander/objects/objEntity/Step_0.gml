@@ -72,9 +72,7 @@ else if item == bow {
 			
 			
 			//Screen Shake
-			var _intensity = 5 * (300 - point_distance(x,y,camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height)) / 300;
-			if(!instance_exists(objPlayer) || id = objPlayer.id) _intensity *= 0.5;
-			if(_intensity > 0) scr_shake(_intensity, 4);
+			scr_shake(2, 4, id, x, y);
 
 			
 			//Charge After Effect

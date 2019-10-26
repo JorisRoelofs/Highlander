@@ -8,9 +8,7 @@ if(speed <= 2)
 	if(speed != 0)
 	{
 		speed = 0;
-		var _intensity = 3 * (300 - point_distance(x,y,camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height)) / 300;
-		if(!instance_exists(objPlayer) || owner = objPlayer.id) _intensity *= 0.5;
-		if(_intensity > 0) scr_shake(_intensity, 4);
+		scr_shake(3, 4, owner, x, y);
 	}
 	deflectTime = -1;
 	image_angle = direction - (max(alarm[0],0)*sin(4*pi*t)*max(startSpeed,1)/100);
