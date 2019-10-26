@@ -2,7 +2,7 @@
 
 
 //General Setup
-event_inherited(); item = bomb;
+event_inherited(); //item = bomb;
 scr_singleton();
 
 //Spawn Location

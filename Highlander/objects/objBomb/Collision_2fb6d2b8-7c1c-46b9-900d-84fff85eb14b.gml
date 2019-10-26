@@ -7,7 +7,7 @@ if(!collision && other.deflectTime >= 0)
 	hspeed = _speedMultiplier * other.hspeed;
 	vspeed = _speedMultiplier * other.vspeed;
 	
-	if(other.owner = objPlayer) owner = objPlayer;
+	if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 	
 	with(other)
 	{
@@ -18,6 +18,6 @@ if(!collision && other.deflectTime >= 0)
 		direction += 180 * (1 + (0.5*cos(pi*random(1))));
 		deflectTime = -0.2;
 		
-		if(other.owner = objPlayer) owner = objPlayer;
+		if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 	}
 }

@@ -2,6 +2,7 @@
 if(deflectTime >= 0 && other.deflectTime >= 0)
 {
 	scr_play_snd(sndSword);
+	if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 	if(owner = objPlayer) scr_shake(5,2); //Practically invisible
 	
 	speed *= 0.5;
@@ -10,6 +11,7 @@ if(deflectTime >= 0 && other.deflectTime >= 0)
 
 	with(other)
 	{
+		if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 		speed *= 0.8;
 		direction += 180;
 		for(var i = 0; i < 15; i++)

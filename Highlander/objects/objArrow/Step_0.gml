@@ -5,7 +5,13 @@ speed *= 0.975;//0.95;
 //Afterwiggle & Deflection Prevention
 if(speed <= 2)
 {
-	if(speed != 0) speed = 0;
+	if(speed != 0)
+	{
+		speed = 0;
+		var _intensity = 3 * (300 - point_distance(x,y,camera_get_view_x(view_camera[0])+0.5*ideal_width,camera_get_view_y(view_camera[0])+0.5*ideal_height)) / 300;
+		if(!instance_exists(objPlayer) || owner = objPlayer.id) _intensity *= 0.5;
+		if(_intensity > 0) scr_shake(_intensity, 4);
+	}
 	deflectTime = -1;
 	image_angle = direction - (max(alarm[0],0)*sin(4*pi*t)*max(startSpeed,1)/100);
 }

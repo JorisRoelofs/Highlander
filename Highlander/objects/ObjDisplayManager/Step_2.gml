@@ -22,8 +22,8 @@ var _spd = .1;
 //Screenshake
 var _ran_x,_ran_y;
 if (shake) {
-	_ran_x = random_range(-intensity,intensity);
-	_ran_y = random_range(-intensity,intensity);
+	_ran_x = choose(-1, 1) * random_range(0.5 * intensity, intensity);
+	_ran_y = choose(-1, 1) * random_range(0.5 * intensity, intensity);
 } else {
 	_ran_x = 0;
 	_ran_y = 0;

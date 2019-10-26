@@ -1,6 +1,6 @@
 /// @description: 
 //charge *= 0.5;
-if(other.owner = objPlayer) owner = objPlayer;
+if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 
 instance_destroy();
 /*if(other.speed <= 0.2)

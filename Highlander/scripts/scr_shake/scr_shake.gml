@@ -5,7 +5,10 @@ var _intensity = argument0;
 var _duration = argument1;
 
 with (objDisplayManager) {
-	shake = true;
-	intensity = _intensity;
-	alarm[1] = _duration;
+	if(!shake || intensity > _intensity)
+	{
+		shake = true;
+		intensity = _intensity;
+		alarm[1] = _duration;
+	}
 }

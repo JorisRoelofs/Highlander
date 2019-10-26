@@ -10,7 +10,7 @@ if(!collision)
 	hspeed = _speedMultiplier * other.hspeed;
 	vspeed = _speedMultiplier * other.vspeed;
 	collision = true;
-	if(other.owner = objPlayer) owner = objPlayer;
+	if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 	
 	with(other)
 	{
@@ -18,7 +18,7 @@ if(!collision)
 		hspeed = _speedMultiplier * _hspd;
 		vspeed = _speedMultiplier * _vspd;
 		collision = true;
-		if(other.owner = objPlayer) owner = objPlayer;
+		if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 	}
 	
 	repeat(100)

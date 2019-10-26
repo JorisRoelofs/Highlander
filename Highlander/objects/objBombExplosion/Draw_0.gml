@@ -16,4 +16,5 @@ if(firstFrame)
 
 draw_sprite_ext(sprite_index,image_index,x,y+4, scale, scale, 0, c_white, 1); //Allows the hitbox to be scaled
 
-//draw_ellipse(bbox_left, bbox_top, bbox_right, bbox_bottom, true);
+/*draw_set_color(c_black);
+draw_ellipse(bbox_left, bbox_top, bbox_right, bbox_bottom, true);

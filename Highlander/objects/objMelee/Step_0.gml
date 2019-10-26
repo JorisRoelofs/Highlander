@@ -1,5 +1,5 @@
 /// @description: Damage / Deflect
-
+if(instance_exists(objPlayer) && owner = objPlayer.id) image_blend = c_black;
 
 //Follow Owner
 if(instance_exists(owner))
@@ -29,7 +29,7 @@ if(image_index >= 3 && image_index <= 7)
 			direction = point_direction(other.x,other.y,x,y);
 			x += hspeed;
 			y += vspeed;
-			if(other.owner = objPlayer) owner = objPlayer;
+			if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 	
 			scr_play_snd(sndParry);
 		}
@@ -43,7 +43,7 @@ if(image_index >= 3 && image_index <= 7)
 			deflectTime = -0.2;	
 			speed *= 0.8;
 			direction += 180 *(1 + (0.5*cos(pi*random(1))));
-			if(other.owner = objPlayer) owner = objPlayer;
+			if(instance_exists(objPlayer) && other.owner = objPlayer.id) owner = objPlayer.id;
 			
 			scr_play_snd(sndParry);
 		}

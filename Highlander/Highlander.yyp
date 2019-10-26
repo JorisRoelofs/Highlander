@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-
+        
     ],
     "option_ecma": false,
     "parentProject": {
@@ -25,7 +25,7 @@
             }
         ],
         "hiddenResources": [
-
+            
         ],
         "projectPath": "${base_project}"
     },
@@ -803,6 +803,14 @@
             "Value": {
                 "id": "38101723-abdd-4b79-86c9-c440cd8ffe8f",
                 "resourcePath": "sprites\\sprSpear\\sprSpear.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7b50c6f3-4379-4f36-afba-728069a9d486",
+            "Value": {
+                "id": "8f49bc61-26bb-4189-8f17-ca4e00e5aee3",
+                "resourcePath": "sprites\\sprBombExplosion1\\sprBombExplosion1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1631,19 +1639,19 @@
             }
         },
         {
-            "Key": "fae83746-00a2-482b-85ab-4fa3db05cb6b",
-            "Value": {
-                "id": "a77a9438-24ef-42aa-8482-ff0a0a505be2",
-                "resourcePath": "objects\\objBomb\\objBomb.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "f6304d4d-6cba-460e-b689-1a2e524c4ed2",
             "Value": {
                 "id": "b3b8acae-4ea9-4890-a683-72a316c42231",
                 "resourcePath": "rooms\\rmIce\\rmIce.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "fae83746-00a2-482b-85ab-4fa3db05cb6b",
+            "Value": {
+                "id": "a77a9438-24ef-42aa-8482-ff0a0a505be2",
+                "resourcePath": "objects\\objBomb\\objBomb.yy",
+                "resourceType": "GMObject"
             }
         },
         {

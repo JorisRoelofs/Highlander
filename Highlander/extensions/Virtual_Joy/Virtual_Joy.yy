@@ -1,7 +1,7 @@
 {
     "id": "e97a909b-87eb-4d64-8637-9a14aeba6875",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "Virtual_Joy",
     "IncludedResources": [
         "Sprites\\Virtual Joy\\Analogue Stick\\vjoy_Theme_Flat_Dark_AS",
@@ -36,6 +36,7 @@
     "copyToTargets": -1,
     "date": "2017-22-27 10:12:35",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         
@@ -56,9 +57,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "com.rm2kdev.virtualjoy",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": -1,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         
