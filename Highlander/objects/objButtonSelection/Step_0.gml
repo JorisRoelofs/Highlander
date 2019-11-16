@@ -4,8 +4,8 @@
 
 //Inputs
 if(instance_exists(objCursor)) selected = position_meeting(objCursor.x,objCursor.y,self);
-input = mouse_check_button_pressed(mb_left);
-inputHeld = mouse_check_button(mb_left);
+input = objCursor.weaponStartInput;
+//inputHeld = mouse_check_button(mb_left);
 
 
 //On CLick

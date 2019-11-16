@@ -6,7 +6,7 @@ if(instance_exists(objCursor)) selected = position_meeting(objCursor.x,objCursor
 input = objCursor.weaponStartInput;
 //inputHeld = mouse_check_button(mb_left);
 
-if keyboard_check(vk_tab) { room_goto(rmIce);}
+//if keyboard_check(vk_tab) { room_goto(rmIce);}
 
 //On CLick
 if(selected && input)

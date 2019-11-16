@@ -14,14 +14,19 @@ weaponStartInput = objCursor.weaponStartInput;
 weaponEndInput = objCursor.weaponEndInput;
 meleeAngleInput = objCursor.meleeAngleInput;
 
+leftInput = objCursor.leftInput;
+rightInput = objCursor.rightInput;
+upInput = objCursor.upInput;
+downInput = objCursor.downInput;
+
 
 //Walking
-//speed = 0;
+speed = 0;
 
-if(keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) || gamepad_button_check(0,gp_padr) hspeed = maxSpeed;
-if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) || gamepad_button_check(0,gp_padl) hspeed = -maxSpeed;
-if(keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) || gamepad_button_check(0,gp_padd) vspeed = maxSpeed;
-if(keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) || gamepad_button_check(0,gp_padu) vspeed = -maxSpeed;
+if(leftInput) hspeed -= maxSpeed;
+if(rightInput) hspeed += maxSpeed;
+if(upInput) vspeed -= maxSpeed;
+if(downInput) vspeed += maxSpeed;
 
 if(point_distance(0,0,lhaxis,lvaxis) > 0.2)
 {
