@@ -16,25 +16,23 @@ var _y = clamp(targetY-view_h/2,0,room_height- view_h);
 var _cur_x = camera_get_view_x(view_camera[0]);
 var _cur_y = camera_get_view_y(view_camera[0]);
 							
-var _spd = .1;
-	
-
 //Screenshake
-var _ran_x,_ran_y;
 if (shake) {
-	_ran_x = choose(-1, 1) * random_range(0.5 * intensity, intensity);
-	_ran_y = choose(-1, 1) * random_range(0.5 * intensity, intensity);
+	ran_x = choose(-1, 1) * random_range(0.5 * intensity, intensity);
+	ran_y = choose(-1, 1) * random_range(0.5 * intensity, intensity);
 } else {
-	_ran_x = 0;
-	_ran_y = 0;
+	ran_x = 0;
+	ran_y = 0;
 }
 
 
 //Camera Positioning
-cameraX = clamp(lerp(_cur_x, _x, _spd) +_ran_x, 0, room_width - (0.5 * ideal_width));
-cameraY = clamp(lerp(_cur_y, _y, _spd) +_ran_y, 0, room_height - (0.5 * ideal_height));
+var _spd = .1;
+cameraX = clamp(lerp(_cur_x, _x, _spd) + ran_x, 0, room_width - (0.5 * ideal_width));
+cameraY = clamp(lerp(_cur_y, _y, _spd) + ran_y, 0, room_height - (0.5 * ideal_height));
 camera_set_view_pos(view_camera[0], cameraX, cameraY);
-
+cameraXPrev = cameraX;
+cameraYPrev = cameraY;
 
 //Unused cursor attraction
 //var length = point_distance(target.x,target.y,mouse_x,mouse_y)/2;

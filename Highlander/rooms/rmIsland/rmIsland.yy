@@ -7,7 +7,6 @@
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "28fa710f-f6fd-4af4-adb8-031cfd7ea90e",
         "128b2ae7-4882-483d-8607-f5b866959d63",
         "95926dcd-f46a-4e4e-af21-caf37f142d5c",
         "27996022-cea8-4bf7-987d-66bac1538706",
@@ -51,10 +50,37 @@
         "75bdf9b5-d476-44cf-a971-0a4704819288",
         "218e7d8b-689c-47b8-8fc5-ae8104e2703a",
         "d1f0b9d4-4645-42ad-95fd-08689ef0342d",
-        "f94e6d28-219c-4bd7-8ceb-66f187268f8d"
+        "f94e6d28-219c-4bd7-8ceb-66f187268f8d",
+        "85c10778-6bea-4003-ab83-930fc6b837b6"
     ],
     "IsDnD": false,
     "layers": [
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "UI",
+            "id": "6369e62a-0a00-45ef-a91c-c5af5bf2cf3f",
+            "depth": -100,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_50BDAB61","id": "85c10778-6bea-4003-ab83-930fc6b837b6","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_50BDAB61","objId": "f0c74abb-71d0-4230-8b34-43eaf853839e","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 192,"y": 128}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Trees",
@@ -187,7 +213,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_50BDAB61","id": "28fa710f-f6fd-4af4-adb8-031cfd7ea90e","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_50BDAB61","objId": "f0c74abb-71d0-4230-8b34-43eaf853839e","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 192,"y": 128}
+
             ],
             "layers": [
 
@@ -196,7 +222,7 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
-            "userdefined_depth": false,
+            "userdefined_depth": true,
             "visible": true
         },
         {

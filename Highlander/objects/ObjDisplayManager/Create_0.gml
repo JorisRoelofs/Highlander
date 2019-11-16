@@ -8,7 +8,6 @@ scr_singleton();
 
 //Mouse Properties
 window_set_cursor(cr_none);
-cursor_sprite = sprCursor;
 
 
 //Display Properties
@@ -27,7 +26,8 @@ targetX = 0;
 targetY = 0;
 cameraX = 0;
 cameraY = 0;
-
+ran_x = 0;
+ran_y = 0;
 
 //Text Properties
 draw_set_halign(fa_center);

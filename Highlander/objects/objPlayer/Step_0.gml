@@ -1,30 +1,33 @@
 /// @description: Input, Movement & Animation
 
 // Controller checking
-var _device;
-var _maxpads = gamepad_get_device_count();for (var i = 0; i < _maxpads; i++) {
-    if (gamepad_is_connected(i)) {
-        _device = i;
-        } else _device = noone;
-    }
 
 //Input
-var _hraxis = gamepad_axis_value(_device, gp_axisrh);
-var _vraxis = gamepad_axis_value(_device, gp_axisrv);
+device = objCursor.device;
+lhaxis = objCursor.lhaxis;
+lvaxis = objCursor.lvaxis;
+rhaxis = objCursor.rhaxis;
+rvaxis = objCursor.rvaxis;
 
-dashInput = mouse_check_button_pressed(mb_right) || gamepad_button_check_pressed(_device,gp_face1);
-weaponStartInput = mouse_check_button_pressed(mb_left)  || gamepad_button_check_pressed(_device,gp_shoulderrb);
-weaponEndInput = mouse_check_button_released(mb_left) || gamepad_button_check_released(_device,gp_shoulderrb);
-meleeAngleInput = point_direction(x,y,objCursor.x,objCursor.y); /*|| point_direction(x, y, _hraxis,_vraxis) */
+dashInput = objCursor.dashInput;
+weaponStartInput = objCursor.weaponStartInput;
+weaponEndInput = objCursor.weaponEndInput;
+meleeAngleInput = objCursor.meleeAngleInput;
 
 
 //Walking
 //speed = 0;
 
 if(keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) || gamepad_button_check(0,gp_padr) hspeed = maxSpeed;
-if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) || gamepad_button_check(0,gp_padl)hspeed = -maxSpeed;
-if(keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) || gamepad_button_check(0,gp_padd)vspeed = maxSpeed;
-if(keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) || gamepad_button_check(0,gp_padu)vspeed = -maxSpeed;
+if(keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) || gamepad_button_check(0,gp_padl) hspeed = -maxSpeed;
+if(keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) || gamepad_button_check(0,gp_padd) vspeed = maxSpeed;
+if(keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) || gamepad_button_check(0,gp_padu) vspeed = -maxSpeed;
+
+if(point_distance(0,0,lhaxis,lvaxis) > 0.2)
+{
+	hspeed = maxSpeed * lhaxis;
+	vspeed = maxSpeed * lvaxis;
+}
 
 speed = clamp(speed,0,maxSpeed);
 
@@ -47,11 +50,11 @@ if speed > 0 {
 
 
 //Player facing		
-if mouse_x > x {
+if objCursor.x > x {
 	facing = 1;
 } else facing = -1;
 
-if mouse_y < y {
+if objCursor.y < y {
 	back = 1
 } else back = -1
 
