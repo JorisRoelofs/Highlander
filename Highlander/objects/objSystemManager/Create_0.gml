@@ -42,7 +42,7 @@ ini_close();
 //Counters
 place = 100;
 kills = 0;
-
+frame = 0;
 
 save_data = ds_map_create();
 file_name = "SaveData.sav";

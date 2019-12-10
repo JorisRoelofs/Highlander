@@ -783,6 +783,14 @@
             }
         },
         {
+            "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
+            "Value": {
+                "id": "6b319c6b-6ac8-494e-ac35-e6f36c06044d",
+                "resourcePath": "options\\html5\\options_html5.yy",
+                "resourceType": "GMHtml5Options"
+            }
+        },
+        {
             "Key": "75ff8398-9a34-4c06-bced-0d746d71d711",
             "Value": {
                 "id": "20e77fa0-5bce-4dd8-8eb2-a47a61149486",

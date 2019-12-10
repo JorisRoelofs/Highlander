@@ -50,7 +50,7 @@ alarm[0]=1;
 
 //Camera
 view_x = 0;
-view_y = 0
+view_y = 0;
 view_w = ideal_width;
 view_h = ideal_height;
 target = self;

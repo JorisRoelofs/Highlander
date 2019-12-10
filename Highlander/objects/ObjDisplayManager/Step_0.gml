@@ -19,3 +19,5 @@ if(keyboard_check_pressed(vk_f3)) {
   }
   
 }
+
+show_debug_message("FPS: " + string(fps));

@@ -1,23 +1,42 @@
 /// @description: Follow Mouse
 
+
+//Initiation
+device = noone;
+lhaxis = 0;
+lvaxis = 0;
+rhaxis = 0;
+rvaxis = 0;
+rightInput = 0;
+leftInput = 0;
+upInput = 0;
+downInput = 0;
+
+
 //Input
 var _maxpads = gamepad_get_device_count();
 for (var i = 0; i < _maxpads; i++) {
 	if (gamepad_is_connected(i)) {
-	    device = i; break;
-	    } else device = noone;
+	    device = i;
+		lhaxis = gamepad_axis_value(device, gp_axislh);
+		lvaxis = gamepad_axis_value(device, gp_axislv);
+		rhaxis = gamepad_axis_value(device, gp_axisrh);
+		rvaxis = gamepad_axis_value(device, gp_axisrv);
+		rightInput = gamepad_button_check(0,gp_padr);
+		leftInput = gamepad_button_check(0,gp_padl);
+		upInput = gamepad_button_check(0,gp_padu);
+		downInput = gamepad_button_check(0,gp_padd);
+		break;
 	}
+}
 
-lhaxis = gamepad_axis_value(device, gp_axislh);
-lvaxis = gamepad_axis_value(device, gp_axislv);
-rhaxis = gamepad_axis_value(device, gp_axisrh);
-rvaxis = gamepad_axis_value(device, gp_axisrv);
+rightInput = (rightInput || keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) || gamepad_button_check(0,gp_padr);
+leftInput = (leftInput || keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) || gamepad_button_check(0,gp_padl);
+upInput = (upInput || keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) || gamepad_button_check(0,gp_padu);
+downInput = (downInput || keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) || gamepad_button_check(0,gp_padd);
 
-rightInput = (keyboard_check(vk_right) || keyboard_check(ord("D")) || keyboard_check(ord("L"))) || gamepad_button_check(0,gp_padr);
-leftInput = (keyboard_check(vk_left) || keyboard_check(ord("A")) || keyboard_check(ord("J"))) || gamepad_button_check(0,gp_padl);
-upInput = (keyboard_check(vk_up) || keyboard_check(ord("W")) || keyboard_check(ord("I"))) || gamepad_button_check(0,gp_padu);
-downInput = (keyboard_check(vk_down) || keyboard_check(ord("S")) || keyboard_check(ord("K"))) || gamepad_button_check(0,gp_padd);
 
+//Pressed This Frame?
 if(rightInput)
 {
 	if(rightInputPressed = 0) rightInputPressed = 1;

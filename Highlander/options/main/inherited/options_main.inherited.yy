@@ -4,7 +4,8 @@
     },
     "option_sci_usesci": true,
     "option_gameguid": "41010461-1971-4705-ab34-940b90ba994e",
-    "option_game_speed": 60
+    "option_game_speed": 60,
+    "option_lastchanged": "10 December 2019 15:34:31"
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "targets": 461609314234257646
 }←7b2c4976-1e09-44e5-8256-c527145e03bb|{
