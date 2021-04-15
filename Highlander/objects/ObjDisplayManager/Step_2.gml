@@ -8,7 +8,7 @@ if(instance_exists(target))
 	targetY = target.y;
 }
 		
-camera_set_view_size(view_camera[0],2*view_w,2*view_h); //2* = WEB-ONLY!!!
+camera_set_view_size(view_camera[0],view_w,view_h); //2* = WEB-ONLY!!!
 		
 var _x = clamp(targetX-view_w/2,0,room_width- view_w);
 var _y = clamp(targetY-view_h/2,0,room_height- view_h);
