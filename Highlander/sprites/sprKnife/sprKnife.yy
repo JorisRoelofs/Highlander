@@ -38,8 +38,8 @@
             ]
         }
     ],
-    "gridX": 0,
-    "gridY": 0,
+    "gridX": 1,
+    "gridY": 1,
     "height": 17,
     "layers": [
         {
@@ -66,5 +66,5 @@
     "type": 0,
     "width": 28,
     "xorig": -4,
-    "yorig": 8
+    "yorig": 7
 }

@@ -583,6 +583,14 @@
             }
         },
         {
+            "Key": "5798c8ec-66fb-4a36-9eb0-8fedc749c39a",
+            "Value": {
+                "id": "e64494ea-b2d3-49c4-96c9-24b31906ffef",
+                "resourcePath": "sprites\\sprKnifeIdle\\sprKnifeIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "592ea9c1-57d6-4204-a262-a20cac04808b",
             "Value": {
                 "id": "ccd59077-01d8-4a09-b3e9-beee0ca044bc",
@@ -663,6 +671,14 @@
             }
         },
         {
+            "Key": "60b11272-ff2e-4cd0-a66e-fbc54a3cd93d",
+            "Value": {
+                "id": "cd482cdc-57ba-4336-af0d-50172ace3f17",
+                "resourcePath": "sprites\\sprSpearIdle2\\sprSpearIdle2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "61510d50-026e-43f8-8882-8fa1e9475e5f",
             "Value": {
                 "id": "09e26c22-ce70-45fc-a17c-f1069cd16d93",
@@ -687,6 +703,14 @@
             }
         },
         {
+            "Key": "643d188e-abf3-4629-b6a2-06f811d21265",
+            "Value": {
+                "id": "c8910d09-37b7-45be-b250-34cbbafaea37",
+                "resourcePath": "sprites\\sprSpearIdle\\sprSpearIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "65a85244-a1ed-4762-afe7-f9273767f491",
             "Value": {
                 "id": "718e9055-9560-480e-b887-fc6be1679824",
@@ -708,6 +732,14 @@
                 "id": "3e682161-ad5c-4778-8360-01d2a23b6069",
                 "resourcePath": "sprites\\sprMeteor\\sprMeteor.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6a6961bb-ca19-463a-ab51-612e3121a671",
+            "Value": {
+                "id": "f95f2251-d30d-4370-a518-62ed4c65629e",
+                "resourcePath": "views\\6a6961bb-ca19-463a-ab51-612e3121a671.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1268,6 +1300,14 @@
                 "id": "6ed9a326-7a97-4c4b-ae0f-d6c9b8f1bc2f",
                 "resourcePath": "objects\\objStageManager\\objStageManager.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ce623824-f2e5-4878-a9a2-232494eae1d5",
+            "Value": {
+                "id": "1ccb569a-2c97-4a29-b2c9-34ebdac4ed63",
+                "resourcePath": "sprites\\sprBowIdle\\sprBowIdle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
