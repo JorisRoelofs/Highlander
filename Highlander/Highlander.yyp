@@ -751,6 +751,14 @@
             }
         },
         {
+            "Key": "6c127420-805c-4d72-b0c4-8b8564c9d980",
+            "Value": {
+                "id": "ed0fe411-e1df-4bf7-b189-d6de0d23e228",
+                "resourcePath": "extensions\\JavascriptWebsocket\\JavascriptWebsocket.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "6c7d2526-e6e5-47e8-b7ad-ebd212382c04",
             "Value": {
                 "id": "c2a9b3b8-ab59-436b-8e3c-93469563544d",
@@ -1044,6 +1052,14 @@
                 "id": "5e7ae2f3-e58e-45c0-a512-64f76a91b912",
                 "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
                 "resourceType": "GMAmazonFireOptions"
+            }
+        },
+        {
+            "Key": "a161fab4-0910-4795-a8dd-a0ed2ba0387b",
+            "Value": {
+                "id": "228587c2-8654-4d17-b806-92a62b25b5a7",
+                "resourcePath": "objects\\objTwitch\\objTwitch.yy",
+                "resourceType": "GMObject"
             }
         },
         {

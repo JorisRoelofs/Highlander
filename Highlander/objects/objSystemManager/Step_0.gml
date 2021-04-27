@@ -6,6 +6,7 @@ if instance_exists(objPlayer) {
 	place = instance_number(objEntity);
 }
 
+/*
 frame++;
 if((frame mod 60) = 0)
 {
