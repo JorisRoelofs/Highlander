@@ -8,5 +8,5 @@ start = noone;
 
 show_debug_message("channel: " + channel);
 
-/*
+
 instance_destroy();

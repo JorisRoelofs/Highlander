@@ -1,7 +1,7 @@
 /// @description  Camerap Positioning
 
 //Target position
-if instance_exists(objPlayer) target = objPlayer;
+if instance_exists(objLegendary) target = objLegendary;
 if(instance_exists(target))
 {
 	targetX = target.x;

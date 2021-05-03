@@ -84,10 +84,10 @@ else {
 	
 	
 	
-	if instance_exists(objPlayer) {
+	if instance_exists(objLegendary.owner) {
 		//Set Place & Kills
 		_place = instance_number(objEntity);
-		_kills = objPlayer.kills;
+		_kills = objLegendary.owner.kills;
 		
 		//Skull Kill Counter
 		var _sep = 12;
@@ -102,7 +102,9 @@ else {
 		}
 	
 	
-		with(objPlayer) {
+		//Draw Crown
+		with(objLegendary.owner)
+		{
 			//Scale Pointers
 			if(mode = 0) {
 				crownScale -= rate;
@@ -114,7 +116,9 @@ else {
 				if(crownScale > 1.1) mode = 0;
 			}
 			
+			draw_sprite_ext(sprCrown,0,x-other.cameraX,y-20-other.cameraY,crownScale,crownScale,0,c_white,1);
 			
+			/*//Enemy Pointer
 			//Determine Pointer Location
 			if(item != objLegendary.item) var _target = objLegendary;
 			else var _target = instance_nearest(x,y,objEnemy);
@@ -141,7 +145,7 @@ else {
 				//Draw Pointers
 				draw_sprite_ext(sprCrown,(item=objLegendary.item),pointerTargetX,pointerTargetY,crownScale,crownScale,0,c_white,1);
 				if(item = objLegendary.item) draw_sprite_ext(sprCrown,0,x-other.cameraX,y-20-other.cameraY,crownScale,crownScale,0,c_white,1);
-			}
+			}*/
 		}
 		
 		
@@ -150,23 +154,23 @@ else {
 	}
 	
 	
-	//Death Message
+	/*//Death Message
 	else
 	{
 		if(mouse_check_button_pressed(mb_left)) room_goto(room);
 		scrDrawText("Ded",0.5*ideal_height);
-	}
+	}*/
 	
 	
 	//Kill & Place Counters
 	var _strPlace = "#" + string(_place);
 	var _strKill = "X" + string(_kills);
 
-	if(_place = 1 || !instance_exists(objPlayer))
+	/*if(_place = 1 || !instance_exists(objPlayer))
 	{
 		if(_place < _placeRecord) _strPlace = string_insert("New record: ", _strPlace, 0);
 		if(_kills > _killRecord) _strKill = string_insert("New record: ", _strKill, 0);
-	}
+	}*/
 		
 	scrDrawText(_strPlace,20);
 	scrDrawText(_strKill,40);
