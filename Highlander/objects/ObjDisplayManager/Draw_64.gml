@@ -81,9 +81,7 @@ if room = rmMenu {
 
 //GUI
 else {
-	
-	
-	
+		
 	if instance_exists(objLegendary.owner) {
 		//Set Place & Kills
 		_place = instance_number(objEntity);
@@ -91,7 +89,7 @@ else {
 		
 		//Skull Kill Counter
 		var _sep = 12;
-		var _screenCenter = ideal_width/2-((((_kills div 5) + (_kills mod 5))/2)*_sep);
+		var _screenCenter = (ideal_width/2) - (0.5 * _sep * ((_kills div 5) + (_kills mod 5) - 1));
 	
 		for (var j = 0; j < _kills div 5; ++j) {
 			draw_sprite_ext(sprCrown,1,(_screenCenter)+(j*_sep),ideal_height-21,1.5,1.5,0,c_white,1);
