@@ -23,6 +23,7 @@ weaponChargeDistance[bow] = 20;
 weaponChargeDistance[bomb] = 35;
 hp = 1;
 myBomb = noone;
+friction = .2;
 
 //UI Crown & Pointer
 pointerTargetX = 0.5*ideal_width;
@@ -30,14 +31,7 @@ pointerTargetY = 0.5*ideal_height;
 mode = 0;
 crownScale = 1;
 rate = 0.0015;
-
-
-// Temp frictions setup
-if room = rmIsland {
-	friction = .2;
-} else if room = rmIce {
-	friction = -.2;
-}
+name = "";
 
 //Inputs
 weaponStartInput = false;

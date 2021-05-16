@@ -9,6 +9,8 @@ function scrSpawning() {
 	var _y = argument[1];
 	var _instance = argument[2];
 	var _race = argument[3];
+	var _name = argument[4];
+	var _twitchId = argument[5];
 
 	var i = 0;
 	raceSpr [0,i++] = sprChickenIdle;
@@ -35,7 +37,8 @@ function scrSpawning() {
 		_entity.sprIdle = raceSpr[_race,0];
 		_entity.sprWalk = raceSpr[_race,1];
 		_entity.sprAbility = raceSpr[_race,2];
+		_entity.name = _name;
+		_entity.twitchId = _twitchId;
 
-
-
+	return _entity;
 }

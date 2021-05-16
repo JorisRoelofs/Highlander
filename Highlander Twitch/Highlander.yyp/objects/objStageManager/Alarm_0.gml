@@ -46,7 +46,7 @@ var rightTop = instance_create_layer(room_width-spacing,spacing,"Water",objWater
 	
 
 //Prepare Next Wave
-if range > 7 and room = rmIsland {
+if range > 7 && (room == rmIsland) {
 	range -= 2;
 	spacing += 64;
 	alarm[0] = room_speed * 5;
